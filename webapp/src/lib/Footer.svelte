@@ -9,7 +9,7 @@
       <svg viewBox="0 0 24 24" class="github-icon" aria-hidden="true">
         <path d={githubLogo} fill="currentColor"></path>
       </svg>
-      <span>View on GitHub</span>
+      <span>Auf GitHub ansehen</span>
     </a>
   </div>
 </footer>

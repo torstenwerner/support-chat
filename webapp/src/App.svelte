@@ -34,7 +34,7 @@
           disabled={loading}
         />
         <button type="submit" disabled={loading || !prompt}>
-          {loading ? 'Please wait' : 'Submit'}
+          {loading ? 'Bitte warten...' : 'Senden'}
         </button>
       </div>
     </form>

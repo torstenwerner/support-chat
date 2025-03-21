@@ -2,35 +2,16 @@
   import { marked } from 'marked';
   import { askAi } from './lib/aiService';
   import Footer from './lib/Footer.svelte';
-  import { onMount } from 'svelte';
 
   let prompt = '';
   let response = '';
   let loading = false;
   let error = null;
 
-  onMount(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlPrompt = urlParams.get('prompt');
-    if (urlPrompt) {
-      prompt = urlPrompt;
-      handleSubmit();
-    }
-  });
-
   async function handleSubmit() {
     loading = true;
     error = null;
     try {
-      // Update URL with the new prompt
-      const url = new URL(window.location.href);
-      if (prompt) {
-        url.searchParams.set('prompt', prompt);
-      } else {
-        url.searchParams.delete('prompt');
-      }
-      window.history.pushState({}, '', url);
-
       const result = await askAi(prompt);
       response = await marked(result.toString());
     } catch (e) {
@@ -48,8 +29,8 @@
         <input
           type="text"
           bind:value={prompt}
-          placeholder="CVE-2021-44228"
-          title="Enter a CVE id"
+          placeholder="Meine Karte wird bei der Anmeldung nicht gefunden."
+          title="Stellen Sie bitte Ihre Frage"
           disabled={loading}
         />
         <button type="submit" disabled={loading || !prompt}>

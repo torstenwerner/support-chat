@@ -62,7 +62,7 @@
   }
 
   main {
-    max-width: 800px;
+    width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
   }

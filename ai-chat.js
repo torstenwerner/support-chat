@@ -17,14 +17,21 @@ const openai = new OpenAI({
  */
 export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
+        const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
             "gpt-4o-mini-search-preview",
-            "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell.",
+            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist ${beaVersion}.`,
             userPrompt,
             {});
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
     }
+}
+
+async function fetchBeaVersion() {
+    const response = await fetch('https://www.bea-brak.de/beaportal/api/settings');
+    const data = await response.json();
+    return data.version;
 }
 
 async function isRelevant(userPrompt) {

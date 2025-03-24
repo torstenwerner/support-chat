@@ -1,1 +1,9 @@
-Meine Karte wird bei der Anmeldung nicht gefunden.
+Was sind die neuesten Sportnachrichten?
+Wie kann ich eine Vertretung einrichten?
+Meine Karte wird bei der Anmeldung nicht erkannt.
+Muss ich bei Versendung aus dem BAG-Postfach immer elektronisch signieren?
+Wer spielt als nächstes gegen Bayern München?
+Wie geht die Erstregistrierung eines Mitarbeiters?
+Wie kann ich meine PUK zurücksetzen?
+
+# The first line is read, only.

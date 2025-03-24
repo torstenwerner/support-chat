@@ -1,6 +1,5 @@
 dist/
-answer.html
-answer.md
+chat.md
 
 # Dependencies
 node_modules/

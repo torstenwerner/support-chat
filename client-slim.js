@@ -14,7 +14,7 @@ const restApiKey = process.env.REST_API_KEY;
 async function main() {
     try {
         // Read the content of client-request.txt
-        const prompt = await fs.readFile('client-request.txt', 'utf8');
+        const prompt = (await fs.readFile('client-request.txt', 'utf8')).split('\n')[0];
 
         // Send POST request to the REST service
         const response = await fetch(restEndpoint, {
@@ -31,8 +31,7 @@ async function main() {
         }
 
         const answer = await response.json();
-        await fs.writeFile('answer.html', marked(answer), 'utf8');
-        await fs.writeFile('answer.md', answer, 'utf8');
+        await fs.writeFile('chat.md', `# Frage\n${prompt}\n\n# Antwort\n${answer}`, 'utf8');
         // console.log(answer);
     } catch (error) {
         console.error('Error:', error);

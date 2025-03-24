@@ -38,7 +38,7 @@ export function askAi(userPrompt) {
         messages: [
             {
                 role: "developer",
-                content: "Du bist ein freundlicher Helfer, der Nutzer des besonderen elektronischen Anwaltspostfaches beA unterstützt."
+                content: "Sie sind ein hilfsbereiter Experte, der Nutzer des besonderen elektronischen Anwaltspostfaches beA unterstützt."
             },
             {
                 role: "user",

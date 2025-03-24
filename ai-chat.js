@@ -18,9 +18,14 @@ const openai = new OpenAI({
 export async function askAi(userPrompt) {
     return askAiWithModelAndPrompt(
         "gpt-4o-mini-search-preview",
-        // "gpt-4o-mini",
          "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell.",
-        //  content: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet."
+         userPrompt);
+}
+
+async function askAiWithoutSearch(userPrompt) {
+    return askAiWithModelAndPrompt(
+        "gpt-4o-mini",
+         "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet.",
          userPrompt);
 }
 

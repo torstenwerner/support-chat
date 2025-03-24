@@ -16,20 +16,34 @@ const openai = new OpenAI({
  * @returns {Promise<string>} the AI chat answer as a promise
  */
 export async function askAi(userPrompt) {
-    return askAiWithModelAndPrompt(
-        "gpt-4o-mini-search-preview",
-         "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell.",
-         userPrompt);
+    if (await isRelevant(userPrompt)) {
+        return askAiWithModelAndPrompt(
+            "gpt-4o-mini-search-preview",
+            "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell.",
+            userPrompt,
+            {});
+    } else {
+        return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
+    }
+}
+
+async function isRelevant(userPrompt) {
+    const categorizationChat = await askAiWithoutSearch(userPrompt);
+    const relevanceAnswer = await askAiWithModelAndPrompt(
+        "gpt-4o-mini",
+        "Bewerte bitte, ob der folgende Chat mit einem Supportagenten für das besondere elektronische Anwaltspostfach beA einen thematischen Zusammenhang zu beA hat und nicht themenfremd ist. Antworte nur mit 'Ja' oder 'Nein'.",
+        categorizationChat);
+    return relevanceAnswer.toLowerCase().trim() === 'ja';
 }
 
 async function askAiWithoutSearch(userPrompt) {
     return askAiWithModelAndPrompt(
         "gpt-4o-mini",
-         "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet.",
-         userPrompt);
+        "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet.",
+        userPrompt);
 }
 
-async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt) {
+async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchOptions = undefined) {
     const response = await openai.chat.completions.create({
         model,
         messages: [
@@ -41,9 +55,10 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt) {
                 role: "user",
                 content: userPrompt
             }
-        ]
-    })
-    return removeUtmSource(response.choices[0].message.content);
+        ],
+        web_search_options: webSearchOptions
+})
+return removeUtmSource(response.choices[0].message.content);
 }
 
 /**

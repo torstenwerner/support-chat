@@ -28,7 +28,8 @@ export async function askAi(userPrompt) {
 }
 
 async function isRelevant(userPrompt) {
-    const categorizationChat = await askAiWithoutSearch(userPrompt);
+    const categorizationAnswer = await askAiWithoutSearch(userPrompt);
+    const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(
         "gpt-4o-mini",
         "Bewerte bitte, ob der folgende Chat mit einem Supportagenten für das besondere elektronische Anwaltspostfach beA einen thematischen Zusammenhang zu beA hat und nicht themenfremd ist. Antworte nur mit 'Ja' oder 'Nein'.",

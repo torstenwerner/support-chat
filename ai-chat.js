@@ -80,6 +80,49 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
 return removeUtmSource(response.choices[0].message.content);
 }
 
+export async function askAiForWebSearchQuery(userPrompt) {
+    const response = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+            {
+                role: "developer",
+                content: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte die Function custom_websearch, um aktuelle Informationen aus dem Web zu erhalten."
+            },
+            {
+                role: "user",
+                content: userPrompt
+            }
+        ],
+        tools: [
+          {
+            "type": "function",
+            "function": {
+              "name": "custom_websearch",
+              "description": "Searches the web using a custom search engine",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "The search query"
+                  }
+                },
+                "required": [
+                  "query"
+                ]
+              },
+              "strict": false
+            }
+          }
+        ]
+    });
+    if (!!response.choices[0].message.tool_calls) {
+        const webSearchQuery = JSON.parse(response.choices[0].message.tool_calls[0].function.arguments).query;
+        return webSearchQuery;
+    }
+    return "n/a";
+}
+
 /**
  * Removes the utm_source=openai parameter from URLs in the text.
  * @param {string} text The text containing URLs to process

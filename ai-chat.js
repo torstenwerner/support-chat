@@ -34,6 +34,17 @@ async function fetchBeaVersion() {
     return data.version;
 }
 
+/**
+ * Shortens the version 3.32.1.456 to 3.32.1.
+ * It is not used yet because it does not improve the results.
+ * @param {String} the original version
+ * @returns {String} the shortened version
+ */
+// The function to be tested
+export function normalizedVersion(version) {
+    return version.split('.').slice(0, 3).join('.');
+}
+
 export async function isRelevant(userPrompt) {
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;

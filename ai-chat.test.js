@@ -1,4 +1,4 @@
-import { removeUtmSource, isRelevant } from './ai-chat.js';
+import { removeUtmSource, isRelevant, normalizedVersion } from './ai-chat.js';
 
 describe('removeUtmSource', () => {
   test('should remove utm_source=openai when it is the only parameter', () => {
@@ -61,6 +61,28 @@ describe('removeUtmSource', () => {
     const input = 'Check out this link: ([title](https://example.com?utm_source=openai))';
     const expected = 'Check out this link: ([title](https://example.com))';
     expect(removeUtmSource(input)).toBe(expected);
+  });
+});
+
+describe('normalizedVersion', () => {
+  test('should normalize a four-segment version to three segments', () => {
+    expect(normalizedVersion('3.32.1.456')).toBe('3.32.1');
+  });
+
+  test('should keep a three-segment version unchanged', () => {
+    expect(normalizedVersion('3.32.1')).toBe('3.32.1');
+  });
+
+  test('should handle a two-segment version', () => {
+    expect(normalizedVersion('3.32')).toBe('3.32');
+  });
+
+  test('should handle a single-segment version', () => {
+    expect(normalizedVersion('3')).toBe('3');
+  });
+
+  test('should handle a version with more than four segments', () => {
+    expect(normalizedVersion('3.32.1.456.789')).toBe('3.32.1');
   });
 });
 

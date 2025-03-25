@@ -86,7 +86,7 @@ export async function askAiForWebSearchQuery(userPrompt) {
         messages: [
             {
                 role: "developer",
-                content: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte die Function custom_websearch, um aktuelle Informationen aus dem Web zu erhalten."
+                content: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte immer die Function custom_websearch, um zusätzliche Informationen aus dem Web zu erhalten."
             },
             {
                 role: "user",
@@ -118,7 +118,7 @@ export async function askAiForWebSearchQuery(userPrompt) {
     });
     if (!!response.choices[0].message.tool_calls) {
         const webSearchQuery = JSON.parse(response.choices[0].message.tool_calls[0].function.arguments).query;
-        return webSearchQuery;
+        return webSearchQuery.trim();
     }
     return "n/a";
 }

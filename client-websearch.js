@@ -34,7 +34,7 @@ async function askAllQuestions() {
         const query = await askAiForWebSearchQuery(question);
         const endTime = Date.now();
         const processingTime = ((endTime - startTime) / 1000).toFixed(1); // Convert milliseconds to seconds
-        await fs.appendFile('websearch.md', `- Frage\n${question}\n\n- Websearch Anfrage: \n${query}\n- Time: ${processingTime}s\n\n`, { flush: true }, 'utf8');
+        await fs.appendFile('websearch.md', `- Frage: ${question}\n- Websearch Anfrage: ${query}\n- Time: ${processingTime}s\n\n`, { flush: true }, 'utf8');
     }
 }
 

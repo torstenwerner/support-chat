@@ -1,0 +1,745 @@
+{
+  "query": {
+    "original": "beA Karte wird nicht erkannt",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": true,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "type": "search",
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Kein geeignetes Hardware- oder Software-Zertifikat gefunden | beA SUPPORT",
+        "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-kein-sicherheitstoken-gefunden",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Wird Ihnen im Anmeldedialog des beA angezeigt &quot;kein geeignetes Hardware- oder Software-Zertifikat gefunden“, obwohl das Kartenlesegerät am PC angeschlossen und die Karte eingesteckt ist, <strong>ist die Verbindung zwischen dem Kartenlesegerät und der Client Security unterbrochen</strong>.",
+        "profile": {
+          "name": "Beasupport",
+          "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-kein-sicherheitstoken-gefunden",
+          "long_name": "portal.beasupport.de",
+          "img": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "portal.beasupport.de",
+          "hostname": "portal.beasupport.de",
+          "favicon": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8",
+          "path": "› fragen-antworten  › kategorie  › erstregistrierung-und-anmeldung  › fehler-kein-sicherheitstoken-gefunden"
+        },
+        "extra_snippets": [
+          "7. Öffnen Sie nun bitte Ihren Browser wieder und rufen die beA-Startseite auf. Stellen Sie sicher, dass Ihre Karte im Kartenlesegerät eingesteckt ist und die Bezeichnung entsprechend in der Anmeldemaske angezeigt wird.",
+          "Bitte beachten Sie das Display Ihres Kartenlesegerätes.",
+          "Sollten Sie die Fehlermeldung jedoch weiterhin erhalten, entsteht der Fehler möglicherweise auch im Zusammenhang mit der sogenannten RFID- Funktion des Kartenlesegeräts. Sobald die Karte per RFID (blaues Blinken der Lampe) einmal eingelesen wurde, wird die Erkennung per Chip (grünes Blinken der Lampe) scheinbar deaktiviert.",
+          "Wenn auch das Ausschalten der RFID-Funktion nicht zur Behebung des Fehlers geführt hat, ist offensichtlich der Treiber Ihres Kartenlesegeräts nicht mehr auf dem aktuellen Stand."
+        ]
+      },
+      {
+        "title": "Hilfe, mein beA funktioniert nicht mehr!",
+        "url": "https://bea-abc.de/blog/hilfe-mein-bea-funktioniert-nicht-mehr/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<strong>Prüfen Sie, ob die Karte richtig (Chip nach unten, Schrift nach oben) und tief genug im Lesegerät</strong> (Beispielbild: REINER SCT cyberJack secoder (= der „kleine“ Reiner) steckt. Wenn das Display des Lesegeräts nichts mehr anzeigt, ist das Lesegerät in der Regel nicht kaputt, sondern es ...",
+        "page_age": "2020-02-29T22:34:24",
+        "profile": {
+          "name": "beA-ABC",
+          "url": "https://bea-abc.de/blog/hilfe-mein-bea-funktioniert-nicht-mehr/",
+          "long_name": "bea-abc.de",
+          "img": "https://imgs.search.brave.com/EY8MbbjUVRpbF2ft3BrNcSqQzbvLTmd8cj7u2dzA6pY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzk2M2M4ZTAz/YTc4ZDkxMTcxZmFl/MDhmM2MyMTdjNWY3/MTc3MWU4OTBhNjI1/MjM5ZDc1MzVjNmYy/MTY5NTc4NC9iZWEt/YWJjLmRlLw"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bea-abc.de",
+          "hostname": "bea-abc.de",
+          "favicon": "https://imgs.search.brave.com/EY8MbbjUVRpbF2ft3BrNcSqQzbvLTmd8cj7u2dzA6pY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzk2M2M4ZTAz/YTc4ZDkxMTcxZmFl/MDhmM2MyMTdjNWY3/MTc3MWU4OTBhNjI1/MjM5ZDc1MzVjNmYy/MTY5NTc4NC9iZWEt/YWJjLmRlLw",
+          "path": "  › home  › hilfe, mein bea funktioniert nicht mehr!"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/CDzRv9XH_pc2mt4QBh3djidN_Rf4UEu8Ua0KhWZk9GI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9iZWEt/YWJjLmRlL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzAyLzIw/MjBfMDJfMjlfYmVB/X0JSQUtfQWt0dWVs/bGVfTWVsZHVuZ2Vu/LmpwZw",
+          "original": "https://bea-abc.de/wp-content/uploads/2020/02/2020_02_29_beA_BRAK_Aktuelle_Meldungen.jpg",
+          "logo": false
+        },
+        "age": "February 29, 2020",
+        "extra_snippets": [
+          "Es kann vorkommen, dass die im Kartenlesegerät eingesteckte Karte nicht erkannt wird. Das System zeigt dann an, dass kein Sicherheitstoken vorhanden ist, obwohl die Karte im Lesegerät steckt. Manchmal ist es hilfreich, zuerst die Karte ins Lesegerät zu stecken und dann erst die beA Client Security zu starten.",
+          "Sie sind hier: Startseite1 / Baden-Württemberg2 / Hilfe, mein beA funktioniert nicht mehr! 29. Februar 2020/in Baden-Württemberg, Bayern, Berlin, besonderes elektronisches Anwaltspostfach (beA), Brandenburg, Bremen, Elektronischer Rechtsverkehr (ERV), Hamburg, Hessen, Kanzleiorganisation, Kartenlesegerät, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Nutzungspflicht, Rechtsprechung, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Signaturkarten, Störungen, Thüringen, Zeitplan/von Ilona Cosack",
+          "Prüfen Sie, ob die Karte richtig (Chip nach unten, Schrift nach oben) und tief genug im Lesegerät (Beispielbild: REINER SCT cyberJack secoder (= der „kleine“ Reiner) steckt. Wenn das Display des Lesegeräts nichts mehr anzeigt, ist das Lesegerät in der Regel nicht kaputt, sondern es braucht ein Update.",
+          "Spätestens jedoch in 671 Tagen wird der Elektronische Rechtsverkehr für alle Anwältinnen und Anwälte zum verpflichtenden Alltag gehören. Sind Sie darauf vorbereitet? https://bea-abc.de/wp-content/uploads/2015/07/beA-ABC-1_240x88.png 0 0 Ilona Cosack https://bea-abc.de/wp-content/uploads/2015/07/beA-ABC-1_240x88.png Ilona Cosack2020-02-29 23:13:372020-02-29 23:34:24Hilfe, mein beA funktioniert nicht mehr!"
+        ]
+      },
+      {
+        "title": "Probleme mit der bea Client-Security und einem cyberJack-Chipkartenleser : REINER SCT Supportportal",
+        "url": "https://help.reiner-sct.com/de/support/solutions/articles/101000447603-probleme-mit-der-bea-client-security-und-einem-cyberjack-chipkartenleser",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<strong>Prüfen Sie, ob die bea Client-Security auf dem Rechner installiert ist und ausgeführt wird</strong>. Dies können Sie an dem Icon in der Taskleiste erkennen. Wird die bea Client-Security nicht ausgeführt, so starten Sie diese bitte.",
+        "page_age": "2022-11-22T00:00:00",
+        "profile": {
+          "name": "Reiner-sct",
+          "url": "https://help.reiner-sct.com/de/support/solutions/articles/101000447603-probleme-mit-der-bea-client-security-und-einem-cyberjack-chipkartenleser",
+          "long_name": "help.reiner-sct.com",
+          "img": "https://imgs.search.brave.com/_thi879fXbwMQnoQzfzUoYqHdJVkgYTOk1UT3ZUrA-U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDQ5Zjc2Zjc2/NTdlZjMyYTY5MTA3/NjI0YWJmYzVjYTE4/NWY3OTY2YTk0ZTBj/YzQ2MmFjNDY0YjBh/ZmIyYjYwNC9oZWxw/LnJlaW5lci1zY3Qu/Y29tLw"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "help.reiner-sct.com",
+          "hostname": "help.reiner-sct.com",
+          "favicon": "https://imgs.search.brave.com/_thi879fXbwMQnoQzfzUoYqHdJVkgYTOk1UT3ZUrA-U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDQ5Zjc2Zjc2/NTdlZjMyYTY5MTA3/NjI0YWJmYzVjYTE4/NWY3OTY2YTk0ZTBj/YzQ2MmFjNDY0YjBh/ZmIyYjYwNC9oZWxw/LnJlaW5lci1zY3Qu/Y29tLw",
+          "path": "› de  › support  › solutions  › articles  › 101000447603-probleme-mit-der-bea-client-security-und-einem-cyberjack-chipkartenleser"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/uYUSTjLKzWuKZ7X6pkPwY_egUHNb1phZPnrvJhXhaTU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zMy5l/dS1jZW50cmFsLTEu/YW1hem9uYXdzLmNv/bS9ldWMtY2RuLmZy/ZXNoZGVzay5jb20v/ZGF0YS9oZWxwZGVz/ay9hdHRhY2htZW50/cy9wcm9kdWN0aW9u/LzEwMTA0NjQ3ODIw/OC9sb2dvL3VJTllr/MEVFVnJ6RVdDR2NY/WXJsd2JQLWFqeE54/VVFiV1EuanBnP1gt/QW16LUFsZ29yaXRo/bT1BV1M0LUhNQUMt/U0hBMjU2JmFtcDth/bXA7WC1BbXotQ3Jl/ZGVudGlhbD1BS0lB/UzZGTlNNWTJYTFpV/TEpQSSUyRjIwMjUw/MjI3JTJGZXUtY2Vu/dHJhbC0xJTJGczMl/MkZhd3M0X3JlcXVl/c3QmYW1wO2FtcDtY/LUFtei1EYXRlPTIw/MjUwMjI3VDAzNDEx/MFomYW1wO2FtcDtY/LUFtei1FeHBpcmVz/PTYwNDgwMCZhbXA7/YW1wO1gtQW16LVNp/Z25lZEhlYWRlcnM9/aG9zdCZhbXA7YW1w/O1gtQW16LVNpZ25h/dHVyZT01NmE5MDQ5/YjQ3Y2Y2YTNiYmE1/ZmM4ZDg2ODBjOGJh/M2IyMjNhZmFhYzk3/ZGJkZDVmY2Q3NmJi/M2M0NmMzZjBh",
+          "original": "https://s3.eu-central-1.amazonaws.com/euc-cdn.freshdesk.com/data/helpdesk/attachments/production/101046478208/logo/uINYk0EEVrzEWCGcXYrlwbP-ajxNxUQbWQ.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAS6FNSMY2XLZULJPI%2F20250227%2Feu-central-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20250227T034110Z&amp;amp;X-Amz-Expires=604800&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=56a9049b47cf6a3bba5fc8d8680c8ba3b223afaac97dbdd5fcd76bb3c46c3f0a",
+          "logo": true
+        },
+        "age": "November 22, 2022",
+        "extra_snippets": [
+          "Wurde der Leser-Test im cyberJack ControlCenter bzw. den cyberJack BaseComponents erfolgreich durchgeführt und auch das cyberJack Support-Tool (SystemAnalyzer) meldet keinerlei Probleme, so liegt in der Regel eine Fehlfunktion in der bea Client-Security vor.",
+          "Hinweis Für die Verwaltung der beA-Karte (PIN-Änderung und Zertifikate) stellen BRAK und BNotK weitere kritisch notwendige Anwendungen bereit, z.B. SecureFramework oder BNotK SAK lite. Der Zugriff dieser Programme auf Lesegerät und Chipkarte über die Smartcard-Schnittstellen des Betriebssysstems kann durch die beA Client Security Anwendung blockiert werden (vgl. \"Fehler 30003\"), so dass hier empfohlen wird die beA Anwendung während der Einrichtung und Verwaltung der Karte (mit SecureFramework oder BNotK SAK lite) temporär zu beenden und erst vor Anmeldung am Postfach auf der Webseite der BRAK wieder zu starten.",
+          "Prüfen Sie, ob die bea Client-Security auf dem Rechner installiert ist und ausgeführt wird. Dies können Sie an dem Icon in der Taskleiste erkennen. Wird die bea Client-Security nicht ausgeführt, so starten Sie diese bitte.",
+          "Entsprechend den Empfehlungen des beA Supports werden folgende Schritte empfohlen:,"
+        ]
+      },
+      {
+        "title": "Verbindungsproblem bei der Anmeldung | beA SUPPORT",
+        "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehlermeldung-beim-anmelden-mit-dem-hinweis-auf-ein-verbindungsproblem",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<strong>Bitte prüfen Sie, ob die beA-Client Security gestartet ist</strong>. Dies erkennen Sie bei einem Windows-Rechner daran, dass die beA-Client-Security als „Mini-Symbol“ auf der Taskleiste (ggfs. bei den „ausgeblendeten Symbolen“) vorzufinden ist. Bei einem MAC-Rechner deutet ein kleiner schwarzer ...",
+        "profile": {
+          "name": "Beasupport",
+          "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehlermeldung-beim-anmelden-mit-dem-hinweis-auf-ein-verbindungsproblem",
+          "long_name": "portal.beasupport.de",
+          "img": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "portal.beasupport.de",
+          "hostname": "portal.beasupport.de",
+          "favicon": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8",
+          "path": "› fragen-antworten  › kategorie  › erstregistrierung-und-anmeldung  › fehlermeldung-beim-anmelden-mit-dem-hinweis-auf-ein-verbindungsproblem"
+        },
+        "extra_snippets": [
+          "Sollte die beA-Client-Security bereits gestartet sein und diese Fehlermeldung tritt dennoch auf, dann prüfen Sie bitte, ob ggfs. Ad-Blocker als Browser-Erweiterungen (z.B.: uBlock oder AdBlock) genutzt werden. Bitte deaktivieren Sie die Ad-Blocker für die beA-Webseite, da ggfs. die localhost Verbindung dadurch blockiert wird und versuchen Sie die Anmeldung erneut.",
+          "Ansonsten löschen Sie bitte die drei \"bealocalhost\" Dateien in C:\\users\\*bernutzername*\\.beacache und starten anschließend die Client Security neu, dann wird das SSL Zertifikat neu hinterlegt.",
+          "Bitte prüfen Sie, ob die beA-Client Security gestartet ist. Dies erkennen Sie bei einem Windows-Rechner daran, dass die beA-Client-Security als „Mini-Symbol“ auf der Taskleiste (ggfs. bei den „ausgeblendeten Symbolen“) vorzufinden ist. Bei einem MAC-Rechner deutet ein kleiner schwarzer Punkt darauf, dass die Anwendung gestartet ist."
+        ]
+      },
+      {
+        "title": "Fehler bei der Zertifikatsprüfung | beA SUPPORT",
+        "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-zertifikatspruefung",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Das Ablaufdatum des verwendeten ... der <strong>beA</strong>-Webanwendung verfügbar). Das angezeigte Ablaufdatum ist allerdings <strong>nicht</strong> immer ausschlaggebend. Wurde ein Sicherheits-Token vom Aussteller gesperrt (bspw. im Rahmen des Tauschs der Sicherheits-Token durch die Bundesnotarkammer), <strong>wird</strong> es mit dem ...",
+        "profile": {
+          "name": "Beasupport",
+          "url": "https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-zertifikatspruefung",
+          "long_name": "portal.beasupport.de",
+          "img": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "portal.beasupport.de",
+          "hostname": "portal.beasupport.de",
+          "favicon": "https://imgs.search.brave.com/JoQHPN_W4hVZQmucJHVPLRXHVgOZXv2gXIKW94ylLK4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTIyN2M3YzE3/MTgyZDk3ODZlNGU2/ZmZmMzhmMTNiOWZi/N2M3NGJhNmU2MjVj/YmZkMzM5YmIwOTdj/Yzg3YjlhMy9wb3J0/YWwuYmVhc3VwcG9y/dC5kZS8",
+          "path": "› fragen-antworten  › kategorie  › erstregistrierung-und-anmeldung  › fehler-zertifikatspruefung"
+        },
+        "extra_snippets": [
+          "Das Ablaufdatum des verwendeten Sicherheits-Token sehen Sie über \"Zertifikate verwalten\" (unten rechts auf der Startseite der beA-Webanwendung verfügbar). Das angezeigte Ablaufdatum ist allerdings nicht immer ausschlaggebend. Wurde ein Sicherheits-Token vom Aussteller gesperrt (bspw. im Rahmen des Tauschs der Sicherheits-Token durch die Bundesnotarkammer), wird es mit dem Tag der Sperrung ungültig.",
+          "Das verwendete Sicherheits-Token ist nicht gültig."
+        ]
+      },
+      {
+        "title": "beA-Softwaretoken installieren und vollaktivieren für die Verwendung Ihrer Kanzleisoftware oder unserer beA-App",
+        "url": "https://bea.expert/softwaretoken/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Der <strong>beA</strong>-Softwaretoken: Die häufigen Fehler und ihre Lösungen. Der Softwaretoken vollaktivieren und das <strong>beA</strong>-Softwarezertifikat korrigieren wenn &#x27;PIN ist falsch&#x27; angezeigt <strong>wird</strong> obwohl die PIN richtig ist.",
+        "page_age": "2021-10-10T00:00:00",
+        "profile": {
+          "name": "Bea",
+          "url": "https://bea.expert/softwaretoken/",
+          "long_name": "bea.expert",
+          "img": "https://imgs.search.brave.com/ePwakK2r2kVbSgu2Ox-m5XwjMIaIaNedJAP0OCQZYBc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTc3NTU2ZDFi/YjkyY2UyZjVhODcw/ZDc2NGUyYzY1Njlm/OWI2MmRmNmIyODg0/NDkyYzQ5YTZjYjgz/N2RiOGIxZS9iZWEu/ZXhwZXJ0Lw"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bea.expert",
+          "hostname": "bea.expert",
+          "favicon": "https://imgs.search.brave.com/ePwakK2r2kVbSgu2Ox-m5XwjMIaIaNedJAP0OCQZYBc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTc3NTU2ZDFi/YjkyY2UyZjVhODcw/ZDc2NGUyYzY1Njlm/OWI2MmRmNmIyODg0/NDkyYzQ5YTZjYjgz/N2RiOGIxZS9iZWEu/ZXhwZXJ0Lw",
+          "path": "› softwaretoken"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/RQONKlcNekss5n5Phpk97l3ta_TS8WB_w8rR6Rs4qHk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9iZWEu/ZXhwZXJ0L2Fzc2V0/cy9pbWFnZXMvaW9z/X2xvZ29fd29faS5w/bmc",
+          "original": "https://bea.expert/assets/images/ios_logo_wo_i.png",
+          "logo": true
+        },
+        "age": "October 10, 2021",
+        "extra_snippets": [
+          "Das Zertifikat wird von der Bundesnotarkammer zur Verfügung gestellt und von dieser auch als Vertrauenstelle signiert. Mit einem Softwaretoken haben Sie die Möglichkeit einen Login ohne Chipkarte in das beA-System durchzuführen. Dies ist wesentlich komfortabler - und auch notwendig - für die beA-App auf iPhone/iPad, da diese Geräte keine Karten lesen können.",
+          "Loggen Sie sich dafür zunächst mit Ihrer beA-Karte in das BRAK-Portal ein. Sie können die aktuelle Berechtigung Ihres Tokens unter „Profilverwaltung > Sicherheits-Token“ sehen. Wenn unter der Kategorie „Vollständig berechtigt“ dannhin \"nein\" steht, müssen Sie diesen Token, wie in den nächsten Schritten beschrieben wird, freischalten.",
+          "Der Token wird nun gelb unterlegt und Sie können auf „Zertifikat freischalten“ drücken. Es öffnet sich nun ein Hinweisfenster. Um den Token freizuschalten, benötigen Sie Ihre Karte und Sie müssen Ihre PIN eingeben.",
+          "Wenn Ihr Token erfolgreich freigeschaltet wurde, wird Ihnen diese Information angezeigt: Um zu überprüfen, ob Ihr Token vollständig freigeschaltet wurde, öffnen Sie erneut „Profilverwaltung > Sicherheits-Token“. Unter der Kategorie „Vollständig berechtigt“ müsste nun ein „Ja“ stehen. Die Zugriffberechtigungen für Mitarebeiter-Karten können manuell eingestellt werden."
+        ]
+      },
+      {
+        "title": "beA, Probleme mit Kartenlesegerät, timeout... - SULT.eu",
+        "url": "https://www.sult.eu/2018/12/18/bea-probleme-mit-kartenlesegeraet-timeout/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Bei der Einrichtung des besonderen, elektronischen Anwaltpostfachs <strong>beA</strong> kann man echt verzweifeln. Das Laden des Signaturzertifikates scheitert daran, dass das Kartenlesegerät <strong>nicht</strong> <strong>erkannt</strong> <strong>wird</strong>.",
+        "page_age": "2022-02-05T10:54:14",
+        "profile": {
+          "name": "Sult",
+          "url": "https://www.sult.eu/2018/12/18/bea-probleme-mit-kartenlesegeraet-timeout/",
+          "long_name": "sult.eu",
+          "img": "https://imgs.search.brave.com/cZXOqXwqoTgGZuAPPwW8_oNSDH56Nm_dV0rJQwcrZRQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGVlMWZhMDdh/ODIxM2Q1ZmRmNDMw/ZjFkMDc1N2FlNDcz/Y2I0NDdiNzE0MmZl/ZWZkMWViZGJmZmU1/YTk2MTc0MS93d3cu/c3VsdC5ldS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sult.eu",
+          "hostname": "www.sult.eu",
+          "favicon": "https://imgs.search.brave.com/cZXOqXwqoTgGZuAPPwW8_oNSDH56Nm_dV0rJQwcrZRQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGVlMWZhMDdh/ODIxM2Q1ZmRmNDMw/ZjFkMDc1N2FlNDcz/Y2I0NDdiNzE0MmZl/ZWZkMWViZGJmZmU1/YTk2MTc0MS93d3cu/c3VsdC5ldS8",
+          "path": "  › startseite  › bea, probleme mit kartenlesegerät, timeout…"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qOOSkboRkzTFphn4UO7W2UHeMzLmK5IRZLcRh-sEZKA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3LnN1/bHQuZXUvd3AtY29u/dGVudC91cGxvYWRz/LzIwMTgvMTIvYmVh/X2xvZ28tMS5wbmc_/Zml0PTI1MCUyQzIx/NyZzc2w9MQ",
+          "original": "https://i0.wp.com/www.sult.eu/wp-content/uploads/2018/12/bea_logo-1.png?fit=250%2C217&ssl=1",
+          "logo": true
+        },
+        "age": "February 5, 2022",
+        "extra_snippets": [
+          "Das Laden des Signaturzertifikates scheitert oft bereits daran, dass das Kartenlesegerät nicht erkannt wird. beA Troubleshooting Kartenlesegerät, timeout.",
+          "Dummerweise liefert die Anleitung zur Zertifikatsverwaltung Ihrer beA-Karte keine besondere Hilfestellung. Aktuell sind die folgenden Kartenleser freigegeben: ReinerSCT cyberJack e-com 3.0 ReinerSCT cyberJack RFID ReinerSCT cyberJack RFID komfort ReinerSCT cyberJack secoder · Eine mögliche Fehlerursache kann sein, dass das Kartenlesegerät bzw. die Software nicht aktuell sind.",
+          "Über die folgende Seite SecSigner Online könnt Ihr auch noch überprüfen ob die beA-Karte mit einem Signaturzertifikat ausgestattet und die Signatur-PIN aktiviert ist."
+        ]
+      },
+      {
+        "title": "Häufige Probleme rund um das beA | Advolux GmbH & Co. KG",
+        "url": "https://www.advolux-gmbh.de/haeufige-probleme-rund-um-das-bea/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "* Meldung im Protokollordner:Fehler beim Öffnen des Zertifikat-Cache. Keine Verbindung zum <strong>beA</strong>-Postfach ... Das richtige Passwort in Advolux hinterlegen (Benutzerverwaltung). Achtung: siehe zum Passwort auch obige Anmerkung · 4) Der Kartenleser <strong>wird</strong> <strong>nicht</strong> gefunden – Treiber fehlen",
+        "page_age": "2019-06-13T00:00:00",
+        "profile": {
+          "name": "Advolux-gmbh",
+          "url": "https://www.advolux-gmbh.de/haeufige-probleme-rund-um-das-bea/",
+          "long_name": "advolux-gmbh.de",
+          "img": "https://imgs.search.brave.com/wXP0KVUXLqLv_ssLoTqnUyWUDmtgaYPKZf11UwTm3H0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQwNTIzMGY0/YWI2YTNiNjhmM2I1/MmVhZDliOWU0OTMw/YTA4YTc4YmMyMDEw/NTZlNmZiYWFiMGE2/OGRlNDk4OC93d3cu/YWR2b2x1eC1nbWJo/LmRlLw"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "advolux-gmbh.de",
+          "hostname": "www.advolux-gmbh.de",
+          "favicon": "https://imgs.search.brave.com/wXP0KVUXLqLv_ssLoTqnUyWUDmtgaYPKZf11UwTm3H0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQwNTIzMGY0/YWI2YTNiNjhmM2I1/MmVhZDliOWU0OTMw/YTA4YTc4YmMyMDEw/NTZlNmZiYWFiMGE2/OGRlNDk4OC93d3cu/YWR2b2x1eC1nbWJo/LmRlLw",
+          "path": "› haeufige-probleme-rund-um-das-bea"
+        },
+        "age": "June 13, 2019",
+        "extra_snippets": [
+          "Multisignaturfähigkeit für eine beA-Karte zusätzlich erwerben. Kontaktieren Sie die Bundesnotarkammer für weitere Informationen. Auf dieser Webseite stellen wir Ihnen die verfügbaren Support-Informationen zur Verfügung. Wenn Sie nicht fündig geworden sind, stehen wir Ihnen selbstverständlich auch persönlich zur Seite.",
+          "Die Signaturkomponente wird dann nicht gestartet. Hierfür gibt es keine Einstell- oder Veränderungsmöglichkeiten durch Advolux, diese Sicherheitsprüfung ist fest in den Signaturkomponenten hinterlegt. 6) Die Signaturkomponente startet nicht – Webclient des beA blockiert die Nutzung",
+          "Dieser Dienst hat nichts mit dem Test des beA-Zugangs in der Mitarbeiterverwaltung zu tun. In diesem Test wird nur geprüft, ob die unter 1) bis 3) genannten Zugangskriterien erfüllt sind. Der beA-Service muss auf einem Rechner eingerichtet werden, der immer läuft, wenn das beA genutzt werden soll.",
+          "In Advolux in „System/Einstellungen/Mitarbeiter- und Rechteverwaltung“ prüfen, ob ggf. zu anderen Benutzern nicht korrekte (oder veraltete) beA-Zugänge hinterlegt sind. Als Grundregel gilt, dass ein beA-Zugang ... eigenes beA-Postfach besitzen, eingerichtet wird."
+        ]
+      },
+      {
+        "title": "FAQ | Zertifizierungsstelle",
+        "url": "https://zertifizierungsstelle.bnotk.de/hilfe/faq",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Zulassung des jeweiligen Rechtsanwalts geknüpft und <strong>nicht</strong> kanzleigebunden ist, behält die <strong>beA</strong>-<strong>Karte</strong> auch bei einem Kanzleiwechsel ihre Gültigkeit und kann weiterhin zur täglichen Anmeldung am Postfach genutzt werden. Bitte denken Sie daran ihre Abrechnungs- und Bankverbindungsdaten nach einem Kanzleiwechsel zu aktualisieren Über das Kundenportal der Zertifizierungsstelle können Sie sebstständig ihre Rechnungsadresse ändern oder eine neue Bankverbindung hinterlegen. Seit dem 1.8.2022 <strong>wird</strong> ...",
+        "page_age": "2021-05-02T00:00:00",
+        "profile": {
+          "name": "Bnotk",
+          "url": "https://zertifizierungsstelle.bnotk.de/hilfe/faq",
+          "long_name": "zertifizierungsstelle.bnotk.de",
+          "img": "https://imgs.search.brave.com/f_HksdoyExxxaz5kZLInLyxUcSOl9mUqXuYxtRs7MW8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTViNzNiZGM5/MjZiZjNkMzJlNDE3/YmNjMTMwZWUwZDc3/NjU0YjE2OTAwZjAx/MmRmYmZkNDQ4MmNj/ODMyM2I2My96ZXJ0/aWZpemllcnVuZ3Nz/dGVsbGUuYm5vdGsu/ZGUv"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "zertifizierungsstelle.bnotk.de",
+          "hostname": "zertifizierungsstelle.bnotk.de",
+          "favicon": "https://imgs.search.brave.com/f_HksdoyExxxaz5kZLInLyxUcSOl9mUqXuYxtRs7MW8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTViNzNiZGM5/MjZiZjNkMzJlNDE3/YmNjMTMwZWUwZDc3/NjU0YjE2OTAwZjAx/MmRmYmZkNDQ4MmNj/ODMyM2I2My96ZXJ0/aWZpemllcnVuZ3Nz/dGVsbGUuYm5vdGsu/ZGUv",
+          "path": "› hilfe  › faq"
+        },
+        "age": "May 2, 2021",
+        "extra_snippets": [
+          "Zulassung des jeweiligen Rechtsanwalts geknüpft und nicht kanzleigebunden ist, behält die beA-Karte auch bei einem Kanzleiwechsel ihre Gültigkeit und kann weiterhin zur täglichen Anmeldung am Postfach genutzt werden. Bitte denken Sie daran ihre Abrechnungs- und Bankverbindungsdaten nach einem Kanzleiwechsel zu aktualisieren Über das Kundenportal der Zertifizierungsstelle können Sie sebstständig ihre Rechnungsadresse ändern oder eine neue Bankverbindung hinterlegen. Seit dem 1.8.2022 wird zugelassenen Berufsausübungsgesellschaften (BAG) ein eigenes beA-Postfach eingerichtet.",
+          "Das Sicherheitsniveau bei einer beA-Karte für Mitarbeitende ist dadurch höher, da die PIN-Eingabe durch ein weiteres Sicherungsmittel - die Chipkarte - besonders geschützt wird. Die beA-Karte für Mitarbeitende und die beA-Softwarezertifikate sind nicht personalisiert.",
+          "Zum Signieren wird die qeS nach erfolgreicher Authentisierung mit der neuen Chipkarte abgerufen. Das bedeutet für Sie im täglichen Betrieb, dass nur noch eine PIN für das Anmelden und das Anbringen qualifizierter Signaturen zum Einsatz kommt. Eine separate Signatur-PIN ist nicht mehr nötig. Bitte beachten Sie, dass für die Anbringung der Fernsignatur zwingend eine Internetverbindung sowie ein Kartenlesegerät der Sicherheitsklasse 3 erforderlich ist.",
+          "Die E-Mail kann dadurch nicht zugestellt werden. • Es kann vorkommen, dass unsere E-Mail von Ihren Mail-Einstellungen (Anti-Spam-Filter) als Spam eingestuft wird. Bitte prüfen Sie in diesem Fall Ihren Spam-Ordner. Nein. Die Bestellung der beA-Karte kann leider nicht widerrufen werden."
+        ]
+      },
+      {
+        "title": "beA-Newsletter 7/2021 v. 1.7.2021",
+        "url": "https://www.brak.de/newsroom/newsletter/bea-newsletter/2021/ausgabe-7-2021-v-172021/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Die Bundesrechtsanwaltskammer vertritt als Dachorganisation der 28 Rechtsanwaltskammern die Interessen der Anwaltschaft.",
+        "page_age": "2021-07-01T00:00:00",
+        "profile": {
+          "name": "Brak",
+          "url": "https://www.brak.de/newsroom/newsletter/bea-newsletter/2021/ausgabe-7-2021-v-172021/",
+          "long_name": "brak.de",
+          "img": "https://imgs.search.brave.com/vZDSWPOlaLWS3HQ7zx0F_UesOtOFgl1e4SlBZtdFjXA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjhmMGYxZWZk/MWI5NTk3NTE1MDdl/N2Q4ZjFkMGRkMDI3/Njg4YjAxYzE0YjQw/NjIzY2I4NmIwODU4/MTA5MzJjMC93d3cu/YnJhay5kZS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "brak.de",
+          "hostname": "www.brak.de",
+          "favicon": "https://imgs.search.brave.com/vZDSWPOlaLWS3HQ7zx0F_UesOtOFgl1e4SlBZtdFjXA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjhmMGYxZWZk/MWI5NTk3NTE1MDdl/N2Q4ZjFkMGRkMDI3/Njg4YjAxYzE0YjQw/NjIzY2I4NmIwODU4/MTA5MzJjMC93d3cu/YnJhay5kZS8",
+          "path": "› newsroom  › newsletter  › bea-newsletter  › 2021  › ausgabe-7-2021-v-172021"
+        },
+        "age": "July 1, 2021"
+      },
+      {
+        "title": "beA Mitarbeiter Karte tauschen und aktivieren",
+        "url": "https://bea-support.de/bea-kartentausch.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Wie Sie die neu ausgetauschte <strong>beA</strong> Mitarbeiter <strong>Karte</strong> aktivieren - Alles zum <strong>beA</strong> Kartentausch. Jetzt ansehen.",
+        "profile": {
+          "name": "Bea-support",
+          "url": "https://bea-support.de/bea-kartentausch.html",
+          "long_name": "bea-support.de",
+          "img": "https://imgs.search.brave.com/vCRDQ-g0gtG66WpN4QC8F9L342Ydc2yiwd2-32TX8EA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzYxZTllY2Uw/N2Q3MmFjM2I1M2U0/OWVkYWIyOGVhZjk5/MTFlMmU4MTA3ZWYw/ZGE1OWY0OGIxMjc5/M2YwNzU3ZC9iZWEt/c3VwcG9ydC5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bea-support.de",
+          "hostname": "bea-support.de",
+          "favicon": "https://imgs.search.brave.com/vCRDQ-g0gtG66WpN4QC8F9L342Ydc2yiwd2-32TX8EA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzYxZTllY2Uw/N2Q3MmFjM2I1M2U0/OWVkYWIyOGVhZjk5/MTFlMmU4MTA3ZWYw/ZGE1OWY0OGIxMjc5/M2YwNzU3ZC9iZWEt/c3VwcG9ydC5kZS8",
+          "path": "› bea-kartentausch.html"
+        },
+        "extra_snippets": [
+          "Die neuen beA Karte wird nicht erkannt / angezeigt · Wir aktivieren ihre neue beA Karte, ohne großen Aufwand und Kopfzerbrechen in ca 20 Minuten. Zum Festpreis von 29 Euro zzgl. Mwst. Ich möchte die neue beA Karte selber austauschen · Wir helfenen Ihnen beim beA Kartentausch - Jetzt loslegen oder direkt anrufen 0221 9322379 ·",
+          "Nichts weiter, am besten nochmals ihre Kontaktdaten auf Richtigkeit überprüfen! Sie werden von der Bundesnotarkammer angeschrieben und die neue beA Karte wird ihnen, an die für Sie im BRAV (Bundesweites Amtliches Anwaltsverzeichnis) hinterlegte Adresse, zugesendet.",
+          "Ihre Signatur kann nicht auf die neue Karte Übertragen werden. Stattdessen wird ein neues Verfahren namens Fernsignatur genutzt. Wenn Sie bereits ein Signaturzertifikat auf ihrer alten beA Karte haben, können sie dies bis zum Ablauf weiter nutzen. Mit ihrer neuen beA Karte erhalten Sie die Möglichkeit zur Nutzung der Fernsignatur.",
+          "Wenn nur die Alte, aber nicht die neue Karte angezeigt wird, dann könnte es sich um ein Kontaktproblem handeln."
+        ]
+      },
+      {
+        "title": "RA-MICRO – beA Helpdesk | RA-MICRO Köln",
+        "url": "https://ra-micro-koeln.de/bea-helpdesk/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "In Verbindung mit RA-MICRO haben Sie Fragen zur <strong>beA</strong>-Schittstelle, zu aktuellen Treibern oder benötigen allgemein Hilfe? Sie stehen beispielsweise vor folgenden Aufgabenstellungen? <strong>Karte</strong> <strong>wird</strong> <strong>nicht</strong> <strong>erkannt</strong> / „Kein geeigneter Sicherheits-Token gefunden“",
+        "page_age": "2023-03-23T09:11:06",
+        "profile": {
+          "name": "Ra-micro-koeln",
+          "url": "https://ra-micro-koeln.de/bea-helpdesk/",
+          "long_name": "ra-micro-koeln.de",
+          "img": "https://imgs.search.brave.com/03dQcqFyTrkFErOsD1BR_ezKGWqKP43AXWLtPTsbowU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODAwNzFlM2M4/YzI4Njg5YmE2MDMw/NjMyZGExOTY4ZjZh/MjRmNjhkYjYxM2U1/OWU3MTBiNmE4ODBj/Yzk0NzdiYy9yYS1t/aWNyby1rb2Vsbi5k/ZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ra-micro-koeln.de",
+          "hostname": "ra-micro-koeln.de",
+          "favicon": "https://imgs.search.brave.com/03dQcqFyTrkFErOsD1BR_ezKGWqKP43AXWLtPTsbowU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODAwNzFlM2M4/YzI4Njg5YmE2MDMw/NjMyZGExOTY4ZjZh/MjRmNjhkYjYxM2U1/OWU3MTBiNmE4ODBj/Yzk0NzdiYy9yYS1t/aWNyby1rb2Vsbi5k/ZS8",
+          "path": "  › startseite  › ra-micro – bea helpdesk"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Bz0peOIj4hyGge0x30zNsxjQYPfqcbkw3V68kZapHm0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yYS1t/aWNyby1rb2Vsbi5k/ZS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wMi9zdXBwb3J0/LmpwZw",
+          "original": "https://ra-micro-koeln.de/wp-content/uploads/2019/02/support.jpg",
+          "logo": false
+        },
+        "age": "March 23, 2023",
+        "extra_snippets": [
+          "Der RA-MICRO beA Helpdesk ist stets für Sie da und bietet ✓ Schnelle ✓ Effektive ✓ Zuverlässige Lösungen. ▶ Zögern Sie nicht, unsere Experten zu kontaktieren!",
+          "Die technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen. ... Die technische Speicherung oder der Zugriff ist für den rechtmäßigen Zweck der Speicherung von Präferenzen erforderlich, die nicht vom Abonnenten oder Benutzer angefordert wurden.",
+          "Die technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren."
+        ]
+      },
+      {
+        "title": "Zertifikate (Sicherheits-Token) verwalten",
+        "url": "https://handbuch.bea-brak.de/einrichtung-von-bea/bea-client-security/authentifizieren/sicherheits-zertifikat-bzw-token-auswaehlen",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Dieser Dialog dient der Verwaltung Ihrer Sicherheits-Token bzw. Zertifikate · Der Dialog zeigt in einer Liste alle bereits im Zertifikatsspeicher enthaltenen und dem <strong>beA</strong>-System bekannten Sicherheits-Token an. Außerdem werden alle geeigneten Hardware-Token angezeigt, die über ein ...",
+        "profile": {
+          "name": "Bea-brak",
+          "url": "https://handbuch.bea-brak.de/einrichtung-von-bea/bea-client-security/authentifizieren/sicherheits-zertifikat-bzw-token-auswaehlen",
+          "long_name": "handbuch.bea-brak.de",
+          "img": "https://imgs.search.brave.com/osNKSbbjL9MkxBho2aKqV0uaTadvExBUNNQ-OdcvdsY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGZiMTliMWNk/ZjFlYTEyYjU3NGM0/NjllYTYzMGRlYjVk/M2FkOTU2M2VkOGFj/ZGYyZWFmMGVlMTdk/MTk3YjM3NC9oYW5k/YnVjaC5iZWEtYnJh/ay5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "handbuch.bea-brak.de",
+          "hostname": "handbuch.bea-brak.de",
+          "favicon": "https://imgs.search.brave.com/osNKSbbjL9MkxBho2aKqV0uaTadvExBUNNQ-OdcvdsY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGZiMTliMWNk/ZjFlYTEyYjU3NGM0/NjllYTYzMGRlYjVk/M2FkOTU2M2VkOGFj/ZGYyZWFmMGVlMTdk/MTk3YjM3NC9oYW5k/YnVjaC5iZWEtYnJh/ay5kZS8",
+          "path": "› einrichtung-von-bea  › bea-client-security  › authentifizieren  › sicherheits-zertifikat-bzw-token-auswaehlen"
+        },
+        "extra_snippets": [
+          "Zertifikate, die im Zertifikatsspeicher hinterlegt sind, für die Anmeldung am beA aber nicht verwendet werden können, werden grau hinterlegt dargestellt. Dies ist z.B. der Fall, wenn das Zertifikat bzw. das Postfach noch nicht registriert wurde."
+        ]
+      },
+      {
+        "title": "RA-MICRO Software AG Knowledge Base - Besonderheiten bei Nutzung der internen Signaturfunktion",
+        "url": "https://helpdesk.ra-micro.de/help/de-de/6-support-e-workflow/239-besonderheiten-bei-nutzung-der-internen-signaturfunktion",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "In dem &quot;QES-Zertifikat für die Signatur auswählen&quot; Fenster <strong>wird</strong> die neue <strong>beA</strong>-<strong>Karte</strong> mit Fernsignatur <strong>nicht</strong> <strong>erkannt</strong> und es <strong>wird</strong> &quot;Keine geeignete Signaturkarte gefunden.&quot; angezeigt.",
+        "page_age": "2022-11-23T00:00:00",
+        "profile": {
+          "name": "Ra-micro",
+          "url": "https://helpdesk.ra-micro.de/help/de-de/6-support-e-workflow/239-besonderheiten-bei-nutzung-der-internen-signaturfunktion",
+          "long_name": "helpdesk.ra-micro.de",
+          "img": "https://imgs.search.brave.com/j3H8db5xlQW8yUFHfXwhM_tmYhgp4a6HOkq-fuhJZCg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzVkN2QyYTU2/MTQ4Y2YxYjU3OThj/MjhmYzc5MWU1MWMz/ZDFjMjIzMWViOTNk/N2Q5ODA4Njk3NTE4/NWYzOTRjZS9oZWxw/ZGVzay5yYS1taWNy/by5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "helpdesk.ra-micro.de",
+          "hostname": "helpdesk.ra-micro.de",
+          "favicon": "https://imgs.search.brave.com/j3H8db5xlQW8yUFHfXwhM_tmYhgp4a6HOkq-fuhJZCg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzVkN2QyYTU2/MTQ4Y2YxYjU3OThj/MjhmYzc5MWU1MWMz/ZDFjMjIzMWViOTNk/N2Q5ODA4Njk3NTE4/NWYzOTRjZS9oZWxw/ZGVzay5yYS1taWNy/by5kZS8",
+          "path": "› help  › de-de  › 6-support-e-workflow  › 239-besonderheiten-bei-nutzung-der-internen-signaturfunktion"
+        },
+        "age": "November 23, 2022",
+        "extra_snippets": [
+          "Der Vorgang unterscheidet sich vom Ablauf je nachdem, ob in der RA-MICRO Benutzerverwaltung ein beA-Softwarezertifikat für die Authentifizierung am beA Systems hinterlegt ist oder nicht. Zu den aktuellen Signatur-Möglichkeiten in RA-MICRO: Neue beA-Karten / Fernsignatur · Sofern in der RA-MICRO Benutzerverwaltung ein beA-Softwarezertifikat hinterlegt ist, erfolgt die Authentifizierung am beA System automatisch mit dem beA-Softwarezertifikat. Nach Betätigen der \"Signatur\" Schaltfläche im beA Postausgang wird das Fenster \"QES-Zertifikat für die Signatur auswählen\" angezeigt.",
+          "Die bisherigen beA-Karten mit auf der Karte gespeicherten Signaturzertifikaten werden laut Information der BRAK bis zum 31.12.2022 weiterhin für die Signaturfunktion unterstützt, selbst wenn die bisherige beA-Karte für die Anmeldung am beA System nicht mehr gültig oder abgelaufen ist. Nach Betätigen der \"OK\" Schaltfläche muss 1x die Signatur-PIN eingegeben werden und der Signaturvorgang wird durchgeführt.",
+          "Wird eine neue beA-Karten mit Fernsignatur verwendet, wird in dem Fenster \"Keine geeignete Signaturkarte gefunden.\" angezeigt, da die beA-Schnittstelle der BRAK (KSW-Schnittstelle / BRAK-Toolkit) keine Fernsignatur unterstützt. Zu den aktuellen Signatur-Möglichkeiten in RA-MICRO: Neue beA-Karten / Fernsignatur · Sofern in der RA-MICRO Benutzerverwaltung ein beA-Softwarezertifikat nicht hinterlegt ist, erfolgt die Authentifizierung am beA-System nicht automatisch und es wird zunächst das \"Sicherheits-Token auswählen\" Fenster angezeigt und erst danach nach erfolgreicher Authentifizierung das \"QES-Zertifikat für die Signatur auswählen\" Fenster angezeigt.",
+          "Die bisherigen beA-Karten mit auf der Karte gespeicherten Signaturzertifikaten werden laut Information der BRAK bis zum 31.12.2022 weiterhin für die Signaturfunktion unterstützt, selbst wenn die bisherige beA-Karte für die Anmeldung am beA System nicht mehr gültig oder abgelaufen ist. Nach Betätigen der \"OK\" Schaltfläche muss 1x die Signatur-PIN der bisherigen beA-Karte eingegeben werden und der Signaturvorgang wird durchgeführt."
+        ]
+      },
+      {
+        "title": "RA-MICRO Software AG Knowledge Base - beA Fehlermeldungen - Ursachen und Lösungen",
+        "url": "https://helpdesk.ra-micro.de/help/de-de/6-support-e-workflow/238-bea-fehlermeldungen-ursachen-und-losungen",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Falls eine Anmeldung und ein Versand über die <strong>beA</strong> Weboberfläche möglich ist, führen Sie den nachfolgenden Schritt 2.2 aus. Falls ein Versand auch nach einem RA-MICRO Neustart weiterhin <strong>nicht</strong> möglich ist und die Fehlermeldung angezeigt <strong>wird</strong>, führen Sie den nachfolgenden Schritt 2.3 aus. Windows Taskmanager starten (rechte Maustaste auf die Windows Start Schaltfläche &gt; Task-Manager), Karteikarte ...",
+        "page_age": "2022-12-01T00:00:00",
+        "profile": {
+          "name": "Ra-micro",
+          "url": "https://helpdesk.ra-micro.de/help/de-de/6-support-e-workflow/238-bea-fehlermeldungen-ursachen-und-losungen",
+          "long_name": "helpdesk.ra-micro.de",
+          "img": "https://imgs.search.brave.com/j3H8db5xlQW8yUFHfXwhM_tmYhgp4a6HOkq-fuhJZCg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzVkN2QyYTU2/MTQ4Y2YxYjU3OThj/MjhmYzc5MWU1MWMz/ZDFjMjIzMWViOTNk/N2Q5ODA4Njk3NTE4/NWYzOTRjZS9oZWxw/ZGVzay5yYS1taWNy/by5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "helpdesk.ra-micro.de",
+          "hostname": "helpdesk.ra-micro.de",
+          "favicon": "https://imgs.search.brave.com/j3H8db5xlQW8yUFHfXwhM_tmYhgp4a6HOkq-fuhJZCg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzVkN2QyYTU2/MTQ4Y2YxYjU3OThj/MjhmYzc5MWU1MWMz/ZDFjMjIzMWViOTNk/N2Q5ODA4Njk3NTE4/NWYzOTRjZS9oZWxw/ZGVzay5yYS1taWNy/by5kZS8",
+          "path": "› help  › de-de  › 6-support-e-workflow  › 238-bea-fehlermeldungen-ursachen-und-losungen"
+        },
+        "age": "December 1, 2022",
+        "extra_snippets": [
+          "Falls eine Anmeldung und ein Versand über die beA Weboberfläche möglich ist, führen Sie den nachfolgenden Schritt 2.2 aus. Falls ein Versand auch nach einem RA-MICRO Neustart weiterhin nicht möglich ist und die Fehlermeldung angezeigt wird, führen Sie den nachfolgenden Schritt 2.3 aus. Windows Taskmanager starten (rechte Maustaste auf die Windows Start Schaltfläche > Task-Manager), Karteikarte Details auswählen, in der Liste den Eintrag ramicro.bea.servicehost.exe auswählen und die Schaltfläche Task beenden betätigen.",
+          "Es ist nicht die PIN zu verwenden, mit der das beA-Softwarezertifikat in der beA-Client-Security hinterlegt wurde. ... In dem \"Sicherheits-Token auswählen\" Fenster wird eine beA-Karte / ein beA-Softwarezertifikat zur Authentifizierung verwendet, ohne dass diese als Sicherheits-Token in dem beA Postfach freigeschaltet sind.",
+          "Normalerweise wird nur 2x die Authentifizierungs-PIN abgefragt. ... Die in dem \"Sicherheits-Token auswählen\" Fenster verwendete beA-Karte oder das in dem \"Sicherheits-Token auswählen\" Fenster verwendete beA-Softwarezertifikat muss in dem beA Postfach als Sicherheits-Token freigeschaltet sein.",
+          "beA Supportseite der BRAK: Vorgehen zur Aktivierung einer neuen Karte (Sicherheits-Token) ... Wenn Sie beim Versand aus dem beA Postausgang oder auch beim manuellen beA Nachrichtenabruf im Posteingang eine Fehlermeldung erhalten ... Falls eine Anmeldung und ein Versand über die beA Weboberfläche nicht möglich ist, liegt ggf."
+        ]
+      },
+      {
+        "title": "Rechtsanwalt Köper ∙ Neue beA-Karte: BNotK SAK lite startet nicht",
+        "url": "https://www.rechtsanwalt-koeper.de/blog/artikel/bnotk-sak-lite-startet-oeffnet-nicht/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Liebe Kollegen, habe ebenfalls das Probelm. BNotK SAK lite lässt sich auch bei mir unter Windows 11 <strong>nicht</strong> öffnen. Der Sicherheitstocken der neuen <strong>Karte</strong> ist freigeschaltet und ich kann mich auch bei <strong>beA</strong> anmelden, also <strong>wird</strong> die <strong>Karte</strong> <strong>erkannt</strong>. Für den Rest hatte ich dann den Support angerufen.",
+        "page_age": "2022-07-21T00:00:00",
+        "profile": {
+          "name": "Rechtsanwalt-koeper",
+          "url": "https://www.rechtsanwalt-koeper.de/blog/artikel/bnotk-sak-lite-startet-oeffnet-nicht/",
+          "long_name": "rechtsanwalt-koeper.de",
+          "img": "https://imgs.search.brave.com/MR-HEzrYBMNksDfg_d7j-sbDCuzihdMLZT-MuXRjVlM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWNlNTg5ZDhj/OWFlY2VhNmVjZGM4/OTY4Zjk2ZGE2ZTIx/MjkxZDFiMDM4NzY0/YmI3NTg2MTlmN2I2/MzcwM2E5Yi93d3cu/cmVjaHRzYW53YWx0/LWtvZXBlci5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rechtsanwalt-koeper.de",
+          "hostname": "www.rechtsanwalt-koeper.de",
+          "favicon": "https://imgs.search.brave.com/MR-HEzrYBMNksDfg_d7j-sbDCuzihdMLZT-MuXRjVlM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWNlNTg5ZDhj/OWFlY2VhNmVjZGM4/OTY4Zjk2ZGE2ZTIx/MjkxZDFiMDM4NzY0/YmI3NTg2MTlmN2I2/MzcwM2E5Yi93d3cu/cmVjaHRzYW53YWx0/LWtvZXBlci5kZS8",
+          "path": "› blog  › artikel  › bnotk-sak-lite-startet-oeffnet-nicht"
+        },
+        "age": "July 21, 2022",
+        "extra_snippets": [
+          "Dazu bitte auch diese Anleitung lesen: https://portal.beasupport.de/fragen-antworten/kategorie/bea-kartentausch/aktivierung-neue-bea-karte-im-bea • beA Client Security starten, es wird ggf. ein Update durchgeführt • die beA Webseite unter https://www.bea-brak.de/bea/index.xhtml aufrufen • auf „Anmelden“ klicken • es öffnet sich das beA Client Security User Interface • mit der alten (!) beA-Karte einloggen • oben im Menü auf den Reiter „Einstellungen“ klicken -> dann links auf „Profilverwaltung“ -> „Sicherheits-Token“ klicken • auf der rechten Seite auf „Neuen",
+          "Steckte man die Karte aber in den Schacht zum Einlesen der physischen Chipkarte, war diese nicht auffindbar - weder per RFID noch physisch. ... Bei mir startet under Windows 11 weder die BNotK SAK lite (obwohl die dreimal im Taskmanager steht), noch lässt sich die PIN der neuen Karte über das SecureFramework mit Cardtool ändern. Das Cardtool startet nur, wenn keine Karte eingelegt ist. Lege ich eine alte Karte ein, wird mir sofort deren Inhalt angezeigt. Lege ich die neue beA-Karte ein und drücke auf aktualisieren: CTD (Crash to Desktop).",
+          "Rechtsanwalt Köper aus Hamburg ist Rechtsanwalt für Sozialrecht mit Spezialisierung auf Berufsunfähigkeit, Krankengeld und Rente ∙ Neue beA-Karte: BNotK SAK lite startet nicht",
+          "Beim beA-Helpdesk erhielt ich per E-Mail zwar ein Ticket, nach zwei Mails mit Problemschilderung aber die Auskunft dafür sei man nicht zuständig, ich müsse mich an die Notarkammer wenden. Geht's noch? Es ist unfassbar, was den zwangsverpflichteten Nutzern hier zugemutet wird!"
+        ]
+      },
+      {
+        "title": "Zugang zu Ihrem beA",
+        "url": "https://www.bea-brak.de/content/help/bea_hilfe.pdf",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Das besondere elektronische Anwaltspostfach (<strong>beA</strong>) ermöglicht Rechtsanwälten die sichere elektronische Kommunikation mit der Justiz und untereinander.",
+        "page_age": "2017-09-04T00:00:00",
+        "profile": {
+          "name": "Bea-brak",
+          "url": "https://www.bea-brak.de/content/help/bea_hilfe.pdf",
+          "long_name": "bea-brak.de",
+          "img": "https://imgs.search.brave.com/SY5DdxHiGADxfUvuz7c0WIm2AUVeJvc_0Tn8oTNgfy8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDliODJjNTQw/MjY4OTBlNGMyZTU1/ODc1NTlhZDk1ZDk4/N2IzMWIzNWQ0MjYw/ZDZkMmQwOWQ2MjJh/YjdmMzFjZi93d3cu/YmVhLWJyYWsuZGUv"
+        },
+        "language": "unk",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bea-brak.de",
+          "hostname": "www.bea-brak.de",
+          "favicon": "https://imgs.search.brave.com/SY5DdxHiGADxfUvuz7c0WIm2AUVeJvc_0Tn8oTNgfy8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDliODJjNTQw/MjY4OTBlNGMyZTU1/ODc1NTlhZDk1ZDk4/N2IzMWIzNWQ0MjYw/ZDZkMmQwOWQ2MjJh/YjdmMzFjZi93d3cu/YmVhLWJyYWsuZGUv",
+          "path": "› content  › help  › bea_hilfe.pdf"
+        },
+        "age": "September 4, 2017",
+        "content_type": "pdf"
+      },
+      {
+        "title": "Das beA Softwarezertifikat - Das beA ohne Karte nutzen",
+        "url": "https://bea-support.de/bea-ohne-karte.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Probleme ade. Mit dem <strong>bea</strong> Softwarezertifikat nutzen Sie das <strong>beA</strong> ohne die üblichen Probleme, einfach einloggen und loslegen. Jetzt lesen wie es geht!",
+        "profile": {
+          "name": "Bea-support",
+          "url": "https://bea-support.de/bea-ohne-karte.html",
+          "long_name": "bea-support.de",
+          "img": "https://imgs.search.brave.com/vCRDQ-g0gtG66WpN4QC8F9L342Ydc2yiwd2-32TX8EA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzYxZTllY2Uw/N2Q3MmFjM2I1M2U0/OWVkYWIyOGVhZjk5/MTFlMmU4MTA3ZWYw/ZGE1OWY0OGIxMjc5/M2YwNzU3ZC9iZWEt/c3VwcG9ydC5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bea-support.de",
+          "hostname": "bea-support.de",
+          "favicon": "https://imgs.search.brave.com/vCRDQ-g0gtG66WpN4QC8F9L342Ydc2yiwd2-32TX8EA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzYxZTllY2Uw/N2Q3MmFjM2I1M2U0/OWVkYWIyOGVhZjk5/MTFlMmU4MTA3ZWYw/ZGE1OWY0OGIxMjc5/M2YwNzU3ZC9iZWEt/c3VwcG9ydC5kZS8",
+          "path": "› bea-ohne-karte.html"
+        },
+        "extra_snippets": [
+          "Der Zugang zu ihrem beA wird viel einfacher und sehr viel zuverlässiger. Sie sparen sich weitere Kartenlesegeräte wenn die das beA an mehreren PCs nutzen möchten. Wenn Sie das beA auf ihrem Laptop nutzen möchten sparen Sie sich auch dort das Kartenlesegerät. Mit dem beA Zugang ohne Karte können sie nicht signieren.",
+          "Sie umgehen eine Menge Probleme die immer wieder im Zusammenhang mit beA Karte und Kartenlesegerät auftreten. Die Probleme wo ihr Sicherheitstoken nicht gefunden wird gehören der Vergangenheit an.",
+          "Die Sicherheit gegenüber der Nutzung einer beA Karte ist wesentlich geringer. Das heißt Sie müssen selber etwas mehr Sorge dafür tragen, dass ihr PC nicht von jemand unbefugtem genutzt wird.",
+          "Für das Login benötigen Sie ihre beA Karte sowie die SAK Lite Software der Bundesnotarkammer. Wenn die SAK Lite Software ihre beA Karte erkannt hat können Sie sich auf der Webseite einloggen und den Tausch der Softwarezertifikate oder deren Kündigung veranlassen."
+        ]
+      },
+      {
+        "title": "Unterstützte Betriebssysteme und Browser",
+        "url": "https://handbuch.bea-brak.de/einrichtung-von-bea/organisatorische-und-technische-voraussetzungen/unterstuetze-betriebssysteme-und-browser",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<strong>beA</strong>-<strong>Karte</strong>: Für die Registrierung ... Ihre <strong>beA</strong>-<strong>Karte</strong> gültige PIN. Endgeräte: Die Funktion <strong>wird</strong> auf Endgeräte mit einer weitestgehend Standard-Installation des Betriebssystems getestet. Bei Abweichungen durch lokale Konfigurationen, bzw. den Betrieb von anderen Anwendungen, ist die Kompatibilität mit der <strong>beA</strong>-Anwendung lokal sicherzustellen. Der <strong>beA</strong> Support kann in solchen Fällen nur sehr begrenzt unterstützen. ... Der Internet Explorer <strong>wird</strong> <strong>nicht</strong> mehr ...",
+        "profile": {
+          "name": "Bea-brak",
+          "url": "https://handbuch.bea-brak.de/einrichtung-von-bea/organisatorische-und-technische-voraussetzungen/unterstuetze-betriebssysteme-und-browser",
+          "long_name": "handbuch.bea-brak.de",
+          "img": "https://imgs.search.brave.com/osNKSbbjL9MkxBho2aKqV0uaTadvExBUNNQ-OdcvdsY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGZiMTliMWNk/ZjFlYTEyYjU3NGM0/NjllYTYzMGRlYjVk/M2FkOTU2M2VkOGFj/ZGYyZWFmMGVlMTdk/MTk3YjM3NC9oYW5k/YnVjaC5iZWEtYnJh/ay5kZS8"
+        },
+        "language": "de",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "handbuch.bea-brak.de",
+          "hostname": "handbuch.bea-brak.de",
+          "favicon": "https://imgs.search.brave.com/osNKSbbjL9MkxBho2aKqV0uaTadvExBUNNQ-OdcvdsY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGZiMTliMWNk/ZjFlYTEyYjU3NGM0/NjllYTYzMGRlYjVk/M2FkOTU2M2VkOGFj/ZGYyZWFmMGVlMTdk/MTk3YjM3NC9oYW5k/YnVjaC5iZWEtYnJh/ay5kZS8",
+          "path": "› einrichtung-von-bea  › organisatorische-und-technische-voraussetzungen  › unterstuetze-betriebssysteme-und-browser"
+        },
+        "extra_snippets": [
+          "beA-Karte: Für die Registrierung benötigen Sie die beA-Karte und die für Ihre beA-Karte gültige PIN. Endgeräte: Die Funktion wird auf Endgeräte mit einer weitestgehend Standard-Installation des Betriebssystems getestet. Bei Abweichungen durch lokale Konfigurationen, bzw. den Betrieb von anderen Anwendungen, ist die Kompatibilität mit der beA-Anwendung lokal sicherzustellen. Der beA Support kann in solchen Fällen nur sehr begrenzt unterstützen. ... Der Internet Explorer wird nicht mehr unterstützt.",
+          "Bei der Verwendung von Ubuntu 20.04 mit Gnome-Desktop (Standard) erscheinen Dialogfenster teilweise im Hintergrund - es wird empfohlen, den Cinnamon-Desktop zu verwenden. Sollten Sie nach einem Versionswechsel in Ihrer individuellen Kombination aus Betriebssystem und Browser Darstellungsprobleme mit Auswahllisten in der beA Benutzeroberfläche haben, dann kann das an Ihrem Browser Cache liegen.",
+          "beA unterstützt grundsätzlich alle gängigen Browser. Ein regelmäßiger Test erfolgt für Chrome, Firefox, Microsoft Edge und Safari in der jeweils aktuellen Version. Aktuellste Browser-Version: Es wird generell empfohlen, immer die aktuelle Version der Browser zu verwenden, da von den Herstellern fortlaufend Sicherheitslücken geschlossen werden.",
+          "Zusätzlich kann beA auch in Terminalserverumgebungen mit dem Server-Betriebssystem Windows Server 2019 verwendet werden."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

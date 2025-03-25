@@ -34,7 +34,7 @@ async function fetchBeaVersion() {
     return data.version;
 }
 
-async function isRelevant(userPrompt) {
+export async function isRelevant(userPrompt) {
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(

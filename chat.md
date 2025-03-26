@@ -2,79 +2,96 @@
 Wie geht die Erstregistrierung eines Mitarbeiters?
 
 # Antwort
-Um einen Mitarbeiter im besonderen elektronischen Anwaltspostfach (beA) zu registrieren, müssen Sie ihn zunächst in Ihrem Postfach als Benutzer anlegen. Dies erfolgt über die Benutzerverwaltung in den Einstellungen Ihres beA-Postfachs. Nach der Anlage erhält der Mitarbeiter von Ihnen die Zugangsdaten (Benutzername und Kennwort) sowie ein Sicherheits-Token (beA-Mitarbeiterkarte oder Software-Token) mit zugehöriger PIN.
+Um einen Mitarbeiter im besonderen elektronischen Anwaltspostfach (beA) zu registrieren, müssen Sie als Postfachinhaber den Mitarbeiter zunächst in Ihrem Postfach anlegen. Nachfolgend finden Sie eine Schritt-für-Schritt-Anleitung zur Erstregistrierung eines Mitarbeiters:
 
-Der Mitarbeiter startet die Registrierung, indem er auf der beA-Startseite den Link "Registrierung ohne eigenes Postfach" auswählt und die erhaltenen Zugangsdaten eingibt. Anschließend importiert er das Sicherheits-Token, gibt die zugehörige PIN ein und legt mindestens eine Sicherheitsfrage fest. Nach erfolgreicher Registrierung kann der Mitarbeiter auf Ihr beA-Postfach zugreifen.
+1. **Anmeldung im beA**: Melden Sie sich mit Ihrer beA-Karte im beA an.
 
-Für eine detaillierte Anleitung zur Erstregistrierung eines Mitarbeiters besuchen Sie bitte die beA-Support-Seite: ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/erstregistrierung-mitarbeiter)) 
+2. **Benutzerverwaltung aufrufen**: Nach der Anmeldung klicken Sie auf "Einstellungen" und wählen im Menü "Benutzerverwaltung" aus.
 
-Time: 11.2s
+3. **Mitarbeiter hinzufügen**: In der Benutzerverwaltung klicken Sie auf "Benutzer anlegen" und geben die erforderlichen Daten des Mitarbeiters ein.
+
+4. **Zugangsdaten bereitstellen**: Nach dem Anlegen des Mitarbeiters erhalten Sie einen Benutzernamen und ein Kennwort, die Sie dem Mitarbeiter mitteilen.
+
+5. **Mitarbeiterregistrierung durchführen**: Der Mitarbeiter geht auf die beA-Startseite und wählt "Registrierung ohne eigenes Postfach". Er gibt den erhaltenen Benutzernamen und das Kennwort ein und folgt den weiteren Anweisungen zur Auswahl eines Sicherheits-Tokens (beA-Mitarbeiterkarte oder Software-Token) und zur Festlegung von Sicherheitsfragen.
+
+Für eine detaillierte Anleitung zur Registrierung von Benutzern ohne eigenes Postfach können Sie die beA-Anwenderhilfe konsultieren: ([handbuch.bea-brak.de](https://handbuch.bea-brak.de/einrichtung-von-bea/registrieren-und-anmelden/registrieren/registrieren-ohne-eigenes-postfach))
+
+Bitte beachten Sie, dass der Postfachinhaber nach der Registrierung des Mitarbeiters über seinen Sicherheits-Token in der Benutzerverwaltung festlegt, welche Rechte der Mitarbeiter im Postfach erhält. Diese Einstellungen werden durch Freigabe des Sicherheits-Tokens des Mitarbeiters aktiviert. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/erstregistrierung-mitarbeiter))
+
+Für weitere Fragen oder Unterstützung steht Ihnen der beA-Support zur Verfügung. 
+
+Time: 13.4s
 
 # Frage
 Meine Karte wird bei der Anmeldung nicht erkannt.
 
 # Antwort
-Wenn Ihre beA-Karte bei der Anmeldung nicht erkannt wird, können folgende Schritte zur Fehlerbehebung hilfreich sein:
+Es tut mir leid zu hören, dass Ihre beA-Karte bei der Anmeldung nicht erkannt wird. Dieses Problem kann verschiedene Ursachen haben. Hier sind einige Schritte, die Ihnen helfen könnten:
 
-1. **Neustart der beA-Client Security:**
+1. **Überprüfen Sie die beA-Client Security:**
+   - Stellen Sie sicher, dass die beA-Client Security auf Ihrem Computer läuft.
+   - Bei Windows-Systemen erkennen Sie dies an einem kleinen Symbol in der Taskleiste.
+   - Falls das Symbol nicht sichtbar ist, starten Sie die beA-Client Security manuell.
+
+2. **Neustart der beA-Client Security:**
    - Schließen Sie alle Browserfenster.
-   - Beenden Sie die beA-Client Security, indem Sie mit der rechten Maustaste auf das beA-Symbol in der Taskleiste klicken und "beenden" auswählen.
-   - Entfernen Sie die Karte aus dem Lesegerät und schließen Sie es vom Computer ab.
-   - Starten Sie die beA-Client Security neu und stecken Sie die Karte wieder ins Lesegerät.
-   - Öffnen Sie Ihren Browser und versuchen Sie erneut, sich anzumelden.
+   - Beenden Sie die beA-Client Security über das Symbol in der Taskleiste.
+   - Trennen Sie das Kartenlesegerät vom Computer und schließen Sie es erneut an.
+   - Starten Sie die beA-Client Security neu und versuchen Sie die Anmeldung erneut.
 
-   ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-kein-sicherheitstoken-gefunden/))
+3. **Überprüfen Sie das Kartenlesegerät:**
+   - Stellen Sie sicher, dass die beA-Karte korrekt im Lesegerät eingelegt ist (Chip nach unten, Schrift nach oben).
+   - Bei Geräten des Herstellers ReinerSCT kann es hilfreich sein, die RFID-Funktion zu deaktivieren, da diese die Erkennung der Karte beeinträchtigen kann. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-kein-sicherheitstoken-gefunden/))
 
-2. **Überprüfung des Kartenlesegeräts:**
-   - Stellen Sie sicher, dass Ihr Kartenlesegerät korrekt angeschlossen ist und die Karte richtig eingelegt wurde (Chip nach unten, Schrift nach oben).
-   - Bei Geräten des Herstellers ReinerSCT prüfen Sie, ob ein Firmware-Update verfügbar ist.
-   - Deaktivieren Sie gegebenenfalls die RFID-Funktion des Lesegeräts, da diese die Erkennung der Karte beeinträchtigen kann.
+4. **Aktualisieren Sie die Treiber des Kartenlesegeräts:**
+   - Veraltete Treiber können zu Erkennungsproblemen führen.
+   - Besuchen Sie die Website des Herstellers Ihres Kartenlesegeräts, um die neuesten Treiber herunterzuladen und zu installieren.
 
-   ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehler-kein-sicherheitstoken-gefunden/))
+5. **Überprüfen Sie die Verbindungseinstellungen:**
+   - Stellen Sie sicher, dass keine Ad-Blocker oder Sicherheitssoftware die Verbindung zwischen dem Kartenlesegerät und der beA-Client Security blockieren.
+   - Deaktivieren Sie gegebenenfalls solche Software temporär und versuchen Sie die Anmeldung erneut.
 
-3. **Überprüfung der beA-Client Security:**
-   - Vergewissern Sie sich, dass die beA-Client Security gestartet ist.
-   - Bei Windows-Systemen erkennen Sie dies an einem Mini-Symbol in der Taskleiste.
-   - Bei MacOS-Systemen zeigt ein kleiner schwarzer Punkt an, dass die Anwendung aktiv ist.
+Sollten diese Schritte das Problem nicht lösen, empfiehlt es sich, den beA-Support zu kontaktieren. Sie erreichen den Support per E-Mail unter servicedesk@beasupport.de oder telefonisch unter 030 / 21787017 (Montag bis Freitag von 8.00 bis 20.00 Uhr, außer an bundeseinheitlichen Feiertagen).
 
-   ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehlermeldung-beim-anmelden-mit-dem-hinweis-auf-ein-verbindungsproblem))
+Ich hoffe, diese Hinweise helfen Ihnen weiter. 
 
-4. **Überprüfung von Browser-Erweiterungen:**
-   - Deaktivieren Sie Ad-Blocker oder andere Erweiterungen, die die Verbindung zum beA-Server blockieren könnten.
-
-   ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstregistrierung-und-anmeldung/fehlermeldung-beim-anmelden-mit-dem-hinweis-auf-ein-verbindungsproblem))
-
-Sollten diese Schritte das Problem nicht lösen, wenden Sie sich bitte an den beA-Anwendersupport unter servicedesk@beasupport.de oder telefonisch unter 030 / 21787017 (Mo. bis Fr. von 8.00 bis 20.00 Uhr, außer an bundeseinheitlichen Feiertagen). 
-
-Time: 11.6s
+Time: 15.8s
 
 # Frage
 Muss ich bei Versendung aus dem BAG-Postfach immer elektronisch signieren?
 
 # Antwort
-Gemäß § 130a Abs. 4 ZPO und den entsprechenden Regelungen in den anderen Verfahrensordnungen stellt das besondere elektronische Anwaltspostfach (beA) seit dem 1. August 2022 einen sicheren Übermittlungsweg für Berufsausübungsgesellschaften (BAG) dar. Nach § 59l Abs. 2 BRAO in Verbindung mit § 23 Abs. 3 RAVPV können berechtigte Rechtsanwältinnen und Rechtsanwälte daher grundsätzlich elektronische Dokumente aus dem beA der BAG ohne qualifizierte elektronische Signatur wirksam einreichen. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
+Ja, bei der Versendung von Dokumenten aus dem besonderen elektronischen Anwaltspostfach (beA) einer Berufsausübungsgesellschaft (BAG) ist eine elektronische Signatur erforderlich. Gemäß § 130a Abs. 4 ZPO und den entsprechenden Regelungen in anderen Verfahrensordnungen stellt das beA seit dem 1. August 2022 einen sicheren Übermittlungsweg für zugelassene Berufsausübungsgesellschaften bereit. Allerdings ist es aufgrund technischer Gegebenheiten derzeit nicht möglich, die Identität der im Zeitpunkt des Versands am beA der BAG angemeldeten Person in den Metadaten der beA-Nachrichten zu übermitteln. Daher kann nicht gewährleistet werden, dass die verantwortliche Person mit der versendenden Person identisch ist. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
 
-Aufgrund technischer Gegebenheiten in der Justiz ist es jedoch derzeit nicht möglich, die Identität der im Zeitpunkt des Versands der Nachricht am beA der BAG angemeldeten Person in den Metadaten der beA-Nachrichten zu übermitteln. Es wird lediglich die Information übertragen, dass eine gemäß § 23 Abs. 3 RAVPV berechtigte Person die Nachricht aus dem Postfach der BAG versandt hat. Die Identität der konkreten Person wird nicht übermittelt, sodass für die Gerichte kein Abgleich möglich ist, ob die den Schriftsatz verantwortende Person mit der versendenden Person identisch ist. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
+Um mögliche rechtliche Unsicherheiten zu vermeiden, empfehlen die Bundesrechtsanwaltskammer und der Deutsche Anwaltverein allen in Berufsausübungsgesellschaften tätigen Rechtsanwältinnen und Rechtsanwälten, ihre Schriftsätze qualifiziert elektronisch zu signieren. Sollte dennoch der sichere Übermittlungsweg ohne qualifizierte elektronische Signatur genutzt werden, ist es wichtig, dass die verantwortliche Person das Dokument persönlich versendet und sich selbst am beA der BAG angemeldet hat. Zur Dokumentation sollte ein Auszug aus dem Nachrichtenjournal, der die Identität des angemeldeten Nutzers zum Zeitpunkt des Versands belegt, zur Akte genommen werden. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
 
-Da die Rechtsfrage, ob das Erfordernis der Personenidentität zwischen der verantwortenden Person, die das elektronische Dokument einfach signiert, und der die Nachricht versendenden Person auch für den Versand von Nachrichten aus dem beA der BAG gilt, bislang ungeklärt ist und keine Rechtsprechung zur Nutzung des sicheren Übermittlungswegs durch BAG vorliegt, empfehlen die Bundesrechtsanwaltskammer (BRAK) und der Deutsche Anwaltverein (DAV) allen Rechtsanwältinnen und Rechtsanwälten, die in BAG tätig sind und Schriftsätze aus dem beA der BAG einreichen möchten, ihre Schriftsätze qualifiziert elektronisch zu signieren. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
+Für weitere Informationen und detaillierte Anleitungen besuchen Sie bitte das beA-Support-Portal unter [portal.beasupport.de](https://portal.beasupport.de/). 
 
-Für den Fall, dass trotz der bestehenden Unsicherheiten das Kanzlei-beA als sicherer Übermittlungsweg ohne qualifizierte elektronische Signatur genutzt werden soll, sollte darauf geachtet werden, dass die Rechtsanwältin oder der Rechtsanwalt, die oder der das elektronische Dokument zeichnet, sich auch selbst am Kanzlei-beA angemeldet hat und das Dokument persönlich versendet. Zur Sicherheit sollte ein Auszug aus dem Nachrichtenjournal, der erkennen lässt, welche Nutzerin oder welcher Nutzer am Kanzlei-beA angemeldet war, zur Akte genommen werden. Damit lässt sich später nachweisen, welche Rechtsanwältin oder welcher Rechtsanwalt die Nachricht versandt hat. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/erstellen-und-versand-von-nachrichten/sicherer-uebermittlungswegs-bag))
-
-Zusammenfassend ist es zwar grundsätzlich möglich, elektronische Dokumente aus dem beA der BAG ohne qualifizierte elektronische Signatur zu versenden, jedoch wird aufgrund der genannten Unsicherheiten empfohlen, Schriftsätze qualifiziert elektronisch zu signieren, um mögliche Nachteile zu vermeiden. 
-
-Time: 10.6s
+Time: 11.3s
 
 # Frage
 Wie kann ich meine PUK zurücksetzen?
 
 # Antwort
-Um den Fehlbedienungszähler Ihrer beA-Karte zurückzusetzen, benötigen Sie die PUK aus Ihrem PIN-Brief und ein Kartenlesegerät der Sicherheitsklasse 3. Bitte beachten Sie, dass die PUK nur zur Freischaltung der zuletzt aktiven PIN verwendet werden kann. Sollten Sie diese nicht mehr kennen, ist eine kostenpflichtige Ersatzkarte erforderlich. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/bea-karten-und-software-token/rund-um-pin-und-puk))
+Um den Fehlbedienungszähler Ihrer beA-Karte zurückzusetzen, benötigen Sie die PUK aus Ihrem PIN-Brief und die Anwendung BNotK SAK lite. Bitte beachten Sie, dass die PUK nur zur Freischaltung der zuletzt aktiven PIN verwendet werden kann. Sollten Sie diese nicht mehr kennen, ist eine kostenpflichtige Ersatzkarte erforderlich. Zudem ist die PUK auf zehn Einsätze begrenzt; nach deren Ausschöpfung ist ebenfalls eine Ersatzkarte notwendig. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/bea-karten-und-software-token/rund-um-pin-und-puk))
 
-Für detaillierte Anleitungen zum Zurücksetzen des Fehlbedienungszählers besuchen Sie bitte die Onlinehilfe der Bundesnotarkammer. ([onlinehilfe.bnotk.de](https://onlinehilfe.bnotk.de/einrichtungen/zertifizierungsstelle/fehlbedienungszaehler-zuruecksetzen-1.html))
+**Voraussetzungen:**
 
-Bei weiteren Fragen oder Problemen wenden Sie sich bitte an den beA-Anwendersupport unter der Telefonnummer 030-21787017 (Mo-Fr 8:00 - 20:00 Uhr) oder per E-Mail an servicedesk@beasupport.de. ([portal.beasupport.de](https://portal.beasupport.de/suche/score/desc/0/9)) 
+- Ein Kartenlesegerät der Sicherheitsklasse 3 mit Display und eigenem PIN-Pad.
+- Installation der BNotK SAK lite auf Ihrem Computer.
+- Die PUK aus Ihrem PIN-Brief.
 
-Time: 8.1s
+**Schritte zum Zurücksetzen des Fehlbedienungszählers:**
+
+1. Laden Sie die BNotK SAK lite von der Website der Bundesnotarkammer herunter und installieren Sie sie.
+2. Schließen Sie Ihr Kartenlesegerät an und stecken Sie die beA-Karte ein.
+3. Starten Sie die BNotK SAK lite und warten Sie, bis die Anwendung die Karte erkennt.
+4. Klicken Sie auf das Zahnrad-Symbol neben dem Zertifikat mit der Bezeichnung "Fortgeschritten" und wählen Sie "Fehlbedienungszähler zurücksetzen".
+5. Folgen Sie den Anweisungen auf dem Bildschirm und geben Sie die PUK ein, wenn dazu aufgefordert wird.
+
+Nach erfolgreichem Zurücksetzen können Sie Ihre beA-Karte wieder wie gewohnt verwenden. Für weitere Unterstützung steht Ihnen der beA-Anwendersupport unter der Telefonnummer 030-21787017 oder per E-Mail an servicedesk@beasupport.de zur Verfügung. ([portal.beasupport.de](https://portal.beasupport.de/suche/score/desc/0/9)) 
+
+Time: 11.2s
 
 # Frage
 Wie kann ich eine Vertretung einrichten?
@@ -99,28 +116,38 @@ Um eine Vertretung in Ihrem besonderen elektronischen Anwaltspostfach (beA) einz
    - Klicken Sie auf „Speichern und zurück“.
 
 5. **Vergabe zusätzlicher Rechte**:
-   - Nach der Zuweisung der Rolle „Vertretung“ können Sie weitere Rechte hinzufügen, die für die Vertretung erforderlich sind.
-   - Wählen Sie dazu die Rolle „Vertretung“ aus und klicken Sie auf „Neues Recht zuordnen“.
-   - Vergessen Sie nicht, die Sicherheits-Token des Benutzers freizuschalten, um die Berechtigungen wirksam zu machen.
+   - Nach der Zuweisung der Rolle „Vertretung“ können Sie weitere spezifische Rechte vergeben, die für die Vertretung erforderlich sind.
+   - Beispielsweise sollten die Rechte „13 – EBs signieren“ und „15 – EBs zurückweisen“ vergeben werden, um eine ordnungsgemäße Vertretung zu gewährleisten.
 
-Bitte beachten Sie, dass seit dem 1. August 2021 die automatische Eintragung der Vertretung durch die regionale Rechtsanwaltskammer entfällt. Daher sind Sie selbst dafür verantwortlich, eine Vertretung zu bestellen und dieser die entsprechenden Zugriffsrechte in Ihrem beA einzuräumen. ([portal.beasupport.de](https://portal.beasupport.de/fragen-antworten/kategorie/benutzerverwaltung/neue-gesetzliche-regelung-zu-vertretung-und-zustellungsbevollmaechtigung))
+6. **Freischaltung des Sicherheits-Tokens**:
+   - Nach der Vergabe der Rechte müssen Sie das Sicherheits-Token des Vertreters freischalten.
+   - Gehen Sie dazu in der Postfachverwaltung auf „Sicherheitstoken freischalten“.
+   - Markieren Sie den entsprechenden Benutzer und klicken Sie auf „Zertifikate freischalten“.
+   - Folgen Sie den Anweisungen zur Freischaltung, die eine Eingabe Ihrer PIN erfordern.
 
-Für detaillierte Anleitungen und weitere Informationen können Sie die offiziellen Handbücher und Support-Seiten des beA konsultieren. ([handbuch.bea-brak.de](https://handbuch.bea-brak.de/einstellungen-in-ihrem-bea/postfachverwaltung/benutzerverwaltung-berechtigungskonzept)) 
+Bitte beachten Sie, dass seit dem 1. August 2021 die automatische Eintragung der Vertretung durch die regionale Rechtsanwaltskammer entfällt. Daher sind Sie selbst dafür verantwortlich, eine Vertretung zu bestellen und dieser die entsprechenden Zugriffsrechte in Ihrem beA einzuräumen. ([brak.de](https://www.brak.de/fileadmin/05_zur_rechtspolitik/newsletter/bea-newsletter/2021/ausgabe-8-2021-v-682021.html))
 
-Time: 11.1s
+Für detaillierte Informationen und weitere Unterstützung können Sie das beA-Handbuch konsultieren oder den Support kontaktieren. 
+
+Time: 12.9s
 
 # Frage
 Welche Änderungen gab es im letzten Update?
 
 # Antwort
-In der aktuellen Version 3.32.1.456 des besonderen elektronischen Anwaltspostfachs (beA), die am 6. März 2025 in Betrieb genommen wurde, wurden folgende Änderungen vorgenommen:
+In der aktuellen beA-Version 3.32.1.456, die am 6. März 2025 in Betrieb genommen wurde, wurden folgende Änderungen vorgenommen:
 
-**Nachrichtenübersicht:**
-- Behebung einer Einschränkung, die nach einem fehlgeschlagenen Versand aus einer Kanzleisoftware auftrat. ([portal.beasupport.de](https://portal.beasupport.de/release-information))
+**1. Aktualisierung der Basiskomponente der beA Client Security:**
+Die Basiskomponente der beA Client Security wurde von Version 3.4.3 auf Version 3.5.2 aktualisiert. Diese Änderung betrifft die Installation der beA Client Security auf dem Arbeitsplatz des Endanwenders. Bitte beachten Sie, dass für die Aktualisierung administrative Berechtigungen erforderlich sind. Sollten diese fehlen, kann die Aktualisierung über die Option "Jetzt nicht" auf später verschoben werden. Es wird empfohlen, die Aktualisierung bis spätestens 20. April 2025 durchzuführen. ([portal.beasupport.de](https://portal.beasupport.de/neuigkeiten/bea-update-06032025))
 
-Bitte beachten Sie, dass mit dieser Version keine Änderungen oder Fehlerbehebungen für die mobile beA-App der BRAK bereitgestellt wurden. Unterstützung im Umgang mit der App bietet das beA-Anwenderhandbuch im Kapitel "beA-App für mobile Geräte". ([portal.beasupport.de](https://portal.beasupport.de/release-information)) 
+**2. Fehlerbehebung in der Nachrichtenübersicht:**
+Ein Fehler, der nach dem fehlgeschlagenen Versand von Nachrichten aus einer Kanzleisoftware auftrat, wurde behoben. Betroffene Nutzer sollten nun wieder uneingeschränkten Zugriff auf die Nachrichtenübersicht haben. ([portal.beasupport.de](https://portal.beasupport.de/release-information))
 
-Time: 7.9s
+Bitte beachten Sie, dass mit dieser Version keine Änderungen oder Fehlerbehebungen für die mobile beA-App der BRAK vorgenommen wurden. Für Unterstützung im Umgang mit der App steht Ihnen das beA-Anwenderhandbuch im Kapitel "beA-App für mobile Geräte" zur Verfügung. ([portal.beasupport.de](https://portal.beasupport.de/release-information))
+
+Weitere Informationen und Anleitungen finden Sie im beA-Supportportal. ([portal.beasupport.de](https://portal.beasupport.de/release-information)) 
+
+Time: 10.7s
 
 # Frage
 Was sind die neuesten beA-Nachrichten?
@@ -129,20 +156,17 @@ Was sind die neuesten beA-Nachrichten?
 Die aktuellste Ausgabe des beA-Newsletters ist die Ausgabe 1/2025 vom 3. März 2025. In dieser Ausgabe werden folgende Themen behandelt:
 
 - **Aktualisierung der beA Client Security**: Informationen zur neuesten Version der beA Client Security.
-
 - **Zivilrechtliche Online-Verfahren**: Möglichkeiten für die Anwaltschaft, aktiv an der Gestaltung mitzuwirken.
-
 - **Änderung bei der Adressierung des BAMF in Asylsachen**: Wichtige Hinweise zur korrekten Adressierung.
+- **Neue D-Trust-Signaturkarten**: Hinweise zur Nutzung im beA.
+- **Wahlmöglichkeit für Syndikusrechtsanwälte**: Entscheidung zwischen beA und eBO.
+- **Kündigung per beA**: Geänderte Voraussetzungen für die Nutzung.
 
-- **Nutzung neuer D-Trust-Signaturkarten im beA**: Aktueller Stand zur Kompatibilität.
+Weitere Details finden Sie auf der Website der Bundesrechtsanwaltskammer. ([brak.de](https://www.brak.de/newsroom/newsletter/bea-newsletter/))
 
-- **Wahlmöglichkeit für Syndikusrechtsanwälte zwischen beA und eBO**: Informationen zur Entscheidungsfindung.
+Bitte beachten Sie, dass die Informationen in den Newslettern aufgrund von Änderungen der Rechtslage oder technischen Anpassungen am beA überholt sein können. Für aktuelle und detaillierte Informationen empfiehlt es sich, regelmäßig die offiziellen Mitteilungen der Bundesrechtsanwaltskammer zu konsultieren. 
 
-- **Kündigung per beA – geänderte Voraussetzungen**: Aktualisierte Bedingungen für die Nutzung des beA für Kündigungen.
-
-Diese Ausgabe bietet einen umfassenden Überblick über die neuesten Entwicklungen und Änderungen im Zusammenhang mit dem besonderen elektronischen Anwaltspostfach (beA). Für detaillierte Informationen und weiterführende Themen können Sie die vollständige Ausgabe des beA-Newsletters auf der Website der Bundesrechtsanwaltskammer einsehen. ([brak.de](https://www.brak.de/newsroom/newsletter/bea-newsletter/)) 
-
-Time: 7.6s
+Time: 9.7s
 
 # Frage
 Was sind die neuesten Sportnachrichten?
@@ -150,7 +174,7 @@ Was sind die neuesten Sportnachrichten?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 2.1s
+Time: 4.1s
 
 # Frage
 Wer spielt als nächstes gegen Bayern München?
@@ -158,23 +182,23 @@ Wer spielt als nächstes gegen Bayern München?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 2.6s
+Time: 1.9s
 
 # Frage
 Wer spielt als nächstes gegen beA?
 
 # Antwort
-Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
+Das besondere elektronische Anwaltspostfach (beA) ist kein Sportereignis, sondern ein sicheres Kommunikationssystem für Rechtsanwälte in Deutschland. Daher gibt es keine "nächsten Spiele" im Zusammenhang mit beA. Falls Sie Informationen zu geplanten Updates oder Wartungsarbeiten des beA suchen, empfehle ich Ihnen, die offizielle Website der Bundesrechtsanwaltskammer (BRAK) zu besuchen oder sich direkt an den Support zu wenden. 
 
-Time: 2.2s
+Time: 5.3s
 
 # Frage
 Wann startete das beA?
 
 # Antwort
-Das besondere elektronische Anwaltspostfach (beA) wurde am 28. November 2016 für alle im Bundesweiten Amtlichen Anwaltsverzeichnis (BRAV) eingetragenen Rechtsanwälte freigeschaltet. Allerdings war die Nutzung bis zum 31. Dezember 2017 freiwillig. Ab dem 3. September 2018 wurde das beA wieder aktiviert, nachdem zuvor Sicherheitslücken behoben worden waren. Seit dem 1. Januar 2018 besteht für alle Rechtsanwälte eine passive Nutzungspflicht, das heißt, sie sind verpflichtet, Zustellungen und Mitteilungen über das beA zur Kenntnis zu nehmen. Ab dem 1. Januar 2022 gilt die aktive Nutzungspflicht, wodurch die elektronische Übermittlung von Dokumenten an Gerichte über das beA für alle Rechtsanwälte verpflichtend wurde. ([mkg-online.de](https://mkg-online.de/2018/08/22/start-frei-fuer-das-besondere-elektronische-anwaltspostfach-bea/), [anwalt.org](https://www.anwalt.org/bea/)) 
+Das besondere elektronische Anwaltspostfach (beA) wurde am 28. November 2016 für alle im Bundesweiten Amtlichen Anwaltsverzeichnis (BRAV) eingetragenen Rechtsanwälte freigeschaltet. Allerdings war die Nutzung bis zum 31. Dezember 2017 freiwillig. Ab dem 3. September 2018 wurde das beA wieder aktiviert, und die passive Nutzungspflicht gemäß § 31a Abs. 6 BRAO trat in Kraft. ([mkg-online.de](https://mkg-online.de/2018/08/22/start-frei-fuer-das-besondere-elektronische-anwaltspostfach-bea/)) 
 
-Time: 5.9s
+Time: 6.4s
 
 # Frage
 Wann startete der 2. Weltkrieg?
@@ -182,7 +206,7 @@ Wann startete der 2. Weltkrieg?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 1.5s
+Time: 1.7s
 
 # Frage
 Wieviele Buchstaben 'e' sind im Wort 'beA' enthalten?
@@ -190,7 +214,7 @@ Wieviele Buchstaben 'e' sind im Wort 'beA' enthalten?
 # Antwort
 Im Wort 'beA' ist der Buchstabe 'e' einmal enthalten. 
 
-Time: 5.2s
+Time: 7.6s
 
 # Frage
 Wieviele Buchstaben 'e' sind im Wort 'Erdbeere' enthalten?
@@ -198,5 +222,5 @@ Wieviele Buchstaben 'e' sind im Wort 'Erdbeere' enthalten?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 1.2s
+Time: 2.4s
 

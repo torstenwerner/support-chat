@@ -20,7 +20,7 @@ export async function askAi(userPrompt) {
         const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
             "gpt-4o-mini-search-preview",
-            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist ${beaVersion}.`,
+            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erkläre höflich, dass du nur in diesem Themengebiet Auskunft gibst. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist ${beaVersion}. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind.`,
             userPrompt,
             {});
     } else {

@@ -9,8 +9,8 @@ const openai = new OpenAI({
 /**
  * Asks the AI using the parameter userPrompt and returns the answer.
  * It executes some specific workflow to improve the answer given by the AI.
- * @param userPrompt the user prompt
- * @returns {string} the AI chat answer
+ * @param {string} userPrompt the user prompt
+ * @returns {Promise<string>} the AI chat answer
  */
 export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
@@ -27,7 +27,7 @@ export async function askAi(userPrompt) {
 
 /**
  * Fetches the version of the beA from a REST service.
- * @returns The version of the beA
+ * @returns {Promise<string>} The version of the beA
  */
 async function fetchBeaVersion() {
     const response = await fetch('https://www.bea-brak.de/beaportal/api/settings');
@@ -49,8 +49,8 @@ export function normalizedVersion(version) {
  * Checks if the user prompt is relevant to the beA.
  * Executes a chat with a simple developer prompt and no web search first.
  * And then let's the AI evaluate this chat if it relates to beA or not.
- * @param {String} userPrompt The user prompt
- * @returns {Boolean} true if the user prompt is relevant to the beA, false otherwise
+ * @param {string} userPrompt The user prompt
+ * @returns {Promise<boolean>} true if the user prompt is relevant to the beA, false otherwise
  */
 export async function isRelevant(userPrompt) {
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
@@ -64,8 +64,8 @@ export async function isRelevant(userPrompt) {
 
 /**
  * Executes a chat with a simple developer prompt and no web search.
- * @param {String} userPrompt The user prompt
- * @returns {String} The answer of the AI
+ * @param {string} userPrompt The user prompt
+ * @returns {Promise<string>} The answer of the AI
  */
 async function askAiWithoutSearch(userPrompt) {
     return askAiWithModelAndPrompt(
@@ -77,11 +77,11 @@ async function askAiWithoutSearch(userPrompt) {
 /**
  * Executes a chat with multiple parameters.
  * Cleans all URLs from the answer.
- * @param {String} model The model to use
- * @param {String} developerPrompt The developer prompt
- * @param {String} userPrompt The user prompt
- * @param {Object} webSearchOptions The web search options, undefined (= disabled) by default
- * @returns {String} The answer of the AI
+ * @param {string} model The model to use
+ * @param {string} developerPrompt The developer prompt
+ * @param {string} userPrompt The user prompt
+ * @param {object} webSearchOptions The web search options, undefined (= disabled) by default
+ * @returns {Promise<string>} The answer of the AI
  */
 async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchOptions = undefined) {
     const response = await openai.chat.completions.create({
@@ -105,8 +105,8 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
  * Executes a chat in order to find out which web search query the AI would use.
  * The result is more a guess than a certainty.
  * This method is currently only used for further manual analysis of problematic user prompts.
- * @param {String} userPrompt The user prompt
- * @returns {String} The web search query
+ * @param {string} userPrompt The user prompt
+ * @returns {Promise<string>} The web search query
  */
 export async function askAiForWebSearchQuery(userPrompt) {
     const response = await openai.chat.completions.create({

@@ -38,8 +38,8 @@ async function fetchBeaVersion() {
 /**
  * Shortens the version 3.32.1.456 to 3.32.1.
  * It is not used yet because it does not improve the results.
- * @param {String} the original version
- * @returns {String} the shortened version
+ * @param {string} the original version
+ * @returns {string} the shortened version
  */
 export function normalizedVersion(version) {
     return version.split('.').slice(0, 3).join('.');

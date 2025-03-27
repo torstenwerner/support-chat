@@ -7,13 +7,10 @@ const openai = new OpenAI({
 });
 
 /**
- * Asks the AI using the parameter userPrompt and returns the answer as a promise.
- * It sends a request to the OpenAI `/v1/chat/completions` API with a hard coded developer prompt
- * that asks for the vulnerability research.
- * The user prompt is limited in size to reduce the risk of prompt injection attacks.
- *
- * @param userPrompt just a CVE id e.g., CVE-2024-12397
- * @returns {Promise<string>} the AI chat answer as a promise
+ * Asks the AI using the parameter userPrompt and returns the answer.
+ * It executes some specific workflow to improve the answer given by the AI.
+ * @param userPrompt the user prompt
+ * @returns {string} the AI chat answer
  */
 export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
@@ -44,7 +41,6 @@ async function fetchBeaVersion() {
  * @param {String} the original version
  * @returns {String} the shortened version
  */
-// The function to be tested
 export function normalizedVersion(version) {
     return version.split('.').slice(0, 3).join('.');
 }

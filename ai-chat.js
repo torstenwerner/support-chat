@@ -28,6 +28,10 @@ export async function askAi(userPrompt) {
     }
 }
 
+/**
+ * Fetches the version of the beA from a REST service.
+ * @returns The version of the beA
+ */
 async function fetchBeaVersion() {
     const response = await fetch('https://www.bea-brak.de/beaportal/api/settings');
     const data = await response.json();
@@ -45,6 +49,13 @@ export function normalizedVersion(version) {
     return version.split('.').slice(0, 3).join('.');
 }
 
+/**
+ * Checks if the user prompt is relevant to the beA.
+ * Executes a chat with a simple developer prompt and no web search first.
+ * And then let's the AI evaluate this chat if it relates to beA or not.
+ * @param {String} userPrompt The user prompt
+ * @returns {Boolean} true if the user prompt is relevant to the beA, false otherwise
+ */
 export async function isRelevant(userPrompt) {
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
@@ -55,6 +66,11 @@ export async function isRelevant(userPrompt) {
     return relevanceAnswer.toLowerCase().trim() === 'ja';
 }
 
+/**
+ * Executes a chat with a simple developer prompt and no web search.
+ * @param {String} userPrompt The user prompt
+ * @returns {String} The answer of the AI
+ */
 async function askAiWithoutSearch(userPrompt) {
     return askAiWithModelAndPrompt(
         "gpt-4o-mini",
@@ -62,6 +78,15 @@ async function askAiWithoutSearch(userPrompt) {
         userPrompt);
 }
 
+/**
+ * Executes a chat with multiple parameters.
+ * Cleans all URLs from the answer.
+ * @param {String} model The model to use
+ * @param {String} developerPrompt The developer prompt
+ * @param {String} userPrompt The user prompt
+ * @param {Object} webSearchOptions The web search options, undefined (= disabled) by default
+ * @returns {String} The answer of the AI
+ */
 async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchOptions = undefined) {
     const response = await openai.chat.completions.create({
         model,
@@ -76,10 +101,17 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
             }
         ],
         web_search_options: webSearchOptions
-})
-return removeUtmSource(response.choices[0].message.content);
+    })
+    return removeUtmSource(response.choices[0].message.content);
 }
 
+/**
+ * Executes a chat in order to find out which web search query the AI would use.
+ * The result is more a guess than a certainty.
+ * This method is currently only used for further manual analysis of problematic user prompts.
+ * @param {String} userPrompt The user prompt
+ * @returns {String} The web search query
+ */
 export async function askAiForWebSearchQuery(userPrompt) {
     const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
@@ -94,26 +126,26 @@ export async function askAiForWebSearchQuery(userPrompt) {
             }
         ],
         tools: [
-          {
-            "type": "function",
-            "function": {
-              "name": "custom_websearch",
-              "description": "Searches the web using a custom search engine",
-              "parameters": {
-                "type": "object",
-                "properties": {
-                  "query": {
-                    "type": "string",
-                    "description": "The search query"
-                  }
-                },
-                "required": [
-                  "query"
-                ]
-              },
-              "strict": false
+            {
+                "type": "function",
+                "function": {
+                    "name": "custom_websearch",
+                    "description": "Searches the web using a custom search engine",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string",
+                                "description": "The search query"
+                            }
+                        },
+                        "required": [
+                            "query"
+                        ]
+                    },
+                    "strict": false
+                }
             }
-          }
         ]
     });
     if (!!response.choices[0].message.tool_calls) {

@@ -12,9 +12,9 @@ const openai = new OpenAI({
  * @param userPrompt the user prompt
  * @returns {string} the AI chat answer
  */
-export async function askAi(userPrompt) {
-    if (await isRelevant(userPrompt)) {
-        const beaVersion = await fetchBeaVersion();
+export function askAi(userPrompt) {
+    if (isRelevant(userPrompt)) {
+        const beaVersion = fetchBeaVersion();
         return askAiWithModelAndPrompt(
             "gpt-4o-mini-search-preview",
             `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn es für die Antwort hilfreich ist. Die aktuelle Version des beA ist ${beaVersion}.`,
@@ -67,7 +67,7 @@ export async function isRelevant(userPrompt) {
  * @param {String} userPrompt The user prompt
  * @returns {String} The answer of the AI
  */
-async function askAiWithoutSearch(userPrompt) {
+function askAiWithoutSearch(userPrompt) {
     return askAiWithModelAndPrompt(
         "gpt-4o-mini",
         "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet.",

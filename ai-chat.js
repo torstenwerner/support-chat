@@ -86,6 +86,7 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
         input: userPrompt,
         tools: webSearchEnabled ? [ { type: "web_search_preview" } ] : []
     });
+    //console.log(JSON.stringify(response, null, 2));
     return removeUtmSource(response.output_text);
 }
 

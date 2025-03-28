@@ -1,0 +1,47 @@
+# Informationen zur Einführung des Gesellschaftspostfachs (BAG)
+
+Suchnummer: 6056
+
+Am 1.8.2022 ist § 31b BRAO in Kraft getreten. Damit hat der Gesetzgeber die Rechtsgrundlage für die BRAK geschaffen, für jede zugelassene Berufsausübungsgesellschaft ein beA empfangsbereit einzurichten.
+
+Auf der Rechtsgrundlage des §59f BRAO entscheidet die zuständige lokale Rechtsanwaltskammer über die Zulassung und die Einrichtung von entsprechenden Postfächern.
+
+Wichtiger Hinweis!
+Bei einem BAG-Postfach handelt es sich um ein eigenständiges Postfach, an das ab dem Zeitpunkt der Zulassung durch die Rechtsanwaltskammer rechtsverbindlich Nachrichten zugestellt werden. Ein Zugriff auf die eingegangenen Nachrichten ist erst nach der entsprechenden Erstregistrierung für dieses Postfach möglich. Diese muss mit der beA-Karte/PIN der BAG erfolgen, welche unter Verwendung der BAG-Postfach-SAFE-ID durch den gesetzlichen Vertreter bestellt wurde. Erst nach der Erstregistrierung und anschließender Anmeldung mit der beA-Karte der BAG können dann den in der Berufsausübungsgesellschaft tätigen Personen über die Benutzerverwaltung Zugriffsrechte zugeordnet werden. Rechte als VHN-Berechtigte für die BAG können dabei nur zugelassene Rechtsanwältinnen oder Rechtsanwälte erhalten. 
+
+Verpflichtendes beA für zugelassene Berufsausübungsgesellschaften
+Für alle zugelassenen Berufsausübungsgesellschaften richtet die BRAK auf Basis der Meldungen der lokalen Rechtsanwaltskammern ein beA ein. Ausnahmen sieht das Gesetz nicht vor. Es können also weder zugelassene Berufsausübungsgesellschaften der Einrichtung ihres beA widersprechen noch können nicht zugelassene Personengesellschaften die Einrichtung eines beA beantragen. Die Einrichtung erfolgt nur über den Weg der (freiwilligen) Zulassung.
+
+Der Automatismus zwischen Zulassung und Einrichtung des beA ist konsequent. Denn gem. § 59l BRAO n.F. können Berufsausübungsgesellschaften als Prozess- und Verfahrensbevollmächtigte beauftragt werden. Sie haben in diesem Fall die Rechte und Pflichten einer Rechtsanwältin bzw. eines Rechtsanwalts. Da sie also als sog. professionelle Einreicher i.S.d. § 130d ZPO und der Parallelvorschriften in den übrigen Verfahrensordnungen am (elektronischen) Rechtsverkehr teilnehmen, ist es richtig, dass sie Einreichungen über ein eigenes beA vornehmen und nicht auf den Umweg über die Nutzung des beA eines gesetzlichen Vertreters angewiesen sind.
+
+Pro Standort ein beA?
+Zur Unterstützung des Kanzleialltags bei Berufsausübungsgesellschaften, die an mehreren Standorten tätig sind, sieht § 31b IV BRAO n.F. vor, dass die BRAK für jede im Gesamtverzeichnis eingetragene Zweigstelle einer Berufsausübungsgesellschaft, auf deren Antrag hin, ein weiteres beA einrichtet. Der Antrag ist an die jeweilige Rechtsanwaltskammer zu richten, bei der die Berufsausübungsgesellschaft zugelassen ist. Mit dieser Regelung kann pro Standort einer Berufsausübungsgesellschaft ein eigenes beA zur Verfügung gestellt werden. Damit in der Praxis nach Möglichkeit „Fehlzustellungen“ vermieden werden, empfiehlt es sich, im ersten Schriftsatz jeweils anzugeben, an welchem Standort das Mandat bearbeitet wird und über welches Postfach die Korrespondenz geführt werden soll. Aus der Pflicht, Posteingänge zur Kenntnis zu nehmen (§ 31b V i.V.m. § 31a VI BRAO), leitet sich ab, dass auch ein an ein „falsches“ beA-Postfach zugegangenes Dokument als zugestellt gilt. Ggf. sollten Korrespondenzpartner (z.B. Gerichte) jeweils über das entsprechende beA-Postfach informiert werden, damit dieses ggf. im Fachverfahren hinterlegt werden kann. Trotzdem sollte jede Berufsausübungsgesellschaft rein vorsorglich organisatorische Maßnahmen treffen, damit „Irrläufer“ unverzüglich und zuverlässig an den „richtigen“ Standort weitergeleitet werden. Ein Hinweis an den entsprechenden Absender, welches Postfach richtigerweise zu adressieren ist, dürfte in diesem Fällen sicherlich ebenfalls hilfreich sein.
+
+beA für Berufsausübungsgesellschaften ersetzt nicht persönliches beA
+Zu beachten ist, dass das beA für zugelassene Berufsausübungsgesellschaften neben das persönliche beA einer Rechtsanwältin oder eines Rechtsanwalts treten wird. Es wird es aber nicht ersetzen.
+
+Das bedeutet für die Praxis, dass besondere Sorgfalt geboten ist und in der Berufsausübungsgesellschaft laufend alle beA von Berufsträgern und Gesellschaft auf Posteingänge hin überprüft werden müssen. Das heißt aber auch, dass nicht zulassungspflichtige Personengesellschaften genau überlegen sollten, ob ihre Zulassung als Berufsausübungsgesellschaft allein wegen der Einrichtung eines beAs sinnvoll ist. Die zusätzlichen Kosten und Verpflichtungen sollten sorgfältig gegen den Nutzen abgewogen werden.
+
+Möglicherweise reichen das Rollen- und Rechtemanagement und die Einstellung von Sichten in der Postfachübersicht der beA-Webanwendung aus, um Posteingang und -versand zentral zu verwalten und somit auf ein zusätzliches beA einer Berufsausübungsgesellschaft zu verzichten.
+
+Sicherer Übermittlungsweg für Berufsausübungsgesellschaften
+Für die persönlichen beA ist geregelt, dass elektronische Dokumente ohne qualifizierte Signatur schriftformersetzend eingereicht werden können, wenn sie vom Postfachinhaber einfach signiert und über ihr beA bei eigener Anmeldung versandt werden. Das System prüft, ob die Postfachinhaberin bzw. der Postfachinhaber selbst angemeldet ist und bringt in diesem Fall den sog. Vertrauenswürdigen Herkunftsnachweis (VHN) an.
+
+Für das beA von Berufsausübungsgesellschaften hat der Gesetzgeber diese Regelung entsprechend angepasst: Die Berufsausübungsgesellschaften bestimmen selbst diejenigen Personen, die über den sicheren Übermittlungsweg elektronische Dokumente einreichen können. In der Berufsausübungsgesellschaft tätigen und zugelassenen Rechtsanwältinnen und Rechtsanwälten kann die Rolle als sog. VHN-Berechtigte zugeordnet werden. Dies regelt §23 Abs.3 RAVPV.
+
+Welche Rechte und Rollen vergeben werden können und wie dies erfolgt, ist im beA-Sondernewsletter 9/2022 beschrieben. Ein Gesellschafter oder Vertreter, der für die Berufsausübungsgesellschaft handelt, vergibt im Postfach der Berufsausübungsgesellschaft das Recht „VHN-Berechtigter“. Dieses Recht kann nur an Rechtsanwältinnen und Rechtsanwälte vergeben werden. Das beA-System unterstützt sie, indem es bei jeder Rechtevergabe die Berufsträgereigenschaft überprüft. Sobald der oder die „VHN-Berechtigte“ angemeldet ist und eine Nachricht versendet, prüft das System, ob ein VHN-Berechtigter zum Zeitpunkt des Nachrichtenversands am Postfach angemeldet war. Trifft dies zu, wird der VHN systemseitig angebracht. Der Empfänger kann so feststellen, dass die Nachricht schriftformersetzend über den sicheren Übermittlungsweg versandt wurde.
+
+Zu beachten ist aber, dass es aufgrund von technischen Gegebenheiten in der Justiz derzeit nicht möglich ist, dass in den Metadaten der beA-Nachrichten die Identität der im Zeitpunkt des Versands der Nachricht am beA der Berufsausübungsgesellschaft angemeldeten Person übermittelt wird. Es wird nur die Information übertragen, dass eine gemäß § 23 Abs. 3 RAVPV berechtigte Person die Nachricht aus dem Postfach der Berufsausübungsgesellschaft versandt hat. Die Identität der konkreten Person wird nicht übermittelt, sodass für die Gerichte auch kein Abgleich möglich ist, ob die den Schriftsatz verantwortende Person mit der ihn versendenten Person identisch ist.
+
+Die Rechtsfrage, ob das Erfordernis der Personenidentität zwischen der verantwortenden Person, die das elektronische Dokument einfach signiert, und der die Nachricht versendenden Person auch für den Versand von Nachrichten aus beA der Berufsausübungsgesellschaften gilt, ist bislang ungeklärt. Rechtsprechung zur Nutzung des sicheren Übermittlungswegs durch Berufsausübungsgesellschaften liegt noch nicht vor.
+
+Zur Vermeidung möglicher Nachteile empfehlen Bundesrechtsanwaltskammer und Deutscher Anwaltverein daher allen Rechtsanwältinnen und Rechtsanwälten, die in Berufsausübungsgesellschaften tätig sind und Schriftsätze aus dem beA der Berufsausübungsgesellschaften einreichen möchten, ihre Schriftsätze qualifiziert elektronisch zu signieren.
+
+Für den Fall, dass trotz der bestehenden Unsicherheiten das Kanzlei-beA als sicherer Übermittlungsweg ohne qualifizierte elektronische Signatur genutzt werden soll, sollte darauf geachtet werden, dass die Rechtsanwältin oder der Rechtsanwalt, die oder der das elektronische Dokument zeichnet, sich auch selbst am Kanzlei-beA angemeldet hat und das Dokument persönlich versendet. Zur Sicherheit sollte sodann ein Auszug aus dem Nachrichtenjournal, welches erkennen lässt, welche Nutzerin oder welcher Nutzer am Kanzlei-beA angemeldet war, zur Akte genommen werden. Damit lässt sich auch später nachweisen, welche Rechtsanwältin oder welcher Rechtsanwalt die Nachricht versandt hat.
+
+Technische Voraussetzungen und beA-Karten
+Die technischen Voraussetzungen wurden durch die BRAK rechtzeitig zur Verfügung gestellt.
+
+Die beA-Karten für Berufsausübungsgesellschaften sind bei der Zertifizierungsstelle der Bundesnotarkammer unter Angabe des Namens der Berufsausübungsgesellschaft und der für sie als gesetzlicher Vertreter gemäß § 57l II BRAO n.F. handelnden Person bestellbar. Informationen der Bundesnotarkammer zur Bestellung der beA-Produkte für BAG stehen hier zur Verfügung: Bestellung der beA-Produkte für BAG
+
+VHN-Berechtigte benötigen keine neue beA-Karte, sie können bzw. müssen auch ihre persönlichen beA-Karten nutzen.

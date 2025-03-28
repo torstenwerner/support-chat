@@ -1,0 +1,13 @@
+# Nutzung des sicheren Übermittlungswegs durch Berufsausübungsgesellschaften (BAG)
+
+**Empfehlung von BRAK und DAV: Schriftsätze sollten qualifiziert elektronisch signiert werden**
+
+Gemäß § 130a Abs. 4 ZPO und den Parallelvorschriften in den übrigen Verfahrensordnungen stellt auch das beA einer zugelassenen Berufsausübungsgesellschaft seit dem 01.08.2022 einen sicheren Übermittlungsweg dar. Nach § 59l Abs. 2 BRAO i.V.m. § 23 Abs. 3 RAVPV können berechtigte Rechtsanwältinnen und Rechtsanwälte daher grundsätzlich elektronische Dokumente aus dem beA der Berufsausübungsgesellschaft ohne qualifizierte elektronische Signatur wirksam einreichen.
+
+Aufgrund von technischen Gegebenheiten in der Justiz ist es derzeit nicht möglich, dass in den Metadaten der beA-Nachrichten die Identität der im Zeitpunkt des Versands der Nachricht am beA der Berufsausübungsgesellschaft angemeldeten Person übermittelt wird. Es wird daher nur die Information übertragen, dass eine gemäß § 23 Abs. 3 RAVPV berechtigte Person die Nachricht aus dem Postfach der Berufsausübungsgesellschaft versandt hat. Die Identität der konkreten Person wird nicht übermittelt, sodass für die Gerichte auch kein Abgleich möglich ist, ob die den Schriftsatz verantwortende Person mit der ihn versendenden Person identisch ist.
+
+Die Rechtsfrage, ob das Erfordernis der Personenidentität zwischen der verantwortenden Person, die das elektronische Dokument einfach signiert, und der die Nachricht versendenden Person auch für den Versand von Nachrichten aus beA der Berufsausübungsgesellschaften gilt, ist bislang ungeklärt. Rechtsprechung zur Nutzung des sicheren Übermittlungswegs durch Berufsausübungsgesellschaften liegt noch nicht vor.
+
+Zur Vermeidung möglicher Nachteile empfehlen Bundesrechtsanwaltskammer und Deutscher Anwaltverein daher allen Rechtsanwältinnen und Rechtsanwälten, die in Berufsausübungsgesellschaften tätig sind und Schriftsätze aus dem beA der Berufsausübungsgesellschaften einreichen möchten, ihre Schriftsätze qualifiziert elektronisch zu signieren.
+
+Für den Fall, dass trotz der bestehenden Unsicherheiten das Kanzlei-beA als sicherer Übermittlungsweg ohne qualifizierte elektronische Signatur genutzt werden soll, sollte darauf geachtet werden, dass die Rechtsanwältin oder der Rechtsanwalt, die oder der das elektronische Dokument zeichnet, sich auch selbst am Kanzlei-beA angemeldet hat und das Dokument persönlich versendet. Zur Sicherheit sollte sodann ein Auszug aus dem Nachrichtenjournal, welches erkennen lässt, welche Nutzerin oder welcher Nutzer am Kanzlei-beA angemeldet war, zur Akte genommen werden. Damit lässt sich auch später nachweisen, welche Rechtsanwältin oder welcher Rechtsanwalt die Nachricht versandt hat.

@@ -8,7 +8,8 @@ const openai = new OpenAI({
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
-const fileContent = fs.createReadStream("file-search/001-eeb.md");
+const filename = "005-bag-sign.md";
+const fileContent = fs.createReadStream(`file-search/${filename}`);
 const response01 = await openai.files.create({
     file: fileContent,
     purpose: "assistants",

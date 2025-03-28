@@ -93,11 +93,12 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
             }],
             tool_choice: "required"
         });
-        console.log('fileSearchResponse:', JSON.stringify(fileSearchResponse.output, null, 2));
+        console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
+        const hasResults = fileSearchResponse.output[1].content[0].annotations.length > 0;
         const webSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",
             // instructions: developerPrompt,
-            instructions: `${developerPrompt} Beachten Sie bitte unbedingt die folgenden Hinweise: ${fileSearchResponse.output_text}`,
+            instructions: hasResults ? `${developerPrompt} Beachten Sie bitte unbedingt die folgenden Hinweise: ${fileSearchResponse.output_text}` : developerPrompt,
             input: userPrompt,
             tools: [{
                 type: "web_search_preview"

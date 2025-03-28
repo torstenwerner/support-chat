@@ -84,7 +84,7 @@ async function askAiWithoutSearch(userPrompt) {
  * @param {object} webSearchOptions The web search options, undefined (= disabled) by default
  * @returns {Promise<string>} The answer of the AI
  */
-async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchOptions = undefined) {
+async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt) {
     const response = await openai.chat.completions.create({
         model,
         messages: [
@@ -96,8 +96,7 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
                 role: "user",
                 content: userPrompt
             }
-        ],
-        web_search_options: webSearchOptions
+        ]
     })
     return removeUtmSource(response.choices[0].message.content);
 }

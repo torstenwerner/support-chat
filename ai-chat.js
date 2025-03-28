@@ -98,7 +98,7 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
         const webSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",
             // instructions: developerPrompt,
-            instructions: hasResults ? `${developerPrompt} Beachten Sie bitte unbedingt die folgenden Hinweise: ${fileSearchResponse.output_text}` : developerPrompt,
+            instructions: hasResults ? `${developerPrompt} Berücksichtigen Sie ggf. die folgenden Hinweise: ${fileSearchResponse.output_text}` : developerPrompt,
             input: userPrompt,
             tools: [{
                 type: "web_search_preview"

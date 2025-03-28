@@ -17,7 +17,7 @@ export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
         const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
-            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn die Frage Berufsausübungsgesellschaften (BAG) betrifft. Die aktuelle Version des beA ist ${beaVersion}.`,
+            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Berücksichtigen Sie die Rolle 'VHN-Berechtigter', wenn die Versendung aus dem Postfach von Berufsausübungsgesellschaften (BAG) betrifft. Die aktuelle Version des beA ist ${beaVersion}.`,
             userPrompt,
             true);
     } else {
@@ -84,8 +84,8 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
     if (webSearchEnabled) {
         const fileSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",
-            // instructions: developerPrompt,
-            instructions: `${developerPrompt} Die hochgeladenen Dokumente sollen Ihre Antwort unterstützen. Ergänzen Sie aber bitte weiteres allgemeines Wissen, wenn dieses für die Antwort hilfreich ist.`,
+            instructions: developerPrompt,
+            // instructions: `${developerPrompt} Die hochgeladenen Dokumente sollen Ihre Antwort unterstützen. Ergänzen Sie aber bitte weiteres allgemeines Wissen, wenn dieses für die Antwort hilfreich ist.`,
             input: userPrompt,
             tools: [{
                 type: "file_search",
@@ -94,19 +94,17 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
             tool_choice: "required"
         });
         console.log('fileSearchResponse:', JSON.stringify(fileSearchResponse.output, null, 2));
-        if (fileSearchResponse.output[1].content[0].annotations.length === 0) {
-            const webSearchResponse = await openai.responses.create({
-                model: "gpt-4o-mini",
-                instructions: developerPrompt,
-                input: userPrompt,
-                tools: [{
-                    type: "web_search_preview"
-                }],
-                tool_choice: "required"
-            });
-            return removeUtmSource(webSearchResponse.output_text);
-        }
-        return removeUtmSource(fileSearchResponse.output_text);
+        const webSearchResponse = await openai.responses.create({
+            model: "gpt-4o-mini",
+            // instructions: developerPrompt,
+            instructions: `${developerPrompt} Beachten Sie bitte unbedingt die folgenden Hinweise: ${fileSearchResponse.output_text}`,
+            input: userPrompt,
+            tools: [{
+                type: "web_search_preview"
+            }],
+            tool_choice: "required"
+        });
+        return removeUtmSource(webSearchResponse.output_text);
     } else {
         const response = await openai.responses.create({
             model: "gpt-4o-mini",

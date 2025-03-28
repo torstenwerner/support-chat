@@ -2,7 +2,7 @@ Muss ein eEB signiert werden?
 Wie geht die Erstregistrierung eines Mitarbeiters?
 Meine Karte wird bei der Anmeldung nicht erkannt.
 Muss ich bei Versendung aus dem BAG-Postfach immer elektronisch signieren?
-Wie kann ich meine PUK zurücksetzen?
+Wie kann ich meine PIN zurücksetzen?
 Wie kann ich eine Vertretung einrichten?
 Welche Änderungen gab es im letzten Update?
 Was sind die neuesten beA-Nachrichten?

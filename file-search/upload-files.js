@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
-const filename = "011-schutzschrift.md";
+const filename = "012-wikipedia.md";
 const fileContent = fs.createReadStream(`file-search/${filename}`);
 const response01 = await openai.files.create({
     file: fileContent,

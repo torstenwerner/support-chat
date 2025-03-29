@@ -17,7 +17,7 @@ export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
         const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
-            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Berücksichtigen Sie die Rolle 'VHN-Berechtigter', wenn die Versendung aus dem Postfach von Berufsausübungsgesellschaften (BAG) betrifft. Die aktuelle Version des beA ist ${beaVersion}.`,
+            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Antworten Sie bitte ausführlich. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Berücksichtigen Sie die Rolle 'VHN-Berechtigter', wenn die Versendung aus dem Postfach von Berufsausübungsgesellschaften (BAG) betrifft. Die aktuelle Version des beA ist ${beaVersion}.`,
             userPrompt,
             true);
     } else {
@@ -85,6 +85,7 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
     if (webSearchEnabled) {
         const fileSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",
+            // model: "gpt-4o",
             instructions: developerPrompt,
             // instructions: `${developerPrompt} Die hochgeladenen Dokumente sollen Ihre Antwort unterstützen. Ergänzen Sie aber bitte weiteres allgemeines Wissen, wenn dieses für die Antwort hilfreich ist.`,
             input: userPrompt,

@@ -7,7 +7,7 @@ const openai = new OpenAI({
 });
 
 const vector_store = await openai.vectorStores.create({
-    name: "support-chat",
+    name: "support-expert",
 });
 
 console.log('Vector store created with id:', vector_store.id);

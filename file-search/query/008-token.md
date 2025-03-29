@@ -1,0 +1,11 @@
+- Wie kann ich meine PIN zurücksetzen?
+- PUK
+- Token, Karte, Chipkarte
+- SAK like, Signaturanwendungskomponente
+- Zertifizierungsstelle, BNotK, Bundesnotarkammer, bnotk.de, beA-Karten-Support
+- Fehlbedienungszähler nach dreimaliger versehentlicher Falscheingabe zurücksetzen
+- entsperren, Sperrung
+- PIN-Änderung, PIN-Brief
+- Ersatzkarte
+- Kopplung, Entkopplung, Sicherheitsfrage, Erstregistrierung
+- Softwarezertifikat

@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
+import fs from 'fs';
 
 dotenv.config();
 const openai = new OpenAI({
@@ -53,7 +54,7 @@ export function normalizedVersion(version) {
  * @returns {Promise<boolean>} true if the user prompt is relevant to the beA, false otherwise
  */
 export async function isRelevant(userPrompt) {
-    // return true;
+    return true;
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(
@@ -83,31 +84,25 @@ async function askAiWithoutSearch(userPrompt) {
  */
 async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEnabled = false) {
     if (webSearchEnabled) {
-        const fileSearchResponse = await openai.responses.create({
-            model: "gpt-4o-mini",
-            instructions: developerPrompt,
-            // instructions: `${developerPrompt} Die hochgeladenen Dokumente sollen Ihre Antwort unterstützen. Ergänzen Sie aber bitte weiteres allgemeines Wissen, wenn dieses für die Antwort hilfreich ist.`,
-            input: userPrompt,
-            tools: [{
-                type: "file_search",
-                vector_store_ids: [vectorStoreId],
-            }],
-            tool_choice: "required",
-            include: ["file_search_call.results"]
-        });
-        const fileSearchResults = fileSearchResponse.output[0].results;
+        const fileSearchResponse = await openai.vectorStores.search(vectorStoreId, { query: userPrompt });
+        const fileSearchResults = fileSearchResponse.body.data;
+
         // console.log(JSON.stringify(fileSearchResults.map(result => ({ filename: result.filename, score: result.score })), null, 2));
-        // console.log(`filenname: ${fileSearchResults[0].filename} score: ${fileSearchResults[0].score}`);
+        console.log(`filename: ${fileSearchResults[0].filename} score: ${fileSearchResults[0].score}`);
         // console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
         // process.exit(0);
-        const hasResults = fileSearchResponse.output[1].content[0].annotations.length > 0;
         const webSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",
             // instructions: developerPrompt,
-            instructions: hasResults ? `${developerPrompt} Berücksichtigen Sie ggf. die folgenden Hinweise: ${fileSearchResponse.output_text}` : developerPrompt,
+            instructions: getFullInstructions(developerPrompt, fileSearchResults),
             input: userPrompt,
             tools: [{
-                type: "web_search_preview"
+                type: "web_search_preview",
+                "user_location": {
+                    "type": "approximate",
+                    "country": "DE"
+                },
+                "search_context_size": "medium"
             }],
             tool_choice: "required"
         });
@@ -120,6 +115,15 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
         });
         return removeUtmSource(response.output_text);
     }
+}
+
+function getFullInstructions(developerPrompt, fileSearchResults) {
+    if (fileSearchResults.length === 0) {
+        return developerPrompt;
+    }
+    const filename = fileSearchResults[0].filename;
+    const fileContent = fs.readFileSync(`file-search/response/${filename}`, 'utf8');
+    return `${developerPrompt}\n\nBitte beachten Sie die folgenden Hinweise:\n\n${fileContent.substring(0, 20000)}`;
 }
 
 /**

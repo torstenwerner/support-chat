@@ -8,8 +8,14 @@ const openai = new OpenAI({
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
-const query = "Welche Änderungen gab es im letzten Update?";
+const query = "Was sind die neuesten beA-Nachrichten?";
 
 const response = await openai.vectorStores.search(vectorStoreId, { query });
-const files = response.body.data.map(item => ({ filename: item.filename, score: item.score }));
+const averageScore = response.body.data.reduce((sum, item) => sum + item.score, 0) / response.body.data.length;
+const files = response.body.data.map(item => ({
+    filename: item.filename,
+    score: item.score,
+    relativeScore: item.score / averageScore
+}));
 console.log(JSON.stringify(files, null, 2));
+// console.log(`average score: ${averageScore}`);

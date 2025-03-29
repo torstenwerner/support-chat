@@ -1,0 +1,4 @@
+- Wie reicht man eine Schutzschrift ein?
+- Externen Strukturdatensatz hochladen
+- zentrales Schutzschriftenregister, ZSSR
+- Anhang statt Schriftsatz

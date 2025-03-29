@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
-const filename = "002-bag-vhn.md";
+const filename = "006-registration-no-postbox.md";
 
 // delete a previous upload
 const uploadedFiles = await openai.vectorStores.files.list(vectorStoreId);
@@ -21,7 +21,7 @@ for (const fileRef of uploadedFiles.data) {
     }
 }
 
-const fileContent = fs.createReadStream(`file-search/${filename}`);
+const fileContent = fs.createReadStream(`file-search/query/${filename}`);
 const response01 = await openai.files.create({
     file: fileContent,
     purpose: "assistants",

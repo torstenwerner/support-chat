@@ -1,0 +1,6 @@
+- Meine Karte wird bei der Anmeldung nicht erkannt.
+- kein geeignetes Hardware- oder Software-Zertifikat gefunden
+- Login, Anmeldedialog
+- Kartenlesegerät, Kartenleser, Lesegerät
+- Reiner SCT Standard und Reiner SCT RFID
+- Treiber, Treibersoftware, Firmware

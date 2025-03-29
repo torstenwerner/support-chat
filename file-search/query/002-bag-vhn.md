@@ -1,0 +1,7 @@
+- Muss ich bei Versendung aus dem BAG-Postfach immer elektronisch signieren?
+- Berufsausübungsgesellschaft
+- Gesellschaftspostfach
+- qualifizierte elektronische Signatur
+- VHN
+- vertrauenswürdiger Herkunftsnachweis
+- sicherer Übermittlungsweg

@@ -53,6 +53,7 @@ export function normalizedVersion(version) {
  * @returns {Promise<boolean>} true if the user prompt is relevant to the beA, false otherwise
  */
 export async function isRelevant(userPrompt) {
+    // return true;
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(
@@ -91,9 +92,14 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
                 type: "file_search",
                 vector_store_ids: [vectorStoreId],
             }],
-            tool_choice: "required"
+            tool_choice: "required",
+            include: ["file_search_call.results"]
         });
-        console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
+        const fileSearchResults = fileSearchResponse.output[0].results;
+        // console.log(JSON.stringify(fileSearchResults.map(result => ({ filename: result.filename, score: result.score })), null, 2));
+        // console.log(`filenname: ${fileSearchResults[0].filename} score: ${fileSearchResults[0].score}`);
+        // console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
+        // process.exit(0);
         const hasResults = fileSearchResponse.output[1].content[0].annotations.length > 0;
         const webSearchResponse = await openai.responses.create({
             model: "gpt-4o-mini",

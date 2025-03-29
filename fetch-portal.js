@@ -65,9 +65,13 @@ async function fetchAllUrls() {
 
 let i = 0;
 
+/**
+ * Fetches the main text from the url and saves it to a file.
+ * @param {string} url 
+ */
 async function fetchAndSaveText(url) {
     const prefix = String(i++).padStart(3, '0');
-    const topic = url.replace(/.*\//, '');
+    const topic = url.replace(/.*\//, '').substring(0,16);
     const path = `portal/${prefix}-${topic}.txt`;
     const text = await fetchText(url);
     fs.writeFileSync(path, text);

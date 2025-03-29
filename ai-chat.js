@@ -95,7 +95,6 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
             tool_choice: "required",
             include: ["file_search_call.results"]
         });
-        const fileSearchResults = fileSearchResponse.output[0].results;
         // console.log(JSON.stringify(fileSearchResults.map(result => ({ filename: result.filename, score: result.score })), null, 2));
         // console.log(`filenname: ${fileSearchResults[0].filename} score: ${fileSearchResults[0].score}`);
         // console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
@@ -107,7 +106,12 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
             instructions: hasResults ? `${developerPrompt} Berücksichtigen Sie ggf. die folgenden Hinweise: ${fileSearchResponse.output_text}` : developerPrompt,
             input: userPrompt,
             tools: [{
-                type: "web_search_preview"
+                type: "web_search_preview",
+                "user_location": {
+                    "type": "approximate",
+                    "country": "DE"
+                },
+                "search_context_size": "medium"
             }],
             tool_choice: "required"
         });

@@ -8,7 +8,19 @@ const openai = new OpenAI({
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
-const filename = "012-wikipedia.md";
+const filename = "002-bag-vhn.md";
+
+// delete a previous upload
+const uploadedFiles = await openai.vectorStores.files.list(vectorStoreId);
+for (const fileRef of uploadedFiles.data) {
+    const metadata = await openai.files.retrieve(fileRef.id);
+    if (metadata.filename === filename) {
+        await openai.vectorStores.files.del(vectorStoreId, fileRef.id);
+        await openai.files.del(fileRef.id);
+        console.log(`Deleted existing file: ${fileRef.id}`);
+    }
+}
+
 const fileContent = fs.createReadStream(`file-search/${filename}`);
 const response01 = await openai.files.create({
     file: fileContent,
@@ -21,4 +33,4 @@ const response02 = await openai.vectorStores.files.create(vectorStoreId,
     {
         file_id: fileId,
     });
-console.log('response02:', JSON.stringify(response02, null, 2));
+console.log(`status: ${response02.status}`);

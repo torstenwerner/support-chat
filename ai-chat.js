@@ -98,6 +98,7 @@ async function askAiWithModelAndPrompt(developerPrompt, userPrompt, webSearchEna
         // console.log(JSON.stringify(fileSearchResults.map(result => ({ filename: result.filename, score: result.score })), null, 2));
         // console.log(`filenname: ${fileSearchResults[0].filename} score: ${fileSearchResults[0].score}`);
         // console.log(`queries: ${JSON.stringify(fileSearchResponse.output[0].queries, null, 2)}\nfiles: ${JSON.stringify(fileSearchResponse.output[1].content[0].annotations.map(annotation => annotation.filename), null, 2)}\ntext: ${fileSearchResponse.output_text}`);
+        return removeUtmSource(fileSearchResponse.output_text);
         // process.exit(0);
         const hasResults = fileSearchResponse.output[1].content[0].annotations.length > 0;
         const webSearchResponse = await openai.responses.create({

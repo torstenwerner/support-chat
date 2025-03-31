@@ -7,7 +7,6 @@ async function windowOfUrl(url) {
 
     const response = await fetch(url);
     const htmlContent = await response.text()
-    console.log(htmlContent);
     window.document.body.innerHTML = htmlContent;
     await window.happyDOM.waitUntilComplete();
 
@@ -22,7 +21,9 @@ async function windowOfUrl(url) {
 async function fetchMainUrls(url) {
     const window = await windowOfUrl(url);
 
-    const parsedUrls = window.document.querySelectorAll('nav[aria-label="Fragen und Antworten"] a')
+    const funda = window.document.querySelectorAll('nav[aria-label="Fragen und Antworten"] a');
+    console.log(funda);
+    const parsedUrls = funda
         .values()
         .map(a => `https://portal.beasupport.de${a.href}`)
         .toArray();

@@ -21,10 +21,8 @@ async function windowOfUrl(url) {
 async function fetchMainUrls(url) {
     const window = await windowOfUrl(url);
 
-    const funda = window.document.querySelectorAll('nav[aria-label="Fragen und Antworten"] a').values();
-    console.log(funda);
-    // process.exit(0)
-    const parsedUrls = funda
+    const parsedUrls = window.document.querySelectorAll('nav[aria-label="Fragen und Antworten"] a')
+        .values()
         .map(a => `https://portal.beasupport.de${a.href}`)
         .toArray();
 

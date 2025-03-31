@@ -7,6 +7,7 @@ async function windowOfUrl(url) {
 
     const response = await fetch(url);
     const htmlContent = await response.text()
+    console.log(htmlContent);
     window.document.body.innerHTML = htmlContent;
     await window.happyDOM.waitUntilComplete();
 

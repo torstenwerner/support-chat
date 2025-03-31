@@ -1,5 +1,5 @@
 {
-  "name": "vulnerability-analysis",
+  "name": "support-chat",
   "version": "1.0.0",
   "description": "REST service for vulnerability analysis using OpenAI API",
   "main": "server.js",

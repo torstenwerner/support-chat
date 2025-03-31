@@ -21,11 +21,12 @@ function fetchTargetUrls(url) {
 
 /**
  * Fetches the URLs of all target pages.
- * @returns {Promise<Array<string>>}
+ * @returns {Promise<string[]>}
  */
 async function fetchAllUrls() {
     const pageUrls = await fetchMainUrls('https://portal.beasupport.de/fragen-antworten');
-    return Promise.all(pageUrls.map(async url => await fetchTargetUrls(url)))
+    const allUrls = await Promise.all(pageUrls.map(async url => await fetchTargetUrls(url)));
+    return allUrls.flat();
 }
 
 let i = 0;
@@ -64,7 +65,7 @@ function prepare() {
 
 prepare();
 
-const targetUrls = (await fetchAllUrls()).flat(1);
-console.log(targetUrls.length);
+const targetUrls = await fetchAllUrls();
+console.log(`fetching ${targetUrls.length} pages`);
 
 await Promise.all(targetUrls.map(async url => await fetchAndSaveText(url)));

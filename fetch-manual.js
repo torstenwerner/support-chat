@@ -46,6 +46,6 @@ function prepare() {
 prepare();
 
 const targetUrls = await fetchAllUrls();
-console.log(targetUrls.length);
+console.log(`fetching ${targetUrls.length} pages`);
 
 await Promise.all(targetUrls.map(async url => await fetchAndSaveText(url)));

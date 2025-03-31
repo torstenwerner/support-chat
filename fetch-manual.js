@@ -53,7 +53,29 @@ async function fetchAndSaveText(url) {
     const path = `manual/${prefix}-${topic}.txt`;
     const text = await fetchText(url);
     fs.writeFileSync(path, text);
+    fs.appendFileSync("webapp/dist/manual-full.txt", text);
 }
+
+function prepare() {
+    const directory = "manual";
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory);
+    }
+    const files = fs.readdirSync(directory);
+    for (const file of files) {
+        if (file.endsWith('.txt')) {
+            const filePath = `${directory}/${file}`;
+            fs.unlinkSync(filePath);
+            // console.log(`Deleted: ${filePath}`);
+        }
+    }
+    if (!fs.existsSync("webapp/dist")) {
+        fs.mkdirSync("webapp/dist");
+    }
+    fs.writeFileSync("webapp/dist/manual-full.txt", "");
+}
+
+prepare();
 
 const targetUrls = await fetchAllUrls();
 console.log(targetUrls.length);

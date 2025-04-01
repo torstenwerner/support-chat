@@ -1,24 +1,22 @@
-import OpenAI from 'openai';
-import dotenv from 'dotenv';
-import fs from 'fs';
-dotenv.config();
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
-});
+import {deleteFile, fetchFile, fetchFileIds, uploadFile} from "./util.js";
+import {dirname, resolve} from "node:path";
+import {fileURLToPath} from "node:url";
 
-const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
+const scriptDirectory = dirname(fileURLToPath(import.meta.url));
+const filename = '000-organisatorische.txt';
+const path = resolve(scriptDirectory, '..', 'manual', filename);
 
-const filename = "012-wikipedia.md";
-const fileContent = fs.createReadStream(`file-search/${filename}`);
-const response01 = await openai.files.create({
-    file: fileContent,
-    purpose: "assistants",
-});
-const fileId = response01.id;
-console.log('file uploaded with id:', fileId);
+// delete a previous upload
+const existingFileIds = await fetchFileIds();
+const fileIds = await deleteFile(existingFileIds, filename);
+console.log(`deleted existing file ids: ${fileIds}`);
 
-const response02 = await openai.vectorStores.files.create(vectorStoreId,
-    {
-        file_id: fileId,
-    });
-console.log('response02:', JSON.stringify(response02, null, 2));
+// upload
+const response = await uploadFile(path);
+console.log(`response: ${JSON.stringify(response, null, 2)}`);
+
+// fetch status after a delay
+setTimeout(async () => {
+    const nextResponse = await fetchFile(response.id);
+    console.log(`status update: ${nextResponse.status}`);
+}, 100);

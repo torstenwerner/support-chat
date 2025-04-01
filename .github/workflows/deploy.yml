@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '23'
           cache: 'npm'
           cache-dependency-path: webapp/package-lock.json
 
@@ -49,6 +49,9 @@ jobs:
         working-directory: webapp
         run: npm run build
 
+      - name: Fetch portal and manual
+        run: npm run fetch
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
@@ -56,7 +59,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'webapp/dist'
-
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

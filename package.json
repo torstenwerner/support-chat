@@ -1,12 +1,15 @@
 {
-  "name": "vulnerability-analysis",
+  "name": "support-chat",
   "version": "1.0.0",
   "description": "REST service for vulnerability analysis using OpenAI API",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "fetch:portal": "node fetch-portal.js",
+    "fetch:manual": "node fetch-manual.js",
+    "fetch": "npm run fetch:portal && npm run fetch:manual"
   },
   "keywords": [],
   "author": "",

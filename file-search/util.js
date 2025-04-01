@@ -25,7 +25,7 @@ export async function fetchFileIds() {
 /**
  * Fetches the file by id and returns status, id, and filename.
  * @param {string} fileId the id of the file
- * @returns {Promise<object>}
+ * @returns {Promise<{status: string, id: string, filename: string}>}
  */
 export async function fetchFile(fileId) {
     const fileResponse = await openai.files.retrieve(fileId);
@@ -58,7 +58,7 @@ export async function deleteFile(existingFileIds, filename) {
 /**
  * Uploads a file and returns the status, file id, and filename.
  * @param {string} path of the file to upload
- * @returns {Promise<object>}
+ * @returns {Promise<{status: string, id: string, filename: string}>}
  */
 export async function uploadFile(path) {
     const fileContent = createReadStream(path);
@@ -73,4 +73,18 @@ export async function uploadFile(path) {
         id: fileId,
         filename: fileResponse.filename
     };
+}
+
+/**
+ * Searches in store.
+ * @param {string} query
+ * @returns {Promise<{id: string, filename: string, score: string}[]>}
+ */
+export async function search(query) {
+    const response = await openai.vectorStores.search(vectorStoreId, { query });
+    return response.data.map(item => ({
+        id: item.file_id,
+        filename: item.filename,
+        score: item.score
+    }));
 }

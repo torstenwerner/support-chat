@@ -1,15 +1,6 @@
-import OpenAI from 'openai';
-import dotenv from 'dotenv';
+import {search} from "./util.js";
 
-dotenv.config();
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
-});
+const query = "Organisatorische und technische Voraussetzungen";
 
-const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
-
-const query = "Welche Änderungen gab es im letzten Update?";
-
-const response = await openai.vectorStores.search(vectorStoreId, { query });
-const files = response.body.data.map(item => ({ filename: item.filename, score: item.score }));
+const files = await search(query)
 console.log(JSON.stringify(files, null, 2));

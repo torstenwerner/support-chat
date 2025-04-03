@@ -1,6 +1,6 @@
 import {Window} from 'happy-dom';
 import fs from "fs";
-import {uploadFile} from "./file-search/util.js";
+import {deleteFilesStartingWith, uploadFile} from "./file-search/util.js";
 
 /**
  * Fetches all URLs from the page at url that are selected by selector.
@@ -40,7 +40,7 @@ export async function processSite(name, urlFetcher, textSelector) {
  * @param {string} name the directory name and file name prefix
  * @return {void}
  */
-function prepareOutput(name ) {
+async function prepareOutput(name ) {
     if (!fs.existsSync("files")) {
         fs.mkdirSync("files");
     }
@@ -55,6 +55,7 @@ function prepareOutput(name ) {
         fs.mkdirSync("webapp/dist");
     }
     fs.writeFileSync(`webapp/dist/${name}-full.txt`, "");
+    await deleteFilesStartingWith(name);
 }
 
 /**
@@ -93,7 +94,7 @@ function pageProcessor(selector, name) {
         const text = await fetchText(url, selector);
         fs.writeFileSync(path, text);
         fs.appendFileSync(`webapp/dist/${name}-full.txt`, text);
-        // await uploadFile(path);
+        await uploadFile(path);
         return filename;
     }
 }

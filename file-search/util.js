@@ -56,6 +56,25 @@ export async function deleteFile(existingFileIds, filename) {
 }
 
 /**
+ * Deletes existing files starting with filename from both the vector store and the file store
+ * @param prefix the filename prefix
+ * @returns {Promise<string[]>} the ids of the deleted files
+ */
+export async function deleteFilesStartingWith(prefix) {
+    const existingFileIds = await fetchFileIds();
+    let deletedFileIds = [];
+    for (const fileId of existingFileIds) {
+        const existingFile = await fetchFile(fileId);
+        if (existingFile.filename.startsWith(prefix)) {
+            await openai.vectorStores.files.del(vectorStoreId, fileId);
+            await openai.files.del(fileId);
+            deletedFileIds.push(fileId);
+        }
+    }
+    return deletedFileIds;
+}
+
+/**
  * Uploads a file and returns the status, file id, and filename.
  * @param {string} path of the file to upload
  * @returns {Promise<{status: string, id: string, filename: string}>}

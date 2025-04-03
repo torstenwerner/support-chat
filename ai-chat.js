@@ -16,11 +16,12 @@ export async function askAi(userPrompt) {
     if (await isRelevant(userPrompt)) {
         const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
-            "gpt-4o-mini-search-preview",
+            "gpt-4o-mini",
             `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn es für die Antwort hilfreich ist. Die aktuelle Version des beA ist ${beaVersion}. Eine Signatur ist für Abgabe eines elektronischen Empfangsbekenntnis nur nötig, wenn es nicht aus dem eigenen Postfach versendet wird oder Sie nicht das Recht "30 - eEBs mit VHN versenden" für dieses Postfach besitzen.
 
 `,
-            userPrompt);
+            userPrompt,
+            true);
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
     }
@@ -39,7 +40,7 @@ async function fetchBeaVersion() {
 /**
  * Shortens the version 3.32.1.456 to 3.32.1.
  * It is not used yet because it does not improve the results.
- * @param {string} the original version
+ * @param {string} version the original version
  * @returns {string} the shortened version
  */
 export function normalizedVersion(version) {
@@ -54,6 +55,7 @@ export function normalizedVersion(version) {
  * @returns {Promise<boolean>} true if the user prompt is relevant to the beA, false otherwise
  */
 export async function isRelevant(userPrompt) {
+    // return true;
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(
@@ -81,24 +83,27 @@ async function askAiWithoutSearch(userPrompt) {
  * @param {string} model The model to use
  * @param {string} developerPrompt The developer prompt
  * @param {string} userPrompt The user prompt
- * @param {object} webSearchOptions The web search options, undefined (= disabled) by default
+ * @param {boolean} webSearchEnabled Whether web search is enabled
  * @returns {Promise<string>} The answer of the AI
  */
-async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt) {
-    const response = await openai.chat.completions.create({
-        model,
-        messages: [
-            {
-                role: "developer",
-                content: developerPrompt
-            },
-            {
-                role: "user",
-                content: userPrompt
-            }
-        ]
-    })
-    return removeUtmSource(response.choices[0].message.content);
+async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchEnabled = false) {
+    const tools = webSearchEnabled ?  [{
+        type: "web_search_preview",
+        "user_location": {
+            "type": "approximate",
+            "country": "DE"
+        },
+        "search_context_size": "medium"
+    }] : undefined;
+    const tool_choice = webSearchEnabled ? "required" : undefined;
+    const response = await openai.responses.create({
+        model: "gpt-4o-mini",
+        instructions: developerPrompt,
+        input: userPrompt,
+        tools,
+        tool_choice
+    });
+    return removeUtmSource(response.output_text);
 }
 
 /**
@@ -109,18 +114,10 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt) {
  * @returns {Promise<string>} The web search query
  */
 export async function askAiForWebSearchQuery(userPrompt) {
-    const response = await openai.chat.completions.create({
+    const response = await openai.responses.create({
         model: "gpt-4o-mini",
-        messages: [
-            {
-                role: "developer",
-                content: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte immer die Function custom_websearch, um zusätzliche Informationen aus dem Web zu erhalten."
-            },
-            {
-                role: "user",
-                content: userPrompt
-            }
-        ],
+        instructions: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte immer die Function custom_websearch, um zusätzliche Informationen aus dem Web zu erhalten.",
+        input: userPrompt,
         tools: [
             {
                 "type": "function",

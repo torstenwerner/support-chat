@@ -1,5 +1,7 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
+import {readFileSync} from 'node:fs';
+import {search} from "./file-search/util.js";
 
 dotenv.config();
 const openai = new OpenAI({
@@ -92,6 +94,23 @@ async function askAiWithoutSearch(userPrompt) {
  */
 async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt,
                                        webSearchEnabled = false, vectorStoreEnabled = false) {
+    if (vectorStoreEnabled) {
+        const response = await search(userPrompt);
+        // console.log(JSON.stringify(response, null, 2));
+        // const fileLength = response.map(item => ({ filename: item.filename, length: readFileSync(`files/${item.filename}`).length}));
+        const filenames = [...new Set(response.map(item => item.filename))];
+        // const fileLength = filenames.map(filename => ({ filename, length: readFileSync(`files/${filename}`).length}));
+        // console.log(fileLength);
+        const fileText = filenames
+            .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
+            .join("\n\n");
+        // console.log(fileText.length);
+        // process.exit(0)
+        // console.log(filenames);
+        developerPrompt = `${developerPrompt}\n\n${fileText.substring(0, 30000)}`;
+        vectorStoreEnabled = false;
+    }
+
     const tools = webSearchEnabled ? [{
         type: "web_search_preview",
         "user_location": {

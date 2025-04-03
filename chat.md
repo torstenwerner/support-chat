@@ -2,11 +2,11 @@
 Muss ein eEB signiert werden?
 
 # Antwort
-Ein elektronisches Empfangsbekenntnis (eEB) muss nur signiert werden, wenn es nicht aus dem eigenen Postfach versendet wird oder wenn Sie nicht über das Recht "30 - eEBs mit VHN versenden" für dieses Postfach verfügen. 
+Eine Signatur ist für die Abgabe eines elektronischen Empfangsbekenntnisses (eEB) notwendig, wenn das eEB nicht aus dem eigenen Postfach versendet wird oder wenn Sie nicht das Recht "30 - eEBs mit VHN versenden" für dieses Postfach besitzen. Ein Nutzer mit der Rolle "Vertretung", "Zustellungsbevollmächtigter" oder "VHN-Berechtigter" hat automatisch das Recht 30 und benötigt keine Signatur.
 
-Für weitere Informationen können Sie auch das Handbuch unter handbuch.bea-brak.de oder den Support unter portal.beasupport.de konsultieren.
+Weitere Informationen finden Sie im Handbuch unter handbuch.bea-brak.de oder im Support-Portal unter portal.beasupport.de.
 
-Time: 6.3s
+Time: 10.0s
 
 # Frage
 Wie geht die Erstregistrierung eines Mitarbeiters?
@@ -15,132 +15,121 @@ Wie geht die Erstregistrierung eines Mitarbeiters?
 Die Erstregistrierung eines Mitarbeiters im besonderen elektronischen Anwaltspostfach (beA) erfolgt in mehreren Schritten:
 
 1. **Vorbereitung durch den Postfachinhaber**:
-   - Der Postfachinhaber (Rechtsanwalt) meldet sich mit seiner beA-Karte an.
-   - Im Einstellungsbereich wechselt er zur Benutzerverwaltung und wählt „Benutzer anlegen“.
-   - Die Daten des neuen Mitarbeiters werden eingegeben. Mit einem Klick auf „Speichern” werden Benutzername und Passwort generiert, die an den Mitarbeiter weitergegeben werden müssen.
+   - Der Postfachinhaber (Rechtsanwalt) muss den Mitarbeiter in seinem beA-Postfach in der Benutzerverwaltung anlegen und ihm einen Benutzernamen und ein Kennwort zuweisen.
+   - Der Postfachinhaber kann dies tun, indem er sich mit seiner persönlichen beA-Karte anmeldet und die Schritte zur Benutzerverwaltung befolgt.
 
 2. **Durchführung der Registrierung durch den Mitarbeiter**:
-   - Der Mitarbeiter nutzt die erstellten Zugangsdaten (Benutzername und Passwort) und die beA-Mitarbeiterkarte oder einen Software-Token zur Registrierung, indem er auf „Registrierung ohne eigenes Postfach” geht.
+   - Der Mitarbeiter wählt die Option "Registrieren ohne eigenes Postfach" auf der beA-Anmeldeseite.
+   - Er gibt den ihm mitgeteilten Benutzernamen und das zugehörige Kennwort ein.
 
-3. **Freischaltung durch den Postfachinhaber**:
-   - Nach der Registrierung muss der Postfachinhaber sich wieder anmelden und die Sicherheits-Token des Mitarbeiters freischalten.
+3. **Sicherheits-Token auswählen**:
+   - Der Mitarbeiter muss ein Sicherheits-Token (beA-Mitarbeiterkarte oder Software-Token) hinterlegen.
+   - Um das Token hinzuzufügen, klickt er auf "Import Sicherheits-Token" und folgt den Anweisungen.
 
-Für detaillierte Informationen und Anleitungen zur Durchführung können die Ressourcen auf [portal.beasupport.de](https://portal.beasupport.de) oder im [Anwenderhandbuch](https://handbuch.bea-brak.de) konsultiert werden.
+4. **Sicherheitsfragen hinterlegen**:
+   - Der Mitarbeiter muss mindestens eine Sicherheitsfrage anlegen, um die Registrierung abzuschließen.
 
-Time: 18.9s
+5. **E-Mail-Adresse eingeben (optional)**:
+   - Der Mitarbeiter kann eine E-Mail-Adresse angeben, um Benachrichtigungen zu erhalten.
+
+6. **Registrierung abschließen**:
+   - Nach der Eingabe aller erforderlichen Informationen wird die Registrierung abgeschlossen, und der Mitarbeiter kann sich nun mit dem Sicherheits-Token in das beA einloggen.
+
+Weitere Details sind in der [Wissensdatenbank](https://portal.beasupport.de) und im [Handbuch](https://handbuch.bea-brak.de) des beA zu finden.
+
+Time: 22.9s
 
 # Frage
 Meine Karte wird bei der Anmeldung nicht erkannt.
 
 # Antwort
-Wenn Ihre Karte bei der Anmeldung im besonderen elektronischen Anwaltspostfach (beA) nicht erkannt wird, kann dies verschiedene Ursachen haben. Hier sind einige häufige Fehler und Lösungen:
+Wenn Ihre Karte bei der Anmeldung am beA nicht erkannt wird, kann das verschiedene Ursachen haben. Hier sind einige Schritte zur Fehlersuche:
 
-1. **Verwendung einer alten oder falschen Karte**:
-   - Wenn die Fehlermeldung besagt, dass mit dieser Karte keine Erstregistrierung möglich ist, stellen Sie sicher, dass Sie die aktuellste beA-Initial-Karte verwenden. Dies ist notwendig, da ältere Karten oder nicht valide Karten zu dieser Fehlermeldung führen können.
+1. **Verbindung prüfen**: Stellen Sie sicher, dass Ihr Kartenlesegerät ordnungsgemäß angeschlossen ist und die Karte korrekt eingelegt ist.
 
-2. **Kartenlesegerät**:
-   - Überprüfen Sie, ob Ihr Kartenlesegerät ordnungsgemäß angeschlossen ist. Manchmal kann ein Neustart der beA Client Security helfen. Schließen Sie dazu den Browser und die Client Security, trennen Sie das Kartenlesegerät, und schließen Sie es erneut an.
+2. **Treiber überprüfen**: Falls Sie ein ReinerSCT-Kartenlesegerät verwenden, vergewissern Sie sich, dass die neuesten Treiber installiert sind. Diese können auf der Website des Herstellers heruntergeladen werden.
 
-3. **Treiberprobleme**:
-   - Stellen Sie sicher, dass die Treiber für Ihr Kartenlesegerät aktuell sind. Überprüfen Sie die Website des Herstellers auf Updates.
+3. **beA-Client Security Neustart**: Schließen Sie den Browser und beenden Sie die beA-Client Security. Starten Sie dann die Software erneut.
 
-4. **RFID-Funktion**:
-   - Bei einigen Lesegeräten kann die RFID-Funktion zu Problemen führen. Deaktivieren Sie diese Funktion, falls vorhanden.
+4. **RFID-Funktion deaktivieren**: Wenn Ihr Kartenlesegerät über eine RFID-Funktion verfügt, versuchen Sie, diese zu deaktivieren. In der Regel finden Sie Anleitungen dazu auf der Website des Herstellers.
 
-Wenn das Problem weiterhin besteht, kontaktieren Sie bitte den beA-Anwendersupport unter der Email-Adresse [`servicedesk@beasupport.de`](mailto:servicedesk@beasupport.de) oder telefonisch unter 030 / 21787017 (Mo. bis Fr. von 8.00 bis 20.00 Uhr) für weitere Unterstützung.
+5. **Zertifikate prüfen**: Überprüfen Sie, ob auf Ihrer Karte ein gültiges Zertifikat gespeichert ist. Dies können Sie über die beA-Client Security tun.
 
-Time: 15.3s
+Sollten diese Schritte nicht zur Lösung des Problems führen, empfehlen wir, das Supportteam unter servicedesk@beasupport.de oder telefonisch unter 030 / 21787017 zu kontaktieren. Weitere Informationen finden Sie auch auf [portal.beasupport.de](https://portal.beasupport.de).
+
+Time: 14.0s
 
 # Frage
 Muss ich bei Versendung aus dem BAG-Postfach immer elektronisch signieren?
 
 # Antwort
-Ich kann Ihnen dabei nicht helfen, da ich nur Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworten kann. Bitte beachten Sie, dass in der aktuellen Version 3.32.1.462 eine Signatur nur erforderlich ist, wenn das elektronische Empfangsbekenntnis nicht aus dem eigenen Postfach versendet wird oder wenn Sie nicht die Berechtigung "30 - eEBs mit VHN versenden" haben.
+Bei der Versendung von Dokumenten aus dem Postfach einer Berufsausübungsgesellschaft (BAG) ist keine qualifizierte elektronische Signatur erforderlich. Die Dokumente können ohne solche Signatur eingereicht werden, wenn die jeweilige Person, die das elektronische Dokument erstellt, sich auch selbst im BAG-Postfach anmeldet und das Dokument versendet.
 
-Für weitere Informationen empfehle ich, die Seiten portal.beasupport.de oder handbuch.bea-brak.de zu besuchen.
+Allerdings wird empfohlen, eine qualifizierte elektronische Signatur zu verwenden, um mögliche rechtliche Unsicherheiten zu vermeiden. 
 
-Time: 10.8s
+Eine einfache elektronische Signatur ist notwendig, wenn das Dokument von einer Person unterzeichnet wird, die nicht selbst im Postfach angemeldet ist. 
+
+Bitte beachten Sie, dass es immer ratsam ist, sich über die aktuellen Regelungen und Empfehlungen auf portal.beasupport.de oder handbuch.bea-brak.de zu informieren.
+
+Time: 10.3s
 
 # Frage
 Wie kann ich meine PIN zurücksetzen?
 
 # Antwort
-Um Ihre PIN für das besondere elektronische Anwaltspostfach (beA) zurückzusetzen, befolgen Sie bitte diese Schritte:
+Um Ihre PIN zurückzusetzen, benötigen Sie eine kostenpflichtige Ersatzkarte, wenn Sie Ihre PIN vergessen haben. In diesem Fall sollten Sie sich an den Herausgeber Ihrer Karte, die Bundesnotarkammer, wenden. Nutzen Sie dazu bitte das Kontaktformular auf der Website der Zertifizierungsstelle der BNotK.
 
-1. **BNotK SAK lite herunterladen**: Diese Software ist notwendig. Sie können sie von der Webseite der Bundesnotarkammer herunterladen.
+Wenn Sie den Fehlbedienungszähler zurücksetzen möchten, weil Sie die PIN versehentlich dreimal falsch eingegeben haben, können Sie dies mit der BNotK SAK lite und der PUK aus Ihrem PIN-Brief tun. Details zu diesem Prozess finden Sie in der entsprechenden Anleitung auf portal.beasupport.de oder handbuch.bea-brak.de.
 
-2. **Kartenlesegerät anschließen**: Verbinden Sie Ihr Kartenlesegerät mit dem PC und stecken Sie die betroffene beA-Karte ein.
+Bitte beachten Sie, dass eine PIN nur entsperrt wird, nicht zurückgesetzt. Wenn Sie Fragen zur BNotK SAK lite oder zum Prozess haben, stehe ich gerne zur Verfügung.
 
-3. **Software starten**: Öffnen Sie die BNotK SAK lite. 
-
-4. **Fehlbedienungszähler zurücksetzen**:
-   - Suchen Sie im Kartenmanagement nach dem Eintrag Ihres Zertifikates (markiert mit "Fortgeschritten").
-   - Klicken Sie auf das Zahnrad-Symbol und wählen Sie die Funktion „Fehlbedienungszähler zurücksetzen“.
-   - Folgen Sie den Anweisungen im Programm. Es wird die Eingabe Ihrer PUK gefordert.
-
-Bitte beachten Sie, dass der PIN-Reset nur funktioniert, wenn Sie Ihre PIN versehentlich dreimal falsch eingegeben haben. Wenn Sie Ihre PIN vergessen haben, benötigen Sie eine kostenpflichtige Ersatzkarte, die Sie über die Bundesnotarkammer anfordern können.
-
-Time: 12.7s
+Time: 11.3s
 
 # Frage
 Wie kann ich eine Vertretung einrichten?
 
 # Antwort
-Um eine Vertretung im besonderen elektronischen Anwaltspostfach (beA) einzurichten, gehen Sie bitte wie folgt vor:
+Um eine Vertretung im beA einzurichten, gehen Sie bitte wie folgt vor:
 
-1. **Anmeldung**: Melden Sie sich mit Ihrer persönlichen beA-Karte in Ihrem beA-Postfach an und wechseln Sie in den Einstellungsbereich.
+1. **Anmeldung**: Melden Sie sich mit Ihrer persönlichen beA-Karte in Ihrem Postfach an.
 
-2. **Benutzerverwaltung**: Suchen Sie über die Benutzerverwaltung die Rechtsanwältin oder den Rechtsanwalt, dem Sie die Rolle der Vertretung zuweisen möchten. Nutzen Sie die Funktion "Benutzer mit Postfach suchen". 
+2. **Einstellungsbereich**: Wechseln Sie in den Einstellungsbereich.
 
-3. **Rechte & Rollen verwalten**: Klicken Sie auf "Rechte & Rollen verwalten". Im Aktionsmenü am rechten Bildschirmrand wählen Sie die Schaltfläche "Neue Rolle zuordnen".
+3. **Benutzerverwaltung**: Wählen Sie die Benutzerverwaltung aus. Dort können Sie nach der Rechtsanwältin oder dem Rechtsanwalt suchen, dem Sie die Rolle der Vertretung zuweisen möchten.
 
-4. **Rolle Vertretung zuweisen**: Wählen Sie die Rolle "Vertretung" aus und legen Sie ggf. einen festen Zeitraum fest. 
+4. **Benutzersuche**: Nutzen Sie die Suchfunktion, um die gewünschte Kollegin oder den gewünschten Kollegen zu finden.
 
-5. **Speichern**: Klicken Sie auf "Speichern und zurück". Ihnen wird ein Hinweis angezeigt, dass die neue Rolle gespeichert wurde. 
+5. **Rolle zuordnen**: Klicken Sie auf die Schaltfläche „Neue Rolle zuordnen“ im Aktionsmenü und wählen Sie die Rolle „Vertretung“. Sie können dies auch auf einen festen Zeitraum eingrenzen.
 
-6. **Sicherheits-Token freischalten**: Um die Rolle der Vertretung wirksam zu machen, müssen Sie das Sicherheits-Token der Vertretung freischalten. Dies erfolgt über die Postfachverwaltung, indem Sie das entsprechende Sicherheits-Token aktivieren.
+6. **Speichern**: Klicken Sie auf „Speichern und zurück“, um die Zuweisung zu bestätigen. 
 
-7. **Zusätzliche Berechtigungen**: Falls gewünscht, können Sie der Vertretung weitere Berechtigungen zuweisen, indem Sie die entsprechende Checkbox aktivieren und im Aktionsmenü "Neues Recht zuordnen" auswählen.
+7. **Sicherheits-Token freischalten**: Gehen Sie zu „Postfachverwaltung“ und wählen Sie die Option zur Freischaltung des Sicherheits-Tokens für die neue Vertretung.
 
-Bitte beachten Sie, dass die Vertretung selbst Zugang zu Ihrem beA benötigt, um Posteingänge zur Kenntnis zu nehmen und elektronische Empfangsbekenntnisse abzugeben. 
+Bitte beachten Sie, dass die Vertretung auch das Recht haben muss, Posteingänge zur Kenntnis zu nehmen und elektronische Empfangsbekenntnisse abzugeben.
 
-Für detaillierte Informationen und Unterstützung können Sie auch die Webseiten [portal.beasupport.de](https://portal.beasupport.de) oder [handbuch.bea-brak.de](https://handbuch.bea-brak.de) konsultieren.
+Für detaillierte Anleitungen und Informationen können Sie auch die folgenden Links besuchen:
+- [beA-Support Portal](https://portal.beasupport.de)
+- [beA-Handbuch](https://handbuch.bea-brak.de) 
 
-Time: 22.9s
+Falls Sie die Rolle „VHN-Berechtigter“ zuweisen möchten, beachten Sie bitte die spezifischen Vorgaben hierzu.
+
+Time: 14.6s
 
 # Frage
 Welche Änderungen gab es im letzten Update?
 
 # Antwort
-Im letzten Update auf Version 3.32.1.462 wurden folgende Änderungen und Hinweise dokumentiert:
+Ich kann keine Informationen zu den Änderungen im letzten Update der beA-Client-Security bereitstellen. Für detaillierte Informationen zu den Updates empfehle ich Ihnen, die offiziellen Informationen auf der Webseite der BRAK oder den entsprechenden Links auf portal.beasupport.de oder handbuch.bea-brak.de zu überprüfen.
 
-1. **Update-Rhythmus**: Es sind zwei größere Releases pro Jahr angedacht, typischerweise im 2. und 4. Quartal. Zusätzlich können kleinere Fehlerbehebungen erfolgen, abhängig von gesetzlichen Vorgaben und anderen Notwendigkeiten.
-
-2. **Administrative Zugriffsrechte**: Bei der Aktualisierung der beA Client-Security müssen alle aktiven Benutzer-Instanzen beendet werden. Administratoren dürfen Updates der Basiskomponente durchführen, aber nicht die Anwendung selbst starten.
-
-3. **Java-Runtime-Umgebung**: Jährliche Updates der Java-Runtime-Umgebung sind geplant, um die Sicherheit und Funktionalität zu gewährleisten.
-
-4. **Client-Security-Funktionen**: Um die Anwendung nutzen zu können, ist es wichtig, dass alle aktuellen Versionen der Client-Security vorhanden sind. Diese werden bei jedem Start automatisch aktualisiert, wenn eine neue Version verfügbar ist.
-
-Es wird empfohlen, regelmäßig die offiziellen Informationen auf den Webseiten der BRAK zu konsultieren für die neusten Updates und spezifischen Anweisungen zur Nutzung der beA Anwendung.
-
-Time: 11.2s
+Time: 11.8s
 
 # Frage
 Was sind die neuesten beA-Nachrichten?
 
 # Antwort
-Die neuesten Informationen zu beA umfassen folgende Punkte:
+Ich kann Ihnen leider nicht bei dieser Anfrage helfen, da ich ausschließlich Informationen zum besonderen elektronischen Anwaltspostfach (beA) bereitstellen kann. Für aktuelle Nachrichten über beA empfehle ich, die offiziellen Informationskanäle oder die Website von beA zu besuchen. Dort finden Sie auch Unterstützung und nützliche Hinweise zu Ihrer Nutzung. Weitere Informationen finden Sie unter [portal.beasupport.de](https://portal.beasupport.de) und im Handbuch unter [handbuch.bea-brak.de](https://handbuch.bea-brak.de).
 
-1. **Updates**: Es sind keine festen Termine für beA-Updates festgelegt. Es werden jedoch grob zwei größere Releases pro Jahr angedacht, jeweils im 2. und 4. Quartal. Zusätzlich können kleinere Fehlerbehebungen durchgeführt werden.
-
-2. **Störungen im EGVP-System**: Aktuell sind Störungen bei den Empfangseinrichtungen aufgetreten. Einige Fehlercodes, wie F001, deuten darauf hin, dass der Server des Empfängerpostfachs temporär nicht erreichbar ist. Technische Probleme können auch zu unvollständigen Suchergebnissen führen.
-
-3. **Aktive Nutzungspflicht**: Seit dem 01.01.2022 gilt die aktive Nutzungspflicht für beA, was bedeutet, dass Nutzer nicht nur auf eingehende Nachrichten achten, sondern auch aktiv Nachrichten versenden müssen.
-
-Weitere nützliche Informationen und aktuelle Meldungen können auf der offiziellen beA-Website oder im Anwenderhandbuch gefunden werden.
-
-Time: 10.0s
+Time: 15.5s
 
 # Frage
 Was sind die neuesten Sportnachrichten?
@@ -154,23 +143,30 @@ Time: 2.2s
 Wie reicht man eine Schutzschrift ein?
 
 # Antwort
-Um eine Schutzschrift über das besondere elektronische Anwaltspostfach (beA) einzureichen, folgen Sie bitte diesen Schritten:
+Um eine Schutzschrift über das besondere elektronische Anwaltspostfach (beA) einzureichen, gehen Sie wie folgt vor:
 
-1. **Anmeldung**: Melden Sie sich im beA an und klicken Sie auf die Schaltfläche „Neue Nachricht“ (Stift-Symbol) im Aktionsmenü.
-  
-2. **Empfänger**: Geben Sie im Entwurf unter „Empfänger“ den Namen des „Zentralen Schutzschriftenregisters“ ein. Wenn keine Vorschläge angezeigt werden, können Sie das Adressbuch durchsuchen, um den Empfänger zu finden.
+1. **Anmeldung**: Melden Sie sich am beA an.
 
-3. **Nachrichtendetails**: Füllen Sie das Pflichtfeld „Betreff“ aus (vermeiden Sie Sonderzeichen wie &!). 
+2. **Neue Nachricht erstellen**: Klicken Sie auf die Schaltfläche „Neue Nachricht“ (Stift-Symbol) im Aktionsmenü.
 
-4. **Anhänge**: Fügen Sie notwendige Anhänge hinzu, indem Sie auf „Anhang hinzufügen“ klicken. Achten Sie darauf, dass alle Anhänge als „Anlage“ und nicht als „Schriftsatz“ deklariert werden. Bei einem Schriftsatz ist eine qualifizierte elektronische Signatur notwendig, während für Anlagen eine einfache Signatur genügt.
+3. **Empfänger auswählen**:
+   - Geben Sie im Feld „Empfänger“ „Zentrales Schutzschriftenregister“ ein. 
+   - Falls keine Vorschläge angezeigt werden, nutzen Sie das Lupensymbol, um das Adressbuch zu öffnen und suchen Sie dort.
 
-5. **Signatur**: Wenn notwendig, signieren Sie Ihre Anhänge. 
+4. **Nachrichtentyp**: Stellen Sie sicher, dass Sie im Entwurf der Nachricht die Felder „Aktenzeichen Empfänger“ und „Sendungspriorität“ (optional) verwenden können und den Strukturdatensatz (xjustiz_nachricht.xml) hochladen.
 
-6. **Versand**: Klicken Sie auf „Nachricht senden“, um die Schutzschrift abzugeben.
+5. **Betreff und Anhänge**:
+   - Tragen Sie im Pflichtfeld „Betreff“ eine angemessene Beschreibung ein (beachten Sie, keine Sonderzeichen wie &! zu verwenden).
+   - Laden Sie die erforderlichen Anhänge über die Schaltfläche „Anhang hinzufügen“ hoch.
 
-Diese Vorgänge sind im Handbuch des Schutzschriftenregisters ausführlich beschrieben.
+6. **Signatur**: 
+   - Wenn Sie die Schutzschrift selbst versenden, benötigen Sie keine qualifizierte elektronische Signatur; eine einfache Signatur reicht aus. Wenn ein Dritter (z.B. Mitarbeiter) die Nachricht versendet, ist eine qualifizierte elektronische Signatur erforderlich.
 
-Time: 24.9s
+7. **Nachricht senden**: Klicken Sie abschließend auf die Schaltfläche „Nachricht senden“.
+
+Für detaillierte Informationen zur Erstellung der Schutzschrift, beachten Sie das Handbuch des Schutzschriftenregisters. Weitere Informationen und Hilfestellungen finden Sie auf [portal.beasupport.de](https://portal.beasupport.de) und [handbuch.bea-brak.de](https://handbuch.bea-brak.de).
+
+Time: 19.5s
 
 # Frage
 Wer spielt als nächstes gegen Bayern München?
@@ -178,7 +174,7 @@ Wer spielt als nächstes gegen Bayern München?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 3.6s
+Time: 2.7s
 
 # Frage
 Wer spielt als nächstes gegen beA?
@@ -186,17 +182,15 @@ Wer spielt als nächstes gegen beA?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 2.5s
+Time: 1.9s
 
 # Frage
 Wann startete das beA?
 
 # Antwort
-Das besondere elektronische Anwaltspostfach (beA) wurde am 1. Januar 2018 eingeführt. Diese Einführung markierte den Beginn einer neuen Phase der elektronischen Kommunikation im Rechtsverkehr in Deutschland. 
+Das besondere elektronische Anwaltspostfach (beA) wurde am 1. Januar 2018 in Betrieb genommen. Für weitere Informationen und Details empfehle ich, die Webseiten der BRAK zu besuchen, wie portal.beasupport.de oder handbuch.bea-brak.de.
 
-Für weitere Informationen und Anleitungen zum beA können Sie die Webseiten [portal.beasupport.de](https://portal.beasupport.de) und [handbuch.bea-brak.de](https://handbuch.bea-brak.de) besuchen.
-
-Time: 7.4s
+Time: 6.4s
 
 # Frage
 Wann startete der 2. Weltkrieg?
@@ -204,15 +198,15 @@ Wann startete der 2. Weltkrieg?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 2.0s
+Time: 4.3s
 
 # Frage
 Wieviele Buchstaben 'e' sind im Wort 'beA' enthalten?
 
 # Antwort
-Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
+Im Wort 'beA' ist ein Buchstabe 'e' enthalten.
 
-Time: 3.9s
+Time: 4.0s
 
 # Frage
 Wieviele Buchstaben 'e' sind im Wort 'Erdbeere' enthalten?
@@ -220,5 +214,5 @@ Wieviele Buchstaben 'e' sind im Wort 'Erdbeere' enthalten?
 # Antwort
 Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!
 
-Time: 2.7s
+Time: 1.9s
 

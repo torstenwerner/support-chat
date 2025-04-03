@@ -66,25 +66,33 @@ function prepareOutput(name ) {
 async function processPages(urls, selector, name) {
     console.log(`fetching ${urls.length} ${name} pages`);
     const processor = pageProcessor(selector, name);
-    return Promise.all(urls.map(async url => await processor(url)));
+    const urlByFilename = {};
+    await Promise.all(urls.map(async url => {
+        const filename = await processor(url);
+        urlByFilename[filename] = url;
+    }));
+    fs.writeFileSync(`${name}/index.json`, JSON.stringify(urlByFilename, null, 2));
 }
 
 /**
  * Return a function with a URL parameter that fetches and saves the page.
+ * The function returns the filename;
  * It maintains an internal state between invocations.
  * @param {string} selector the CSS selector for the page text
  * @param {string} name the directory name and file name prefix
- * @return {function(url: string): Promise<void>}
+ * @return {function(url: string): Promise<string>}
  */
 function pageProcessor(selector, name) {
     let i = 0;
     return async (url) => {
         const prefix = String(i++).padStart(3, '0');
         const topic = url.replace(/.*\//, '').substring(0, 16);
-        const path = `${name}/${prefix}-${topic}.txt`;
+        const filename = `${prefix}-${topic}.txt`;
+        const path = `${name}/${filename}`;
         const text = await fetchText(url, selector);
         fs.writeFileSync(path, text);
         fs.appendFileSync(`webapp/dist/${name}-full.txt`, text);
+        return filename;
     }
 }
 
@@ -97,13 +105,15 @@ function pageProcessor(selector, name) {
 async function fetchText(url, selector) {
     const window = await windowOfUrl(url);
 
-    const textContent = window.document.querySelector(selector)
+    const text = window.document.querySelector(selector)
         .textContent
         .trim()
-        .replace(/\n\s*/g, "\n");
+        .replace(/\n\s*/g, "\n")
+        .replace(/[\u00A0\t ]+/g, " ")
+        .replace(/[„“"]/g, "");
 
     await window.close();
-    return `${url}\n\n${textContent}\n\n`;
+    return text;
 }
 
 /**

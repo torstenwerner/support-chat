@@ -27,12 +27,14 @@
 <div class="app-container">
     <main>
         <form on:submit|preventDefault={handleSubmit}>
+            <div class="confidential hint">
+                Bitte geben Sie in Ihrer Anfrage keine vertraulichen Daten an.
+            </div>
             <div class="input-group">
                 <input
                         type="text"
                         bind:value={prompt}
                         placeholder="Meine Karte wird bei der Anmeldung nicht gefunden."
-                        title="Stellen Sie bitte Ihre Frage"
                         disabled={loading}
                 />
                 <button type="submit" disabled={loading || !prompt}>
@@ -56,6 +58,9 @@
             <div class="response">
                 {@html response}
             </div>
+            <div class="hint">
+                Die Richtigkeit der Antwort kann nicht garantiert werden. Bitte überprüfen Sie die Angaben.
+            </div>
         {/if}
     </main>
     <Footer/>
@@ -72,6 +77,14 @@
         width: 800px;
         margin: 2rem auto;
         padding: 0 1rem;
+    }
+
+    .hint {
+        font-style: italic;
+    }
+
+    .confidential {
+        margin-bottom: 1rem;
     }
 
     .input-group {
@@ -117,6 +130,7 @@
         padding: 1rem;
         border-radius: 4px;
         border: 1px solid #eee;
+        margin-bottom: 1rem;
     }
 
     .response :global(h1),

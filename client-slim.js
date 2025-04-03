@@ -1,11 +1,13 @@
-import { promises as fs } from 'fs';
+import {promises as fs} from 'fs';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
-import { marked } from 'marked';
 
 dotenv.config();
 const restEndpoint = process.env.REST_ENDPOINT;
 const restApiKey = process.env.REST_API_KEY;
+
+// const vectorStoreEnabled = false;
+const vectorStoreEnabled = true;
 
 /**
  * A slim test client reading the prompt from file client-request.txt,
@@ -23,7 +25,7 @@ async function main() {
                 'Content-Type': 'application/json',
                 'x-api-key': restApiKey,
             },
-            body: JSON.stringify({ prompt })
+            body: JSON.stringify({prompt, vectorStoreEnabled}),
         });
         if (!response.ok) {
             console.error('Fetch failed: ', response.status, response.statusText);

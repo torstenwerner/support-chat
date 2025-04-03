@@ -51,7 +51,7 @@ export const handler = async (event) => {
         }
 
         // Call the AI chat function
-        const completion = await askAi(body.prompt);
+        const completion = await askAi(body.prompt, !!body.vectorStoreEnabled);
 
         // Return the successful response
         return {

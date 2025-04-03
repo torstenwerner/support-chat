@@ -24,6 +24,7 @@ jobs:
     env:
       VITE_REST_ENDPOINT: ${{ vars.VITE_REST_ENDPOINT }}
       VITE_REST_API_KEY: ${{ secrets.VITE_REST_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,7 +45,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-        
+
       - name: Build
         working-directory: webapp
         run: npm run build
@@ -59,7 +60,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'webapp/dist'
-      
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

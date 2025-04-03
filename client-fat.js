@@ -1,6 +1,9 @@
 import {promises as fs} from 'fs';
 import {askAi} from "./ai-chat.js";
 
+// const vectorStoreEnabled = false;
+const vectorStoreEnabled = true;
+
 /**
  * A fat client that read the prompt from the file client-request.txt and writes the AI chat answer into the file answer.md.
  */
@@ -14,7 +17,7 @@ async function main() {
 
 async function askFirstQuestion() {
         const prompt = (await fs.readFile('client-request.txt', 'utf8')).split('\n')[0];
-        const answer = await askAi(prompt);
+        const answer = await askAi(prompt, vectorStoreEnabled);
         await fs.writeFile('chat.md', `# Frage\n${prompt}\n\n# Antwort\n${answer}`, 'utf8');
 }
 
@@ -27,7 +30,7 @@ async function askAllQuestions() {
         }
         console.log(`Asking question: ${question}`);
         const startTime = Date.now();
-        const answer = await askAi(question);
+        const answer = await askAi(question, vectorStoreEnabled);
         const endTime = Date.now();
         const processingTime = ((endTime - startTime) / 1000).toFixed(1); // Convert milliseconds to seconds
         await fs.appendFile('chat.md', `# Frage\n${question}\n\n# Antwort\n${answer}\n\nTime: ${processingTime}s\n\n`, { flush: true }, 'utf8');

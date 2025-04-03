@@ -5,14 +5,16 @@ dotenv.config();
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
 });
+const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
 /**
  * Asks the AI using the parameter userPrompt and returns the answer.
  * It executes some specific workflow to improve the answer given by the AI.
  * @param {string} userPrompt the user prompt
+ * @param {boolean} vectorStoreEnabled should the vector store be used instead of web search
  * @returns {Promise<string>} the AI chat answer
  */
-export async function askAi(userPrompt) {
+export async function askAi(userPrompt, vectorStoreEnabled = false) {
     if (await isRelevant(userPrompt)) {
         const beaVersion = await fetchBeaVersion();
         return askAiWithModelAndPrompt(
@@ -21,7 +23,8 @@ export async function askAi(userPrompt) {
 
 `,
             userPrompt,
-            true);
+            !vectorStoreEnabled,
+            vectorStoreEnabled);
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
     }
@@ -84,17 +87,23 @@ async function askAiWithoutSearch(userPrompt) {
  * @param {string} developerPrompt The developer prompt
  * @param {string} userPrompt The user prompt
  * @param {boolean} webSearchEnabled Whether web search is enabled
+ * @param {boolean} vectorStoreEnabled should the vector store be used instead of web search
  * @returns {Promise<string>} The answer of the AI
  */
-async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchEnabled = false) {
-    const tools = webSearchEnabled ?  [{
+async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt,
+                                       webSearchEnabled = false, vectorStoreEnabled = false) {
+    const tools = webSearchEnabled ? [{
         type: "web_search_preview",
         "user_location": {
             "type": "approximate",
             "country": "DE"
         },
         "search_context_size": "medium"
-    }] : undefined;
+    }] : (vectorStoreEnabled ? [{
+            type: "file_search",
+            vector_store_ids: [vectorStoreId],
+        }] :
+        undefined);
     const tool_choice = webSearchEnabled ? "required" : undefined;
     const response = await openai.responses.create({
         model: "gpt-4o-mini",

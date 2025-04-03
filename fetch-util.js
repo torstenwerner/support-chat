@@ -1,5 +1,6 @@
 import {Window} from 'happy-dom';
 import fs from "fs";
+import {uploadFile} from "./file-search/util.js";
 
 /**
  * Fetches all URLs from the page at url that are selected by selector.
@@ -26,7 +27,7 @@ export async function fetchUrls(url, selector, urlPrefix = '') {
  * @param {string} name of the site
  * @param {function (): Promise<string[]>} urlFetcher a function that fetches all URLs for this site
  * @param textSelector the CSS selector for the page text
- * @returns {Promise<void[]>}
+ * @returns {Promise<void>}
  */
 export async function processSite(name, urlFetcher, textSelector) {
     prepareOutput(name);
@@ -40,13 +41,13 @@ export async function processSite(name, urlFetcher, textSelector) {
  * @return {void}
  */
 function prepareOutput(name ) {
-    if (!fs.existsSync(name)) {
-        fs.mkdirSync(name);
+    if (!fs.existsSync("files")) {
+        fs.mkdirSync("files");
     }
-    const files = fs.readdirSync(name);
+    const files = fs.readdirSync("files");
     for (const file of files) {
-        if (file.endsWith('.txt')) {
-            const filePath = `${name}/${file}`;
+        if (file.startsWith(name) && file.endsWith('.txt')) {
+            const filePath = `files/${file}`;
             fs.unlinkSync(filePath);
         }
     }
@@ -61,7 +62,7 @@ function prepareOutput(name ) {
  * @param {string[]} urls of all pages to process
  * @param {string} selector the CSS selector for the page text
  * @param {string} name the directory name and file name prefix
- * @return {Promise<void[]>}
+ * @return {Promise<void>}
  */
 async function processPages(urls, selector, name) {
     console.log(`fetching ${urls.length} ${name} pages`);
@@ -71,7 +72,7 @@ async function processPages(urls, selector, name) {
         const filename = await processor(url);
         urlByFilename[filename] = url;
     }));
-    fs.writeFileSync(`${name}/index.json`, JSON.stringify(urlByFilename, null, 2));
+    fs.writeFileSync(`files/index-${name}.json`, JSON.stringify(urlByFilename, null, 2));
 }
 
 /**
@@ -87,11 +88,12 @@ function pageProcessor(selector, name) {
     return async (url) => {
         const prefix = String(i++).padStart(3, '0');
         const topic = url.replace(/.*\//, '').substring(0, 16);
-        const filename = `${prefix}-${topic}.txt`;
-        const path = `${name}/${filename}`;
+        const filename = `${name}${prefix}-${topic}.txt`;
+        const path = `files/${filename}`;
         const text = await fetchText(url, selector);
         fs.writeFileSync(path, text);
         fs.appendFileSync(`webapp/dist/${name}-full.txt`, text);
+        // await uploadFile(path);
         return filename;
     }
 }

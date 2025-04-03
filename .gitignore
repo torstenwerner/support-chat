@@ -1,6 +1,5 @@
 dist/
-manual/
-portal/
+files/
 fail.md
 
 # Dependencies

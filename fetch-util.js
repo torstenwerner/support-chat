@@ -40,7 +40,7 @@ export async function processSite(name, urlFetcher, textSelector) {
  * @param {string} name the directory name and file name prefix
  * @return {void}
  */
-async function prepareOutput(name ) {
+async function prepareOutput(name) {
     if (!fs.existsSync("files")) {
         fs.mkdirSync("files");
     }
@@ -68,21 +68,21 @@ async function prepareOutput(name ) {
 async function processPages(urls, selector, name) {
     console.log(`fetching ${urls.length} ${name} pages`);
     const processor = pageProcessor(selector, name);
-    const urlByFilename = {};
+    const dataByFilename = {};
     await Promise.all(urls.map(async url => {
-        const filename = await processor(url);
-        urlByFilename[filename] = url;
+        const document = await processor(url);
+        dataByFilename[document.filename] = {url, title: document.title};
     }));
-    fs.writeFileSync(`files/index-${name}.json`, JSON.stringify(urlByFilename, null, 2));
+    fs.writeFileSync(`files/index-${name}.json`, JSON.stringify(dataByFilename, null, 2));
 }
 
 /**
  * Return a function with a URL parameter that fetches and saves the page.
- * The function returns the filename;
+ * The function returns the filename and title;
  * It maintains an internal state between invocations.
  * @param {string} selector the CSS selector for the page text
  * @param {string} name the directory name and file name prefix
- * @return {function(url: string): Promise<string>}
+ * @return {function(url: string): Promise<{filename: string, title: string}>}
  */
 function pageProcessor(selector, name) {
     let i = 0;
@@ -91,19 +91,19 @@ function pageProcessor(selector, name) {
         const topic = url.replace(/.*\//, '').substring(0, 16);
         const filename = `${name}${prefix}-${topic}.txt`;
         const path = `files/${filename}`;
-        const text = await fetchText(url, selector);
-        fs.writeFileSync(path, text);
-        fs.appendFileSync(`webapp/dist/${name}-full.txt`, text);
+        const document = await fetchText(url, selector);
+        fs.writeFileSync(path, document.text);
+        fs.appendFileSync(`webapp/dist/${name}-full.txt`, document.text);
         await uploadFile(path);
-        return filename;
+        return {filename, title: document.title};
     }
 }
 
 /**
- * Fetches the text from the URL and normalizes it.
+ * Fetches the text and title from the URL and normalizes them.
  * @param url of the page to fetch
  * @param selector the CSS selector where the textContent is extracted
- * @returns {Promise<string>}
+ * @returns {Promise<{text: string, title: string}>}
  */
 async function fetchText(url, selector) {
     const window = await windowOfUrl(url);
@@ -114,9 +114,10 @@ async function fetchText(url, selector) {
         .replace(/\n\s*/g, "\n")
         .replace(/[\u00A0\t ]+/g, " ")
         .replace(/[„“"]/g, "");
+    const title = window.document.title.replace(/ \| beA SUPPORT/, "");
 
     await window.close();
-    return text;
+    return {text, title};
 }
 
 /**

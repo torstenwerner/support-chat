@@ -63,7 +63,7 @@
             </div>
         {/if}
     </main>
-    <Footer/>
+<!--    <Footer/>-->
 </div>
 
 <style>

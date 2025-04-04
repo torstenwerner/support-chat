@@ -1,0 +1,44 @@
+name: Update lambda function
+
+on:
+  schedule:
+    - cron: '47 3 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_LAMBDA_FUNCTION_NAME: ${{ vars.AWS_LAMBDA_FUNCTION_NAME }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_VECTOR_STORE_ID: ${{ secrets.OPENAI_VECTOR_STORE_ID }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install backend dependencies
+        run: npm ci
+
+      - name: Fetch portal and manual
+        run: npm run fetch
+
+      - name: Install lambda dependencies
+        working-directory: lambda
+        run: npm ci
+
+      - name: Update lambda function
+        run: npm update

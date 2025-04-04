@@ -1,12 +1,14 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import {readFileSync} from 'node:fs';
-import {search} from "./file-search/util.js";
+import {fetchIndexes, search} from "./file-search/util.js";
 
 dotenv.config();
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
 });
+
+const fileIndex = fetchIndexes();
 
 /**
  * Asks the AI using the parameter userPrompt and returns the answer.
@@ -21,11 +23,13 @@ export async function askAi(userPrompt, vectorStoreEnabled = false) {
         const developerPromptTemplate = `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn es für die Antwort hilfreich ist. Die aktuelle Version des beA ist ${beaVersion}. Eine Signatur ist für Abgabe eines elektronischen Empfangsbekenntnis nur nötig, wenn es nicht aus dem eigenen Postfach versendet wird oder Sie nicht das Recht "30 - eEBs mit VHN versenden" für dieses Postfach besitzen.
 
 `;
-        const developerPrompt = vectorStoreEnabled ?
-            await createExtendedPrompt(userPrompt, developerPromptTemplate) :
-            developerPromptTemplate;
+        const fileSearchResult = vectorStoreEnabled ?
+            await fileSearch(userPrompt, developerPromptTemplate) :
+            undefined;
+        const developerPrompt = vectorStoreEnabled ? fileSearchResult.prompt : developerPromptTemplate;
         const webSearchEnabled = !vectorStoreEnabled;
-        return askAiWithModelAndPrompt("gpt-4o", developerPrompt, userPrompt, webSearchEnabled);
+        const answer = await askAiWithModelAndPrompt("gpt-4o", developerPrompt, userPrompt, webSearchEnabled);
+        return vectorStoreEnabled ? addSources(fileSearchResult.filenames, answer) : answer;
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
     }
@@ -87,18 +91,19 @@ async function askAiWithoutSearch(userPrompt) {
  * It implements a Cache-Augmented Generation (CAG).
  * @param {string} userPrompt
  * @param {string} developerPrompt the initial developer prompt
- * @returns {Promise<string>}
+ * @returns {Promise<{filenames: string[], prompt: string}>}
  */
-async function createExtendedPrompt(userPrompt, developerPrompt) {
+async function fileSearch(userPrompt, developerPrompt) {
     const response = await search(userPrompt);
     // de-duplicate filenames but keep their order "score descending"
     const filenames = [...new Set(response.map(item => item.filename))];
     const fileText = filenames
         .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
         .join("\n\n");
-    // process.exit(0)
-    // console.log(filenames);
-    return `${developerPrompt}\n\n${fileText.substring(0, 30000)}`;
+    return {
+        filenames,
+        prompt: `${developerPrompt}\n\n${fileText.substring(0, 30000)}`
+    };
 }
 
 /**
@@ -129,6 +134,22 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
         tool_choice
     });
     return removeUtmSource(response.output_text);
+}
+
+/**
+ * Add sources to the answer.
+ * @param {string[]} filenames the list of sources
+ * @param {string} answer the original answer
+ * @returns {string}
+ */
+function addSources(filenames, answer) {
+    const heading = "\n\n**Quellen:**\n\n";
+    const sources = filenames
+        .map(filename => `- ${fileIndex[filename]}`)
+        .join("\n");
+    const extendedAnswer = `${answer}${heading}${sources}\n`;
+    console.log(extendedAnswer);
+    return extendedAnswer;
 }
 
 /**

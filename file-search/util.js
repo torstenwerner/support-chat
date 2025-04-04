@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import {fileURLToPath} from 'node:url';
 import {dirname, resolve} from 'node:path';
-import {createReadStream} from "node:fs";
+import {createReadStream, readdirSync, readFileSync} from "node:fs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const envFile = resolve(scriptDirectory, '..', '.env');
@@ -100,10 +100,25 @@ export async function uploadFile(path) {
  * @returns {Promise<{id: string, filename: string, score: string}[]>}
  */
 export async function search(query) {
-    const response = await openai.vectorStores.search(vectorStoreId, { query });
+    const response = await openai.vectorStores.search(vectorStoreId, {query});
     return response.data.map(item => ({
         id: item.file_id,
         filename: item.filename,
         score: item.score
     }));
+}
+
+/**
+ * Aggregates the index-*.json files into one aggregated object.
+ * @returns {object}
+ */
+export function fetchIndexes() {
+    return readdirSync("files")
+        .filter(filename => filename.startsWith("index-") && filename.endsWith(".json"))
+        .map(filename => {
+            const fileContent = readFileSync(`files/${filename}`, "utf8");
+            return JSON.parse(fileContent);
+        }).reduce((aggregatedJson, singleJson) => {
+            return {...aggregatedJson, ...singleJson};
+        }, {});
 }

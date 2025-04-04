@@ -147,7 +147,7 @@ function addSources(filenames, answer) {
     const sources = filenames
         .map(filename => {
             const data = fileIndex[filename];
-            return `- [${data.title}](${data.url})`;
+            return `- <a href="${data.url}" target="_blank">${data.title}</a>`;
         })
         .join("\n");
     return `${answer}${heading}${sources}\n`;

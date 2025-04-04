@@ -3,6 +3,7 @@ name: Update lambda function
 on:
   schedule:
     - cron: '47 3 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: read

@@ -96,33 +96,24 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt,
                                        webSearchEnabled = false, vectorStoreEnabled = false) {
     if (vectorStoreEnabled) {
         const response = await search(userPrompt);
-        // console.log(JSON.stringify(response, null, 2));
-        // const fileLength = response.map(item => ({ filename: item.filename, length: readFileSync(`files/${item.filename}`).length}));
         const filenames = [...new Set(response.map(item => item.filename))];
-        // const fileLength = filenames.map(filename => ({ filename, length: readFileSync(`files/${filename}`).length}));
-        // console.log(fileLength);
         const fileText = filenames
             .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
             .join("\n\n");
-        // console.log(fileText.length);
         // process.exit(0)
         // console.log(filenames);
         developerPrompt = `${developerPrompt}\n\n${fileText.substring(0, 30000)}`;
-        vectorStoreEnabled = false;
     }
 
     const tools = webSearchEnabled ? [{
-        type: "web_search_preview",
-        "user_location": {
-            "type": "approximate",
-            "country": "DE"
-        },
-        "search_context_size": "medium"
-    }] : (vectorStoreEnabled ? [{
-            type: "file_search",
-            vector_store_ids: [vectorStoreId],
+            type: "web_search_preview",
+            "user_location": {
+                "type": "approximate",
+                "country": "DE"
+            },
+            "search_context_size": "medium"
         }] :
-        undefined);
+        undefined;
     const tool_choice = webSearchEnabled ? "required" : undefined;
     const response = await openai.responses.create({
         model: model,

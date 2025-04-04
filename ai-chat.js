@@ -7,7 +7,6 @@ dotenv.config();
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
 });
-const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 
 /**
  * Asks the AI using the parameter userPrompt and returns the answer.
@@ -19,14 +18,14 @@ const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
 export async function askAi(userPrompt, vectorStoreEnabled = false) {
     if (await isRelevant(userPrompt)) {
         const beaVersion = await fetchBeaVersion();
-        return askAiWithModelAndPrompt(
-            "gpt-4o",
-            `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn es für die Antwort hilfreich ist. Die aktuelle Version des beA ist ${beaVersion}. Eine Signatur ist für Abgabe eines elektronischen Empfangsbekenntnis nur nötig, wenn es nicht aus dem eigenen Postfach versendet wird oder Sie nicht das Recht "30 - eEBs mit VHN versenden" für dieses Postfach besitzen.
+        const developerPromptTemplate = `Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Wenn eine Frage nicht zu diesem Thema gehört, erklären Sie höflich, dass Sie nur in diesem Themengebiet Auskunft geben. Bleiben Sie stets respektvoll und professionell. Ergänzen Sie bitte Verweise auf portal.beasupport.de oder handbuch.bea-brak.de, wenn diese Informationen für die Antwort hilfreich sind. Weisen Sie auf die Rolle 'VHN-Berechtigter' hin, wenn es für die Antwort hilfreich ist. Die aktuelle Version des beA ist ${beaVersion}. Eine Signatur ist für Abgabe eines elektronischen Empfangsbekenntnis nur nötig, wenn es nicht aus dem eigenen Postfach versendet wird oder Sie nicht das Recht "30 - eEBs mit VHN versenden" für dieses Postfach besitzen.
 
-`,
-            userPrompt,
-            !vectorStoreEnabled,
-            vectorStoreEnabled);
+`;
+        const developerPrompt = vectorStoreEnabled ?
+            await createExtendedPrompt(userPrompt, developerPromptTemplate) :
+            developerPromptTemplate;
+        const webSearchEnabled = !vectorStoreEnabled;
+        return askAiWithModelAndPrompt("gpt-4o", developerPrompt, userPrompt, webSearchEnabled);
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
     }
@@ -83,28 +82,35 @@ async function askAiWithoutSearch(userPrompt) {
 }
 
 /**
+ * Create an extended developerPrompt using the file-search with the vector store.
+ * The file content will be cut to avoid an excessive prompt size.
+ * It implements a Cache-Augmented Generation (CAG).
+ * @param {string} userPrompt
+ * @param {string} developerPrompt the initial developer prompt
+ * @returns {Promise<string>}
+ */
+async function createExtendedPrompt(userPrompt, developerPrompt) {
+    const response = await search(userPrompt);
+    // de-duplicate filenames but keep their order "score descending"
+    const filenames = [...new Set(response.map(item => item.filename))];
+    const fileText = filenames
+        .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
+        .join("\n\n");
+    // process.exit(0)
+    // console.log(filenames);
+    return `${developerPrompt}\n\n${fileText.substring(0, 30000)}`;
+}
+
+/**
  * Executes a chat with multiple parameters.
  * Cleans all URLs from the answer.
  * @param {string} model The model to use
  * @param {string} developerPrompt The developer prompt
  * @param {string} userPrompt The user prompt
  * @param {boolean} webSearchEnabled Whether web search is enabled
- * @param {boolean} vectorStoreEnabled should the vector store be used instead of web search
  * @returns {Promise<string>} The answer of the AI
  */
-async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt,
-                                       webSearchEnabled = false, vectorStoreEnabled = false) {
-    if (vectorStoreEnabled) {
-        const response = await search(userPrompt);
-        const filenames = [...new Set(response.map(item => item.filename))];
-        const fileText = filenames
-            .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
-            .join("\n\n");
-        // process.exit(0)
-        // console.log(filenames);
-        developerPrompt = `${developerPrompt}\n\n${fileText.substring(0, 30000)}`;
-    }
-
+async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSearchEnabled = false) {
     const tools = webSearchEnabled ? [{
             type: "web_search_preview",
             "user_location": {

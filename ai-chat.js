@@ -145,11 +145,12 @@ async function askAiWithModelAndPrompt(model, developerPrompt, userPrompt, webSe
 function addSources(filenames, answer) {
     const heading = "\n\n**Quellen:**\n\n";
     const sources = filenames
-        .map(filename => `- ${fileIndex[filename]}`)
+        .map(filename => {
+            const data = fileIndex[filename];
+            return `- [${data.title}](${data.url})`;
+        })
         .join("\n");
-    const extendedAnswer = `${answer}${heading}${sources}\n`;
-    console.log(extendedAnswer);
-    return extendedAnswer;
+    return `${answer}${heading}${sources}\n`;
 }
 
 /**

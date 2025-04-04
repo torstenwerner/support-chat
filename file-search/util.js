@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import {fileURLToPath} from 'node:url';
 import {dirname, resolve} from 'node:path';
-import {createReadStream, readdirSync, readFileSync} from "node:fs";
+import {createReadStream, existsSync, readdirSync, readFileSync} from "node:fs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const envFile = resolve(scriptDirectory, '..', '.env');
@@ -113,6 +113,9 @@ export async function search(query) {
  * @returns {object}
  */
 export function fetchIndexes() {
+    if (!existsSync("files")) {
+        return {};
+    };
     return readdirSync("files")
         .filter(filename => filename.startsWith("index-") && filename.endsWith(".json"))
         .map(filename => {

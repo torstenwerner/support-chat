@@ -42,4 +42,4 @@ jobs:
         run: npm ci
 
       - name: Update lambda function
-        run: npm update
+        run: npm run update

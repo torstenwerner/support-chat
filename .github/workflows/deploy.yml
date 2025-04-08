@@ -75,3 +75,9 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync ./webapp/dist s3://${{ vars.S3_BUCKET_NAME }} --delete
+
+      # Invalidate CloudFront distribution cache
+      # This ensures users get the latest version of the files
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

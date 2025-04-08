@@ -1,7 +1,6 @@
 <script>
     import {marked} from 'marked';
     import {askAi} from './lib/aiService';
-    import Footer from './lib/Footer.svelte';
     import Toggle from "./lib/Toggle.svelte";
 
     let prompt = '';
@@ -14,6 +13,7 @@
         loading = true;
         error = null;
         try {
+            response = '<i>Bitte warten Sie, die Antwort wird vorbereitet ...</i>';
             const result = await askAi(prompt, vectorStoreEnabled);
             response = await marked(result.toString());
         } catch (e) {
@@ -58,12 +58,14 @@
             <div class="response">
                 {@html response}
             </div>
-            <div class="hint">
-                Die Richtigkeit der Antwort kann nicht garantiert werden. Bitte überprüfen Sie die Angaben.
-            </div>
+            {#if !loading}
+                <div class="hint">
+                    Die Richtigkeit der Antwort kann nicht garantiert werden. Bitte überprüfen Sie die Angaben.
+                </div>
+            {/if}
         {/if}
     </main>
-<!--    <Footer/>-->
+    <!--    <Footer/>-->
 </div>
 
 <style>

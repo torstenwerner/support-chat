@@ -10,7 +10,7 @@
     "empty-store": "node file-search/empty-store.js",
     "fetch:portal": "node fetch-portal.js",
     "fetch:manual": "node fetch-manual.js",
-    "fetch": "npm run fetch:portal && npm run fetch:manual"
+    "fetch": "npm run empty-store && npm run fetch:portal && npm run fetch:manual"
   },
   "keywords": [],
   "author": "",

@@ -55,7 +55,7 @@ async function prepareOutput(name) {
         fs.mkdirSync("webapp/dist");
     }
     fs.writeFileSync(`webapp/dist/${name}-full.txt`, "");
-    await deleteFilesStartingWith(name);
+    // await deleteFilesStartingWith(name);
 }
 
 /**

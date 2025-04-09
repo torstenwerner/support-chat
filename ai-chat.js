@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
-import {readFileSync} from 'node:fs';
+import {existsSync, readFileSync} from 'node:fs';
 import {fetchIndexes, search} from "./file-search/util.js";
 
 dotenv.config();
@@ -98,6 +98,13 @@ async function fileSearch(userPrompt, developerPrompt) {
     // de-duplicate filenames but keep their order "score descending"
     const filenames = [...new Set(response.map(item => item.filename))];
     const fileText = filenames
+        .filter(filename => {
+            const exists = existsSync(filename);
+            if (!exists) {
+                console.warn(`File "${filename}" not found.`);
+            }
+            return exists;
+        })
         .map(filename => readFileSync(`files/${filename}`).toString().substring(0, 10000))
         .join("\n\n");
     return {

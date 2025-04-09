@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "empty-store": "node file-search/empty-store.js",
     "fetch:portal": "node fetch-portal.js",
     "fetch:manual": "node fetch-manual.js",
     "fetch": "npm run fetch:portal && npm run fetch:manual"

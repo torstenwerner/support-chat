@@ -149,3 +149,47 @@ export function fetchIndexes() {
             return {...aggregatedJson, ...singleJson};
         }, {});
 }
+
+/**
+ * Deletes all content of the vector store and the related files.
+ * Logs some progress to the console.
+ * @returns {Promise<void>}
+ */
+export async function emptyStore() {
+    const storeResponse = openai.vectorStores.files.list(vectorStoreId);
+    let step = 0;
+    for await (const responseItem of storeResponse) {
+        const fileId = responseItem.id;
+        try {
+            await openai.vectorStores.files.del(vectorStoreId, fileId);
+        } catch (e) {
+            console.warn(`Empty store step ${step}: could not delete file from store: ${fileId}`);
+        }
+        try {
+            await openai.files.del(fileId);
+        } catch (e) {
+            console.warn(`Empty store step ${step}: could not delete file: ${fileId}`);
+        }
+        if (step % 10 === 0) {
+            console.info(`Empty store step ${step}: done`);
+        }
+        step++;
+    }
+}
+
+export async function deleteAllFiles() {
+    const filesResponse = openai.files.list();
+    let step = 0;
+    for await (const responseItem of filesResponse) {
+        const fileId = responseItem.id;
+        try {
+            await openai.files.del(fileId);
+        } catch (e) {
+            console.warn(`Empty store step ${step}: could not delete file: ${fileId}`);
+        }
+        if (step % 10 === 0) {
+            console.info(`Empty store step ${step}: done`);
+        }
+        step++;
+    }
+}

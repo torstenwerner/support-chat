@@ -99,9 +99,9 @@ async function fileSearch(userPrompt, developerPrompt) {
     const filenames = [...new Set(response.map(item => item.filename))];
     const fileText = filenames
         .filter(filename => {
-            const exists = existsSync(filename);
+            const exists = existsSync(`files/${filename}`);
             if (!exists) {
-                console.warn(`File "${filename}" not found.`);
+                console.warn(`File "files/${filename}" not found.`);
             }
             return exists;
         })

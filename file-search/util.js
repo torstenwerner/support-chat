@@ -18,8 +18,12 @@ const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
  * @returns {Promise<string[]>}
  */
 export async function fetchFileIds() {
-    const storeResponse = await openai.vectorStores.files.list(vectorStoreId);
-    return storeResponse.data.map(item => item.id);
+    const storeResponse = openai.vectorStores.files.list(vectorStoreId);
+    let ids = [];
+    for await (const responseItem of storeResponse) {
+        ids.push(responseItem.id);
+    }
+    return ids;
 }
 
 /**

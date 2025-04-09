@@ -28,4 +28,13 @@ async function fetchAllUrls() {
     return allUrls.flat();
 }
 
+/**
+ * Returns the URL of the status page.
+ * @returns {Promise<string[]>}
+ */
+async function fetchStatusUrls() {
+    return ['https://portal.beasupport.de/verfuegbarkeit'];
+}
+
 await processSite('portal', fetchAllUrls, '.faq-details');
+await processSite('status', fetchStatusUrls, '.ce-status');

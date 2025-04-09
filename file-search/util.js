@@ -32,12 +32,17 @@ export async function fetchFileIds() {
  * @returns {Promise<{status: string, id: string, filename: string}>}
  */
 export async function fetchFile(fileId) {
-    const fileResponse = await openai.files.retrieve(fileId);
-    return {
-        status: fileResponse.status,
-        id: fileId,
-        filename: fileResponse.filename
-    };
+    try {
+        const fileResponse = await openai.files.retrieve(fileId);
+        return {
+            status: fileResponse.status,
+            id: fileId,
+            filename: fileResponse.filename
+        };
+    } catch (e) {
+        console.warn(`Could not retrieve file: ${fileId}`);
+        return null;
+    }
 }
 
 /**
@@ -50,8 +55,11 @@ export async function deleteFile(existingFileIds, filename) {
     let deletedFileIds = [];
     for (const fileId of existingFileIds) {
         const existingFile = await fetchFile(fileId);
-        if (existingFile.filename === filename) {
-            await openai.vectorStores.files.del(vectorStoreId, fileId);
+        if (existingFile == null) {
+            await deleteFileFromStore(fileId);
+            deletedFileIds.push(fileId);
+        } else if (existingFile.filename === filename) {
+            await deleteFileFromStore(fileId);
             await openai.files.del(fileId);
             deletedFileIds.push(fileId);
         }
@@ -69,13 +77,25 @@ export async function deleteFilesStartingWith(prefix) {
     let deletedFileIds = [];
     for (const fileId of existingFileIds) {
         const existingFile = await fetchFile(fileId);
-        if (existingFile.filename.startsWith(prefix)) {
-            await openai.vectorStores.files.del(vectorStoreId, fileId);
+        if (existingFile == null) {
+            await deleteFileFromStore(fileId);
+            deletedFileIds.push(fileId);
+        } else if (existingFile.filename.startsWith(prefix)) {
+            await deleteFileFromStore(fileId);
             await openai.files.del(fileId);
             deletedFileIds.push(fileId);
         }
     }
     return deletedFileIds;
+}
+
+async function deleteFileFromStore(fileId) {
+    try {
+        return await openai.vectorStores.files.del(vectorStoreId, fileId);
+    } catch (e) {
+        console.warn(`Could not delete file from store: ${fileId}`);
+        return null;
+    }
 }
 
 /**

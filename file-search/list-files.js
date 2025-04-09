@@ -7,3 +7,4 @@ const filenamePromises = fileIds.map(async fileId => {
 })
 const filenames = await Promise.all(filenamePromises);
 console.log(filenames);
+console.log(`${filenames.length} files found.`);

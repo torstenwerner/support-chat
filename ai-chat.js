@@ -8,8 +8,11 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
 });
 
-const mainModel = "gpt-4o";
-const miniModel = "gpt-4o-mini";
+// const mainModel = "gpt-4o";
+// const miniModel = "gpt-4o-mini";
+const mainModel = "gpt-4.1";
+// const miniModel = "gpt-4.1-mini";
+const miniModel = "gpt-4.1-nano";
 
 const fileIndex = fetchIndexes();
 

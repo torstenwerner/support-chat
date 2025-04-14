@@ -8,6 +8,9 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
 });
 
+const mainModel = "gpt-4o";
+const miniModel = "gpt-4o-mini";
+
 const fileIndex = fetchIndexes();
 
 /**
@@ -28,7 +31,7 @@ export async function askAi(userPrompt, vectorStoreEnabled = false) {
             undefined;
         const developerPrompt = vectorStoreEnabled ? fileSearchResult.prompt : developerPromptTemplate;
         const webSearchEnabled = !vectorStoreEnabled;
-        const answer = await askAiWithModelAndPrompt("gpt-4o", developerPrompt, userPrompt, webSearchEnabled);
+        const answer = await askAiWithModelAndPrompt(mainModel, developerPrompt, userPrompt, webSearchEnabled);
         return vectorStoreEnabled ? addSources(fileSearchResult.filenames, answer) : answer;
     } else {
         return "Es tut mir leid, aber ich kann Ihnen dabei nicht helfen, da ich ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach (beA) beantworte. Wenn Sie Informationen zu beA benötigen, stehe ich Ihnen gerne zur Verfügung!";
@@ -67,7 +70,7 @@ export async function isRelevant(userPrompt) {
     const categorizationAnswer = await askAiWithoutSearch(userPrompt);
     const categorizationChat = `Frage:\n${userPrompt}\n\nAntwort:\n${categorizationAnswer}`;
     const relevanceAnswer = await askAiWithModelAndPrompt(
-        "gpt-4o-mini",
+        miniModel,
         "Bewerte bitte, ob der folgende Chat mit einem Supportagenten für das besondere elektronische Anwaltspostfach beA einen thematischen Zusammenhang zu beA hat und nicht themenfremd ist. Antworte nur mit 'Ja' oder 'Nein'.",
         categorizationChat);
     return relevanceAnswer.toLowerCase().trim() === 'ja';
@@ -80,7 +83,7 @@ export async function isRelevant(userPrompt) {
  */
 async function askAiWithoutSearch(userPrompt) {
     return askAiWithModelAndPrompt(
-        "gpt-4o-mini",
+        miniModel,
         "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet.",
         userPrompt);
 }
@@ -169,7 +172,7 @@ function addSources(filenames, answer) {
  */
 export async function askAiForWebSearchQuery(userPrompt) {
     const response = await openai.responses.create({
-        model: "gpt-4o-mini",
+        model: miniModel,
         instructions: "Sie sind ein hilfreicher, sachlicher und freundlicher Assistent, der ausschließlich Fragen zum besonderen elektronischen Anwaltspostfach beA beantwortet. Bleibe stets respektvoll und professionell. Die aktuelle Version des beA ist 3.32.1.456. Benutze bitte immer die Function custom_websearch, um zusätzliche Informationen aus dem Web zu erhalten.",
         input: userPrompt,
         tools: [

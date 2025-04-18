@@ -158,23 +158,42 @@ export function fetchIndexes() {
 export async function emptyStore() {
     const storeResponse = openai.vectorStores.files.list(vectorStoreId);
     let step = 0;
+    const fileIds = [];
+    let promises = [];
     for await (const responseItem of storeResponse) {
         const fileId = responseItem.id;
         try {
-            await openai.vectorStores.files.del(vectorStoreId, fileId);
+            promises.push(openai.vectorStores.files.del(vectorStoreId, fileId));
         } catch (e) {
             console.warn(`Empty store step ${step}: could not delete file from store: ${fileId}`);
         }
+        fileIds.push(fileId);
+        if (step % 10 === 0) {
+            await Promise.all(promises);
+            promises = [];
+            console.info(`Delete from vector store step ${step}: done`);
+        }
+        step++;
+    }
+    await Promise.all(promises);
+    promises = [];
+    console.info(`Delete from vector store step ${step}: done`);
+    step = 0;
+    for (const fileId of fileIds) {
         try {
-            await openai.files.del(fileId);
+            promises.push(openai.files.del(fileId));
         } catch (e) {
             console.warn(`Empty store step ${step}: could not delete file: ${fileId}`);
         }
         if (step % 10 === 0) {
-            console.info(`Empty store step ${step}: done`);
+            await Promise.all(promises);
+            promises = [];
+            console.info(`Delete file step ${step}: done`);
         }
         step++;
     }
+    await Promise.all(promises);
+    console.info(`Delete from file step step ${step}: done`);
 }
 
 export async function deleteAllFiles() {

@@ -160,6 +160,7 @@ export async function emptyStore() {
     let step = 0;
     const fileIds = [];
     let promises = [];
+    // empty the vector store first
     for await (const responseItem of storeResponse) {
         const fileId = responseItem.id;
         try {
@@ -179,6 +180,11 @@ export async function emptyStore() {
     promises = [];
     console.info(`Delete from vector store step ${step}: done`);
     step = 0;
+
+    const newStoreResponse = await openai.vectorStores.files.list(vectorStoreId);
+    console.log(`Vector store data length: ${newStoreResponse.data.length}, has_more: ${newStoreResponse.has_more}`);
+
+    // delete the actual files now
     for (const fileId of fileIds) {
         try {
             promises.push(openai.files.del(fileId));

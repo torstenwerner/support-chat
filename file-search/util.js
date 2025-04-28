@@ -1,4 +1,4 @@
-import OpenAI from 'openai';
+import {AzureOpenAI} from 'openai';
 import dotenv from 'dotenv';
 import {fileURLToPath} from 'node:url';
 import {dirname, resolve} from 'node:path';
@@ -7,8 +7,9 @@ import {createReadStream, existsSync, readdirSync, readFileSync} from "node:fs";
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const envFile = resolve(scriptDirectory, '..', '.env');
 dotenv.config({path: envFile});
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || 'dummy-key-for-testing'
+const openai = new AzureOpenAI({
+    apiVersion: "2024-07-01-preview",
+    endpoint: "https://bea-support-se.openai.azure.com"
 });
 
 const vectorStoreId = process.env.OPENAI_VECTOR_STORE_ID;
@@ -139,7 +140,8 @@ export async function search(query) {
 export function fetchIndexes() {
     if (!existsSync("files")) {
         return {};
-    };
+    }
+    ;
     return readdirSync("files")
         .filter(filename => filename.startsWith("index-") && filename.endsWith(".json"))
         .map(filename => {
@@ -172,13 +174,15 @@ export async function emptyStore() {
         if (step % 10 === 0) {
             await Promise.all(promises);
             promises = [];
-            console.info(`Delete from vector store step ${step}: done`);
+            console.info(`Delete
+                          from vector store step ${step}: done`);
         }
         step++;
     }
     await Promise.all(promises);
     promises = [];
-    console.info(`Delete from vector store step ${step}: done`);
+    console.info(`Delete
+                  from vector store step ${step}: done`);
     step = 0;
 
     const newStoreResponse = await openai.vectorStores.files.list(vectorStoreId);
@@ -199,7 +203,8 @@ export async function emptyStore() {
         step++;
     }
     await Promise.all(promises);
-    console.info(`Delete from file step step ${step}: done`);
+    console.info(`Delete
+                  from file step step ${step}: done`);
 }
 
 export async function deleteAllFiles() {

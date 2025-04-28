@@ -8,7 +8,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const envFile = resolve(scriptDirectory, '..', '.env');
 dotenv.config({path: envFile});
 const openai = new AzureOpenAI({
-    apiVersion: "2024-07-01-preview",
+    apiVersion: "2025-03-01-preview",
     endpoint: "https://bea-support-se.openai.azure.com"
 });
 
@@ -107,9 +107,9 @@ async function deleteFileFromStore(fileId) {
 export async function uploadFile(path) {
     const fileContent = createReadStream(path);
     const fileResponse = await openai.files.create({
-        file: fileContent,
-        purpose: "assistants",
-    });
+            file: fileContent,
+            purpose: "assistants",
+        });
     const fileId = fileResponse.id;
     const storeResponse = await openai.vectorStores.files.create(vectorStoreId, {file_id: fileId});
     return {
@@ -174,15 +174,13 @@ export async function emptyStore() {
         if (step % 10 === 0) {
             await Promise.all(promises);
             promises = [];
-            console.info(`Delete
-                          from vector store step ${step}: done`);
+            console.info(`Delete from vector store step ${step}: done`);
         }
         step++;
     }
     await Promise.all(promises);
     promises = [];
-    console.info(`Delete
-                  from vector store step ${step}: done`);
+    console.info(`Delete from vector store step ${step}: done`);
     step = 0;
 
     const newStoreResponse = await openai.vectorStores.files.list(vectorStoreId);
@@ -203,8 +201,7 @@ export async function emptyStore() {
         step++;
     }
     await Promise.all(promises);
-    console.info(`Delete
-                  from file step step ${step}: done`);
+    console.info(`Delete from file step step ${step}: done`);
 }
 
 export async function deleteAllFiles() {

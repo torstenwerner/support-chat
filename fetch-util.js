@@ -86,8 +86,19 @@ async function processPages(urls, selector, name) {
  */
 function pageProcessor(selector, name) {
     let i = 0;
+    let requestCount = 0;
+
+    async function throttle() {
+        while (requestCount >= 10) {
+            // sleep one second
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+        requestCount++;
+    }
+
     return async (url) => {
-        const prefix = String(i++).padStart(3, '0');
+        await throttle();
+        const prefix = String(i).padStart(3, '0');
         const topic = url.replace(/.*\//, '').substring(0, 16);
         const filename = `${name}${prefix}-${topic}.txt`;
         const path = `files/${filename}`;
@@ -95,6 +106,11 @@ function pageProcessor(selector, name) {
         fs.writeFileSync(path, document.text);
         fs.appendFileSync(`webapp/dist/${name}-full.txt`, document.text);
         await uploadFile(path);
+        requestCount--;
+        if (i % 10 === 0) {
+            console.log(`uploaded ${i} files`);
+        }
+        i++;
         return {filename, title: document.title};
     }
 }

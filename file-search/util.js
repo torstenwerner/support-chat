@@ -139,7 +139,7 @@ export async function search(query) {
 export function fetchIndexes() {
     if (!existsSync("files")) {
         return {};
-    };
+    }
     return readdirSync("files")
         .filter(filename => filename.startsWith("index-") && filename.endsWith(".json"))
         .map(filename => {
@@ -172,13 +172,15 @@ export async function emptyStore() {
         if (step % 10 === 0) {
             await Promise.all(promises);
             promises = [];
-            console.info(`Delete from vector store step ${step}: done`);
+            console.info(`Delete
+                          from vector store step ${step}: done`);
         }
         step++;
     }
     await Promise.all(promises);
     promises = [];
-    console.info(`Delete from vector store step ${step}: done`);
+    console.info(`Delete
+                  from vector store step ${step}: done`);
     step = 0;
 
     const newStoreResponse = await openai.vectorStores.files.list(vectorStoreId);
@@ -186,11 +188,8 @@ export async function emptyStore() {
 
     // delete the actual files now
     for (const fileId of fileIds) {
-        try {
-            promises.push(openai.files.del(fileId));
-        } catch (e) {
-            console.warn(`Empty store step ${step}: could not delete file: ${fileId}`);
-        }
+        promises.push(openai.files.del(fileId)
+            .catch(() => console.warn(`Empty store step ${step}: could not delete file: ${fileId}`)));
         if (step % 10 === 0) {
             await Promise.all(promises);
             promises = [];
@@ -199,7 +198,8 @@ export async function emptyStore() {
         step++;
     }
     await Promise.all(promises);
-    console.info(`Delete from file step step ${step}: done`);
+    console.info(`Delete
+                  from file step step ${step}: done`);
 }
 
 export async function deleteAllFiles() {

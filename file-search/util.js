@@ -163,11 +163,9 @@ export async function emptyStore() {
     // empty the vector store first
     for await (const responseItem of storeResponse) {
         const fileId = responseItem.id;
-        try {
-            promises.push(openai.vectorStores.files.del(vectorStoreId, fileId));
-        } catch (e) {
-            console.warn(`Empty store step ${step}: could not delete file from store: ${fileId}`);
-        }
+        promises.push(openai.vectorStores.files.del(vectorStoreId, fileId)
+            .catch(() =>
+                console.warn(`Empty store step ${step}: could not delete file from store: ${fileId}`)));
         fileIds.push(fileId);
         if (step % 10 === 0) {
             await Promise.all(promises);

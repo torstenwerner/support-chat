@@ -5,7 +5,7 @@
   "main": "lambda.js",
   "type": "module",
   "scripts": {
-    "build": "rm -rf dist function.zip && mkdir -p dist/file-search && cp -a lambda.js ../ai-chat.js package.json ../files dist/ && cp ../file-search/util.js dist/file-search/ && cd dist && npm install --production",
+    "build": "rm -rf dist function.zip && esbuild lambda.js --bundle --outfile=dist/index.js --platform=node --format=esm --external:aws-sdk --external:@aws-sdk/client-lambda --external:openai --external:dotenv && cp -R ../files dist/files && cp package.json dist/ && cd dist && npm install --omit=dev",
     "package": "npm run build && cd dist && zip -rq ../function.zip .",
     "update": "npm run package && node update-lambda.js"
   },
@@ -17,6 +17,7 @@
     "openai": "^4.28.4"
   },
   "devDependencies": {
-    "@aws-sdk/client-lambda": "^3.758.0"
+    "@aws-sdk/client-lambda": "^3.758.0",
+    "esbuild": "^0.20.2"
   }
 }
